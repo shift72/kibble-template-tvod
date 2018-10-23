@@ -43,7 +43,6 @@
             <a href="#" class="s72-btn s72-dropdown-toggle">{{i18n("nav_signed_in_as")}} <s72-username></s72-username></a>
             <div class="s72-dropdown-menu s72-dropdown-menu-right">
               <a class="s72-dropdown-item" href="/devices.html">{{i18n("nav_devices")}}</a>
-              <a class="s72-dropdown-item" href="/subscriptions.html">{{i18n("nav_subscriptions")}}</a>
               <a class="s72-dropdown-item" href="/account.html">{{i18n("nav_account")}}</a>
               <s72-sign-out class="s72-dropdown-item">{{i18n("nav_signout")}}</s72-sign-out>
             </div>
