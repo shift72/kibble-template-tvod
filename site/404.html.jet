@@ -1,0 +1,19 @@
+{{extends "templates/application.jet"}}
+
+{{block head()}}
+  {{yield seo(title=i18n("404_page_header"), index=false)}}
+{{end}}
+
+{{block body()}}
+<div class="container page">
+
+  <div class="page-header text-center">
+    <h2>{{ i18n("404_page_header") }}</h2>
+  </div>
+
+  <div class="text-center">
+    {{i18n("404_page_content") | raw}}
+  </div>
+
+</div>
+{{end}}

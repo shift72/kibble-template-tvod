@@ -1,0 +1,41 @@
+{{block metaItemTagline(genres=true)}}
+  <ul class="meta-item-tagline">
+
+    {*<li class="meta-item-tagline-item">
+      <span class="meta-item-classification meta-item-classification-mature">M</span>
+    </li>*}
+
+    {{if genres == true}}
+      {{if isset(.Genres)}}
+        <li class="meta-item-tagline-item">{{.Genres}}</li>
+      {{end}}
+      {{if isset(.ShowInfo) && isset(.ShowInfo.Genres)}}
+        <li class="meta-item-tagline-item">{{.ShowInfo.Genres}}</li>
+      {{end}}
+
+      {{if isset(.Runtime) || isset(.Episodes)}}
+        <li class="meta-item-tagline-divider">•</li>
+      {{end}}
+    {{end}}
+
+    {{if isset(.Runtime)}}
+
+      {{if .Runtime > 60}}
+        <li class="meta-item-tagline-item">{{.Runtime.Hours()}}{{i18n("runtime_hours")}} {{.Runtime.Minutes()}}{{i18n("runtime_minutes")}}</li>
+      {{else}}
+        <li class="meta-item-tagline-item">{{.Runtime}}min</li>
+      {{end}}
+
+      {*<li class="meta-item-tagline-item">{{.Runtime}}min</li>*}
+    {{end}}
+
+    {{if isset(.Items)}}
+      <li class="meta-item-tagline-item">{{i18n("bundle_items_all_films", len(.Items))}}</li>
+    {{end}}
+
+    {{if isset(.Episodes)}}
+      <li class="meta-item-tagline-item">{{i18n("episode_count", len(.Episodes))}}</li>
+    {{end}}
+
+  </ul>
+{{end}}

@@ -1,0 +1,14 @@
+{{range site.Pages}}{{routeToSlug(.Slug)}}
+{{end}}
+
+{{ range site.Films }}{{routeToSlug(.Slug)}}
+{{ end }}
+
+{{ range site.TVSeasons }}{{routeToSlug(.Slug)}}
+{{ end }}
+
+{{ range site.Collections }}{{routeToSlug(.Slug)}}
+{{ end }}
+
+{{ range site.Bundles }}{{routeToSlug(.Slug)}}
+{{ end }}

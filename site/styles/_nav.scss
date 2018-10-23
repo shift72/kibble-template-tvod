@@ -1,0 +1,84 @@
+.navbar {
+
+  .nav-link {
+    color: $navbar-nav-link-color;
+
+    @include hover-focus {
+      color: $navbar-nav-link-hover-color;
+    }
+  }
+
+  .btn-signup,
+  .btn-signin,
+  .btn-navbar-search,
+  .navbar-nav-user-nav {
+    margin-top: $navbar-padding-y;
+
+    @include media-breakpoint-down(md) {
+      display: block;
+    }
+
+    @include media-breakpoint-up(md) {
+      margin-top: 0;
+      margin-left: .2rem; //just a little gap
+    }
+  }
+}
+
+.btn-navbar-search {
+  @extend .btn;
+  @extend .btn-outline-primary;
+}
+
+.navbar-search-label {
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+
+.navbar-nav {
+  s72-user-anon.s72-show,
+  s72-user-known.s72-show {
+    display: block;
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+    }
+  }
+
+  .s72-username {
+    max-width: 100px; //arbituary
+    overflow-x: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+    white-space: nowrap;
+  }
+}
+
+
+.navbar-brand {
+  @extend .text-hide;
+  min-width: $navbar-logo-width;
+  background: url('../images/common/logo.png') left center/100% no-repeat;
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min-resolution: 192dpi) {
+    background: url("../images/common/logo@2x.png") left center/100% no-repeat;
+  }
+}
+
+.navbar-nav-user-nav {
+
+  .s72-dropdown-toggle {
+    color: $navbar-nav-link-color;
+    display: block;
+
+    @include media-breakpoint-up(md) {
+      display: inline-block;
+    }
+
+    @include hover-focus {
+      color: $navbar-nav-link-hover-color;
+    }
+  }
+}

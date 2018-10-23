@@ -1,0 +1,27 @@
+footer {
+	padding: $footer-padding-y $footer-padding-x;
+}
+
+.footer-nav {
+  justify-content: center;
+}
+
+.footer-branding {
+	text-align: center;
+}
+
+.footer-branding-brand {
+	@extend .navbar-brand;
+	display: block;
+	margin: 0 auto;
+	max-width: $navbar-logo-width;
+}
+
+.footer-branding-powered-by,
+.footer-branding-copyright {
+	@extend .small;
+}
+
+// .footer-branding-copyright  {
+// 	margin: 10px 0;
+// }

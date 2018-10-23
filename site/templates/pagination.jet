@@ -1,0 +1,7 @@
+{{block pagination(p)}}
+  <div class="pagination">{{if len(p.PreviousURL) > 0}}
+    <a href="{{ p.PreviousURL }}">Prev</a>{{end}}
+    <span>Current Page: {{ p.Index }}</span>{{if len(p.NextURL) > 0}}
+    <a href="{{ p.NextURL }}">Next</a>{{end}}
+  </div>
+{{end}}

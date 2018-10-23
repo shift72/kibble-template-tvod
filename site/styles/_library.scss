@@ -1,0 +1,14 @@
+.s72-userlibrary-items {
+  @extend .page-collection-list-item-wrapper;
+
+  .meta-item {
+    @extend .page-collection-item;
+    @extend .page-collection-item-6;
+    padding-bottom: $grid-gutter-width;
+  }
+}
+
+.s72-userlibrary-empty {
+  text-align: center;
+  flex: 1;
+}

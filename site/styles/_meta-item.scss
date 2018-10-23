@@ -1,0 +1,143 @@
+.meta-item {
+  position: relative;
+
+  a { display: inline-block; }
+
+  .poster s72-image {
+    display: block;
+    height: 100%;
+  }
+}
+
+.meta-item-body {
+  @include stretch();
+
+  z-index: 2;
+  padding: $meta-item-body-padding;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-size: $meta-item-body-font-size;
+  color: $meta-item-body-color;
+
+  &.hover {
+    opacity: 0;
+    transition: opacity $meta-item-hover-time ease;
+    background-color: $meta-item-body-bg;
+
+    // half assed attempt at making each thing inside the hover is aligned nicely.
+    > * {
+      flex: 1 1 0;
+      display: flex;
+    }
+  }
+}
+
+.meta-item-link {
+
+  &:hover {
+    text-decoration: none;
+
+    .meta-item-body.hover {
+      opacity: 1;
+    }
+
+    s72-availability-status,
+    s72-availability-label {
+      display: none;
+    }
+  }
+}
+
+.meta-item-title {
+  font-weight: bold;
+}
+
+.meta-item-text {
+
+  .meta-item-tagline {
+    margin-bottom: 0;
+  }
+}
+
+.meta-item-synopsis {
+  font-size: $small-font-size;
+  overflow: hidden;
+
+  @include media-breakpoint-down(md) {
+    display: none !important;
+  }
+
+  @include media-breakpoint-up(md) {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+
+.meta-item-buttons {
+  margin-top: 5px;
+}
+
+.meta-item-play-btn {
+  padding-right: 0;
+  display: block;
+  margin: 0 auto;
+
+  .s72-icon-play {
+    margin: 0;
+    width: 64px;
+    height: 64px;
+  }
+
+  .verb { display: block; }
+}
+
+.meta-item-caption {
+  color: $meta-item-caption-color;
+  padding-top: $meta-item-caption-padding-y;
+  font-size: $meta-item-caption-font-size;
+
+  .meta-item-tagline { font-size: $small-font-size; }
+}
+
+.featured-meta-item {
+  overflow: hidden;
+  border-radius: $meta-item-border-radius;
+
+  s72-availability-status { top: $meta-item-availability-tag-margin; right: $meta-item-availability-tag-margin; }
+  s72-availability-label  { top: $meta-item-availability-tag-margin; left: $meta-item-availability-tag-margin; }
+
+  s72-image {
+    display: block;
+    width: 100%;
+  }
+
+  .meta-item-title {
+    font-size: $h4-font-size;
+    line-height: $headings-line-height;
+    text-shadow: 1px 1px 2px #000;
+  }
+
+  .meta-item-text {
+    padding-top: 5px;
+  }
+
+  .meta-item-buttons {
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+}
+
+.featured-meta-item-body {
+  top: auto;
+  display: block;
+  @include gradient-y($start-color: transparent, $end-color: rgba(#000, 0.7), $start-percent: 0%, $end-percent: 50%);
+  padding: $featured-meta-item-body-padding;
+
+  @include media-breakpoint-up(md) {
+    padding: $featured-meta-item-body-padding * 2;
+  }
+}

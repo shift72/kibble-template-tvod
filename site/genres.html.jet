@@ -1,0 +1,25 @@
+{{extends "templates/application.jet"}}
+
+{{block body()}}
+  <h2>Genres</h2>
+  <div>
+
+    <div>All Taxonomies</div>
+    {{range keyOrIndex, value := site.Taxonomies }}
+      <div>
+        <h1>Taxonomy: {{ keyOrIndex }}</h1>
+        {{range oi := value.Alphabetical() }}
+          <div>
+            <h2>{{ oi.Key }} - ({{ len(oi.Items) }})</h2>
+            <ul>
+              {{ range item := oi.Items }}
+                <li><a href="{{ routeToSlug(item.Slug) }}">{{ item.Title }}</a></li>
+              {{ end }}
+            </ul>
+          </div>
+        {{end}}
+      </div>
+    {{ end }}
+
+  </div>
+{{end}}

@@ -1,0 +1,49 @@
+.s72-userdevices-header { display: none; }
+
+.s72-userdevices-device-list { @extend .list-group; }
+.s72-userdevices-device { @extend .list-group-item; }
+
+.s72-userdevices-device-type {
+  @extend .h5;
+}
+
+.s72-userdevices-device-description {
+
+}
+
+.s72-userdevices-device-added {
+  @extend .text-muted;
+  @extend .small;
+}
+
+.s72-userdevices-device-actions {
+  text-align: right;
+
+  @include media-breakpoint-up(sm) {
+    position: absolute;
+    right: $list-group-item-padding-x;
+    top: $list-group-item-padding-y;
+  }
+}
+
+.s72-userdevices-device-deleted {
+  opacity: .5;
+  user-select: none;
+}
+
+.s72-userdevices-device-deleted-label {
+  @extend .small;
+  display: inline-block;
+  margin-left: .5em;
+}
+
+.s72-btn-userdevices-confirm,
+.s72-btn-userdevices-delete {
+  @extend .btn-primary;
+  @extend .btn-sm;
+}
+
+.s72-btn-userdevices-cancel {
+  @extend .btn-link;
+  @extend .btn-sm;
+}

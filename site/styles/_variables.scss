@@ -1,0 +1,133 @@
+// This file contains any variables used by the site.
+// These variables should be reasonably generic so that overrides are placed in main.scss.
+
+// Bootstrap variables copied here, that some of the below are dependent on.
+$grid-gutter-width-base: 30px !default;
+
+// An extra XXL breakpoint added to the default set.
+// NOTE(gscragg): I would not advise changing these 2 variables here without consulting me first.
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1600px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  // NOTE(gscragg) this might need to be changed to 1540 if the gutters are fucked with this one
+  xxl: 1570px
+);
+
+// Body / Core
+// ------------------------------------
+$primary:         #00A2FF !default; // BS4 default: #007bff
+$body-bg:         #fff !default; // BS4 default
+$body-color:      #212529 !default; // BS4 default
+
+// Nav
+// ------------------------------------
+
+$navbar-logo-width: 30px; // width of raw logo
+$navbar-logo-width-min: $navbar-logo-width;
+$navbar-brand-padding-y: 15px; // half the height
+
+$navbar-nav-link-padding-x:  1rem;
+$navbar-nav-link-padding-y:  1rem;
+
+$navbar-nav-link-color:         rgba(#000, .5) !default;
+$navbar-nav-link-hover-color:   rgba(#000, .7) !default;
+$navbar-nav-link-active-color:  rgba(#000, .9) !default;
+
+$subnav-background-color: $body-bg !default;
+$subnav-nav-item-background-color: transparent !default;
+$subnav-nav-item-color: $navbar-nav-link-color;
+$subnav-nav-item-hover-background-color: transparent !default;
+$subnav-nav-item-active-background-color: transparent !default;
+$subnav-nav-item-margin-x: 1rem !default;
+$subnav-nav-item-margin-y: .5rem !default;
+$subnav-nav-item-border-radius: 2rem !default;
+
+// Footer
+// ------------------------------------
+
+$footer-padding-x: 0 !default;
+$footer-padding-y: 40px !default;
+
+// Meta Items
+// ------------------------------------
+$meta-item-border-radius: 3px;
+
+$meta-item-body-padding: 15px;
+$meta-item-body-color: #fff;
+$meta-item-body-bg: rgba(0,0,0,0.8) !default;
+$meta-item-body-font-size: 1rem !default;
+
+$meta-item-caption-color: $body-color !default;
+$meta-item-caption-font-size: 1rem !default;
+$meta-item-caption-padding-y: .5rem !default;
+
+$meta-item-hover-time: .25s !default;
+
+$meta-item-tagline-classification-border-radius: $meta-item-border-radius;
+
+$meta-item-availability-tag-margin: 5px;
+
+$featured-meta-item-body-padding: 10px;
+
+
+// Posters
+// ------------------------------------
+
+$poster-portrait-width: 282px !default;
+$poster-portrait-height: 422px !default;
+$poster-landscape-width: 585px !default;
+$poster-landscape-height: 330px !default;
+$poster-carousel-width: 1600px !default;
+$poster-carousel-height: 600px !default;
+
+$poster-landscape-size-ratio: ($poster-landscape-height / $poster-landscape-width);
+$poster-portrait-size-ratio: ($poster-portrait-height / $poster-portrait-width);
+$poster-carousel-size-ratio: ($poster-carousel-height / $poster-carousel-width);
+
+$poster-border-radius: $meta-item-border-radius !default;
+
+// Sliders
+// ------------------------------------
+
+$slider-control-width: 50px !default;
+$slider-control-height: 50px !default;
+$slider-control-color: #fff !default;
+$slider-control-icon-size: 32px !default;
+$slider-control-bg: $primary !default;
+$slider-control-border: $slider-control-bg !default;
+$slider-control-hover-bg: darken($primary, 7.5%) !default;
+
+$slider-container-width: 1140px !default; // base value that item widths are calculated off
+$slider-item-gutter-width: 10px !default; //bs4 grid-gutter-width is wider than we like
+
+// Page Collections
+// ------------------------------------
+
+$page-collection-container-width: $slider-container-width !default;
+$page-collection-item-gutter-width: $slider-item-gutter-width !default;
+
+$page-collection-title-font-size: 1.5rem !default;
+$page-collection-title-padding-y: 20px !default;
+
+// Icons
+// ------------------------------------
+
+$icon-play-size: 32px !default;
+$icon-play-color: #fff !default;
+$icon-play-bg: rgba(#000, 0.5) !default;
+$icon-play-hover-color: #fff !default;
+$icon-play-hover-bg: rgba(#fff, 0.5) !default;
+
+// Modals
+// ------------------------------------

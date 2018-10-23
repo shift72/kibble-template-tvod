@@ -1,0 +1,29 @@
+// These icons mostly build off fontawesome
+// to help with common UX class combinations.
+//--------------------------------------------------
+
+.icon-navbar-toggler {
+  @extend .fa;
+  @extend .fa-bars;
+}
+
+.icon-loading {
+  @extend .fa;
+  @extend .fa-spinner;
+  @extend .fa-spin;
+}
+
+.icon-errored {
+  @extend .fa;
+  @extend .fa-exclamation-circle;
+}
+
+.icon-warning {
+ @extend .fa;
+ @extend .fa-warning;
+}
+
+.icon-search {
+ @extend .fa;
+ @extend .fa-search;
+}

@@ -1,0 +1,40 @@
+
+s72-signin-form,
+s72-signup-form,
+s72-forgotpassword-form,
+s72-resetpassword-form,
+s72-useraccount-form,
+s72-activatedevice-form {
+  display: block;
+  max-width: 400px;
+  width: 100%;
+}
+
+.s72-account-password-form-group .s72-control-inputs {
+  display: flex;
+
+  .s72-form-control-static { flex: 1; }
+}
+
+.s72-combined-auth {
+
+  @include media-breakpoint-up(sm){
+
+    .s72-form-group-password,
+    .s72-form-group-password2 {
+      float: left;
+      width: 50%;
+    }
+
+    .s72-form-group-password { padding-right: $grid-gutter-width / 2; }
+    .s72-form-group-password2 { padding-left: $grid-gutter-width / 2; }
+
+    clear: left;
+  }
+}
+
+.form-block {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+}

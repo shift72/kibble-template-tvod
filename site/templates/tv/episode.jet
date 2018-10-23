@@ -1,0 +1,21 @@
+{{block episodeCollectionItem(item)}}
+<div class="episode-poster poster poster-landscape">
+  <s72-availability-status data-slug="{{item.Slug}}"></s72-availability-status>
+  <s72-play-button data-slug="{{item.Slug}}" data-title="{{item.Title}}" data-label="false" class="btn-play-poster"></s72-play-button>
+  <s72-image src="{{item.Images.Landscape}}" alt="{{item.Title}}" class="poster-image poster-image-landscape" border="0"></s72-image>
+</div>
+
+<div class="episode-caption">
+  <div class="episode-title" title="{{item.Title}}">{{item.Title}}</div>
+  <div class="episode-overview">{{item.Overview}}</div>
+
+  {{if item.Runtime > 0 }}
+    <div class="episode-runtime">
+      {{if item.Runtime.Hours() > 0}}
+        {{item.Runtime.Hours()}}{{i18n("runtime_hours")}}
+      {{end}}
+      {{item.Runtime.Minutes()}}{{i18n("runtime_minutes")}}
+    </div>
+  {{end}}
+</div>
+{{end}}

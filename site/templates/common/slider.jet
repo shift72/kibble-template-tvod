@@ -1,0 +1,14 @@
+{{block slider(itemsPerRow, itemLayout, fluid=false)}}
+  <div class="slider slider-{{itemsPerRow}} slider-{{itemLayout}} {{fluid ? "slider-fluid" : ""}}">
+    <s72-slider data-items-per-page="{{itemsPerRow}}" data-item-layout="{{itemLayout}}" class="{{fluid ? "s72-slider-fluid" : ""}}">
+      <div class="s72-slider-container-container">
+        <div class="s72-slider-container">
+          <div class="s72-slider-item-wrapper">
+            {{yield content}}
+          </div>
+        </div>
+      </div>
+    </s72-slider>
+  </div>
+
+{{end}}

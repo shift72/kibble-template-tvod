@@ -1,0 +1,12 @@
+{{extends "../application.jet"}}
+
+{{block body()}}
+  <h2>Collection - Index</h2>
+
+  {{range collections}}
+    <p>
+      {{ .Title }} - {{ .Slug }} - {{ routeToSlug(.Slug) }}
+    </p>
+  {{end}}
+
+{{end}}

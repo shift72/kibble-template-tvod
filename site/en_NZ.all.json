@@ -1,0 +1,159 @@
+{
+  "settings_title": { "other": "Settings" },
+  "en": { "other": "English" },
+  "fr": { "other": "French" },
+  "seasons":{
+    "one": "one season",
+    "other": "{{.Count}} seasons"
+  },
+  "tvseason": {
+    "other": "{{.ShowInfo.Title}} Seasón {{.Season.SeasonNumber}}"
+  },
+  "tvseason_title_html": {
+    "other": "{{.ShowInfo.Title}} <small>Seasón {{.Season.SeasonNumber}}</small>"
+  },
+  "episode_count": {
+    "one": "1 Episode",
+    "other": "{{.Count}} Episodes"
+  },
+  "nav_signin": { "other": "Sign In" },
+  "nav_signup": { "other": "Create an Account" },
+  "nav_signed_in_as": { "other": "Signed in as" },
+  "nav_library": { "other": "My Library" },
+  "nav_subscriptions": { "other": "My Subscriptions" },
+  "nav_devices": { "other": "My Devices" },
+  "nav_account": { "other": "My Account" },
+  "nav_signout": { "other": "Sign Out" },
+
+  "nav_branding_title": { "other": "Shift72 AVOD" },
+  "footer_branding_copyright": { "other": "Shift72 - All Rights Reserved." },
+
+  "play_trailer": { "other": "Watch Trailer" },
+  "runtime_hours": { "other": "h" },
+  "runtime_minutes": { "other": "m" },
+
+  "modal_cancel": { "other": "Cancel" },
+
+  "datetime_next": { "other": "this {{.Date}}" },
+
+  "search_control_placeholder": { "other": "Search" },
+
+  "play_button_watch": { "other": "Watch Now"},
+
+  "homepage_header": { "other" : "Featured"},
+  "page_collection_see_all": { "other" : "See All"},
+
+  "signup_page_header": { "other": "Create an Account" },
+  "signup_form_name": { "other": "Name" },
+  "signup_form_email": { "other": "Email address" },
+  "signup_form_password": { "other": "Password" },
+  "signup_form_password_confirmation": { "other": "Confirm your password" },
+  "signup_form_submit": { "other": "Submit" },
+
+  "signin_page_header": { "other": "Sign In" },
+  "signin_form_email": { "other": "Email address" },
+  "signin_form_password": { "other": "Password" },
+  "signin_form_remember": { "other": "Remember me" },
+  "signin_form_submit": { "other": "Submit" },
+  "signin_page_forgotpassword": { "other": "Forgotten your password?" },
+  "signup_form_error_email_already_in_use": { "other": "That email address is already in use." },
+  "signin_form_error_incorrect_credentials": { "other": "The username or password is incorrect." },
+
+  "combined_auth_continue": { "other": "Continue" },
+  "combined_auth_change": { "other": "change" },
+  "combined_auth_signin": { "other": "Sign in" },
+  "combined_auth_signup": { "other": "Create account" },
+  "combined_auth_signin_password": { "other": "Please enter your password to sign in to your account." },
+  "combined_auth_signin_error_incorrect_credentials": { "other": "That password is incorrect." },
+
+  "forgotpassword_page_header": { "other": "Reset your Password" },
+  "forgotpassword_form_email": { "other": "Email address" },
+  "forgotpassword_form_submit": { "other": "Reset" },
+  "forgotpassword_form_error_email_doesnt_exist": { "other": "An account matching that email address does not exist." },
+  "forgotpassword_complete": { "other": "Thank you. A password reset email should appear in your inbox shortly." },
+
+  "resetpassword_page_header": { "other": "Change your Password" },
+  "resetpassword_form_invalid_reset_password_token": { "other": "It appears as if this reset password request is invalid, please fill out the <a href=\"{{.URL}}\">Forgot Password</a> form again." },
+  "resetpassword_form_password": { "other": "New password" },
+  "resetpassword_form_password2": { "other": "Confirm your new password" },
+  "resetpassword_form_submit": { "other": "Change" },
+  "resetpassword_complete": { "other": "Thank you. Your password has been changed, and you have been signed in." },
+  "resetpassword_form_error_invalid_reset_password_token": { "other": "The reset password request is invalid. Please try again later." },
+
+  "account_page_header": { "other": "My Account" },
+  "account_form_name": { "other": "Name" },
+  "account_form_email": { "other": "Email address" },
+  "account_form_password": { "other": "Password" },
+  "account_form_change_password": { "other": "Change" },
+  "account_form_submit": { "other": "Update" },
+  "account_form_submitted": { "other": "Updated" },
+  "account_form_password_changed": { "other": "Updated" },
+  "account_form_error_incorrect_password": { "other": "That password is incorrect." },
+
+  "passwordconfirmation_modal_header": { "other": "Confirm your password" },
+  "passwordconfirmation_modal_label": { "other": "Please enter your password in order to update your changes" },
+  "passwordconfirmation_modal_confirm": { "other": "Confirm" },
+
+  "changepassword_modal_header": { "other": "Change your password" },
+  "changepassword_modal_currentpassword": { "other": "Your current password" },
+  "changepassword_modal_password": { "other": "Your new password" },
+  "changepassword_modal_password2": { "other": "Confirm your new password" },
+  "changepassword_modal_submit": { "other": "Update" },
+  "changepassword_modal_error_incorrect_password": { "other": "That password is incorrect." },
+
+  "userlibrary_page_header": { "other": "My Library" },
+  "userlibrary_empty_header":  { "other": "Your library is empty." },
+  "userlibrary_empty_content": { "other": "Fill it by <a href=\"/\">browsing</a> our great selection." },
+
+  "activatedevice_page_header": { "other": "Activate Device" },
+  "activatedevice_page_content": { "other": "Follow the instructions on your device to get a PIN code. Your computer and device must both be connected to the internet to activate." },
+  "activatedevice_form_pin": { "other": "PIN Code" },
+  "activatedevice_form_submit": { "other": "Activate" },
+  "activatedevice_form_error_invalid_code": { "other": "PIN Code not found, please try again." },
+  "activatedevice_form_error_pin_not_found": { "other": "PIN Code not found, please try again." },
+  "activatedevice_signin_prompt": { "other": "Please sign in before activating your device." },
+  "activatedevice_page_activated": { "other": "Thank you for activating {{.DeviceName}}. You should now be able to browse your library on your television or device." },
+
+  "userdevices_page_header": { "other": "Devices" },
+  "userdevices_page_content": {
+    "one": "Devices will be automatically added here when you use them. You are limited to only one device.",
+    "other": "Devices will be automatically added here when you use them. You are limited to {{.Count}} devices."
+  },
+  "userdevices_empty_content": { "other": "You currently have 0 registered devices." },
+  "userdevices_header_type": { "other": "Device Type" },
+  "userdevices_header_description": { "other": "Description" },
+  "userdevices_device_added": { "other": "Added {{.Date}}" },
+  "userdevices_device_actions_delete": { "other": "Remove" },
+  "userdevices_device_actions_cancel": { "other": "Cancel" },
+  "userdevices_device_actions_confirm": { "other": "Yes, remove device" },
+  "userdevices_device_deleted": { "other": "(Removed)" },
+
+  "searchresults_page_header": { "other": "Search Results" },
+  "searchresults_load_more": { "other": "Load {{.Count}} more" },
+  "searchresults_total": {
+    "one": "Found 1 result for \"{{.Query}}\".",
+    "other": "Found {{.Count}} results for \"{{.Query}}\"."
+  },
+  "searchresults_empty_header":  { "other": "There were no search results for \"{{.Query}}\"" },
+  "searchresults_empty_content": { "other": "Try another search or <a href=\"/\">browse our content</a> to find what you're looking for." },
+
+  "404_page_header": { "other": "That Page Doesn't Exist" },
+  "404_page_content": { "other": "<p>Sorry, it looks like the page that you're looking for doesn't exist.</p><p>It could have been moved or deleted, or perhaps you misspelled something.</p><p>Try going back to the homepage to find what you were looking for.</p><p><a href=\"/\">Back to the Homepage</a></p>" },
+
+  "validation_name_required": { "other": "Please enter your name." },
+  "validation_email_required": { "other": "Please enter your email address." },
+  "validation_email_email": { "other": "Please enter a valid email address." },
+  "validation_currentpassword_required": { "other": "Please enter your current password." },
+  "validation_password_required": { "other": "Please enter a password." },
+  "validation_password2_required": { "other": "Please confirm your password." },
+  "validation_password2_match": { "other": "Your passwords do not match." },
+  "validation_password_minlength": { "other": "Please enter at least {{.Count}} characters." },
+  "validation_promocode_required": { "other": "Please enter a promo code." },
+  "validation_pincode_required": { "other": "Please enter a PIN code." },
+
+  "meta_detail_cast_title": { "other": "Cast" },
+  "meta_detail_crew_title": { "other": "Crew" },
+  "meta_detail_episodes_title": { "other": "Episodes" },
+  "meta_detail_bonus_title": { "other": "Bonus Content" },
+  "meta_detail_recommendations_title": { "other": "You may also like" }
+}

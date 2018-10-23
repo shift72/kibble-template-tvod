@@ -1,0 +1,24 @@
+.meta-item-tagline {
+  @extend .list-inline;
+
+  .meta-item-tagline-item,
+  .meta-item-tagline-divider {
+    @extend .list-inline-item;
+
+    &:not(:last-child) {
+      margin-right: map-get($spacers, 1); // Currently 0.25rem
+    }
+  }
+}
+
+.meta-item-classification {
+  border-radius: $meta-item-tagline-classification-border-radius;
+  padding: 0 5px 1px 5px;
+  font-weight: 800;
+  display: inline-block;
+}
+
+.meta-item-classification-mature {
+  background-color: #FDFF5C;
+  color: #000;
+}

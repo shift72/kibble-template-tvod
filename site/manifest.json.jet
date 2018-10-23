@@ -1,0 +1,15 @@
+{
+  "short_name": "Screen Plus",
+  "name": "Screen Plus",
+  "icons": [
+    {
+      "src": "/images/common/icons-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#222",
+  "display": "standalone",
+  "theme_color": "#222"
+}

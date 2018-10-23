@@ -1,0 +1,99 @@
+.s72-shopping-modal {
+  font-family: $font-family-base;
+
+  .s72-buttons {
+    text-align: right;
+  }
+}
+
+.s72-price-line {
+  margin-bottom: $modal-inner-padding;
+
+  &:last-child { margin-bottom: 0; }
+}
+
+.s72-price-title {
+  font-weight: $font-weight-bold;
+}
+
+.s72-price {
+  font-weight: $font-weight-bold;
+  text-align: right;
+
+  s {
+    font-size: 90%;
+    font-weight: normal;
+    margin-right: .5em;
+  }
+}
+
+.s72-price-discount {
+  font-size: 90%;
+}
+
+.s72-shopping-thinking {
+  text-align: center;
+  font-size: 4rem;
+}
+
+.s72-shopping-error {
+  @extend .alert;
+  @extend .alert-danger;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.s72-shopping-modal-header-title {
+  padding-left: $modal-inner-padding;
+
+  h4, p { margin-bottom: 0; }
+
+  .s72-btn-close:disabled {
+    opacity: .15;
+  }
+}
+
+.s72-shopping-modal-header-image {
+  @extend .poster;
+}
+
+.s72-shopping-item-info {
+  @extend .small;
+}
+
+.s72-shopping-info-meta {
+  margin-bottom: 0;
+  padding-left: $modal-inner-padding;
+}
+
+.s72-shopping-info-credit {
+  @extend .list-unstyled;
+  margin-bottom: 0;
+}
+
+.s72-shopping-modal-promo-code {
+  width: 100%;
+}
+
+.s72-shopping-modal-promo-code-check {
+  font-size: 90%;
+}
+
+.s72-shopping-modal-promo-code-form {
+  @extend .form-inline;
+  margin-top: .5rem;
+
+  .s72-form-group {
+    flex: 1;
+    padding-right: $modal-inner-padding;
+  }
+
+  .s72-control-inputs,
+  .s72-form-control { width: 100%; }
+
+  .s72-buttons { align-self: start; }
+}
+
+.StripeElement--invalid {
+  color: $form-feedback-invalid-color;
+}

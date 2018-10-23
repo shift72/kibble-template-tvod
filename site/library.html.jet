@@ -1,0 +1,17 @@
+{{extends "templates/application.jet"}}
+
+{{block head()}}
+  {{yield seo(title=i18n("userlibrary_page_header"), index=false)}}
+{{end}}
+
+{{block body()}}
+<div class="container page">
+
+  <div class="page-header text-center">
+    <h2>{{ i18n("userlibrary_page_header") }}</h2>
+  </div>
+
+  <s72-userlibrary signin-url="/signin.html" partials-base-path="/partials" />
+
+</div>
+{{end}}

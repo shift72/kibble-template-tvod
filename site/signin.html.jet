@@ -1,0 +1,22 @@
+{{extends "templates/application.jet"}}
+
+{{block head()}}
+  {{yield seo(title=i18n("signin_page_header"), index=false)}}
+{{end}}
+
+{{block body()}}
+  <div class="page form-page usersignin-page">
+
+    <div class="container">
+      <div class="page-header form-page-header">
+        <h1 class="page-title form-page-title">{{ i18n("signin_page_header") }}</h1>
+        <p><a href="/forgotpassword.html">{{ i18n("signin_page_forgotpassword")}}</a></p>
+      </div>
+
+      <div class="page-content form-page-content">
+        <s72-signin-form />
+      </div>
+    </div>
+
+  </div>
+{{end}}

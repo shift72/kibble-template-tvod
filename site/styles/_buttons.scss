@@ -1,0 +1,42 @@
+.btn {
+
+  font-family: $font-family-base;
+
+}
+
+.btn-signin {
+  @extend .btn-secondary;
+}
+
+.btn-signup {
+  @extend .btn-primary;
+}
+
+.btn-play-square {
+
+  text-align: center;
+  padding-right: 0;
+
+  .verb { display: block; }
+  .s72-icon-play { margin: 0 auto; }
+}
+
+.btn-play-square-lg {
+  @extend .btn-play-square;
+
+  .s72-icon-play {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.btn-play-poster {
+  @extend .btn-play-square;
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2; // .poster[z-index] + 1
+  top: 0;
+  left: 0;
+}

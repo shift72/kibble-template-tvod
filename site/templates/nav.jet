@@ -1,0 +1,55 @@
+{{block nav()}}
+  <nav class="navbar navbar-expand-md">
+    <a class="navbar-brand" href="/">{{i18n("nav_branding_title")}}</a>
+    <button class="navbar-toggler" type="button" s72-collapse=".collapse" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="icon-navbar-toggler"></span>
+    </button>
+
+    <div class="collapse navbar-collapse">
+      <div class="navbar-nav mr-auto" id="main-navbar">
+        {{range site.Navigation.Header}}
+          {{if len(.Items) > 0}}
+            <s72-dropdown class="nav-item">
+              <a class="s72-dropdown-toggle nav-link" href="{{ len(.Link.ExternalURL) > 0 ? .Link.ExternalURL : len(.Items) == 0 ? routeToSlug(.Link.Slug) : "#" }}">{{ .Label }}</a>
+              <div class="s72-dropdown-menu">
+                {{range sub := .Items}}
+                  <a class="dropdown-item" href="{{ len(sub.Link.ExternalURL) > 0 ? sub.Link.ExternalURL : routeToSlug(sub.Link.Slug) }}">{{ sub.Label }}</a>
+                {{end}}
+              </div>
+            </s72-dropdown>
+          {{else}}
+            <div class="nav-item {{len(.Link.ExternalURL) == 0 && routeToSlug(.Link.Slug) == currentUrlPath ? "active" : ""}}">
+              <a class="nav-link" href="{{ len(.Link.ExternalURL) > 0 ? .Link.ExternalURL : routeToSlug(.Link.Slug) }}">{{ .Label }}</a>
+            </div>
+          {{end}}
+        {{end}}
+      </div>
+
+      <div class="navbar-nav">
+        <a href="/search.html" class="btn-navbar-search">
+          <i class="icon-search"></i>
+          <span class="navbar-search-label">{{i18n("search_control_placeholder")}}</span>
+        </a>
+
+        <s72-user-anon>
+          <a class="btn btn-signin" href="/signin.html">{{i18n("nav_signin")}}</a>
+          {{if config("disable_user_signups") != "true"}}
+            <a class="btn btn-signup" href="/signup.html">{{i18n("nav_signup")}}</a>
+          {{end}}
+        </s72-user-anon>
+
+        <s72-user-known>
+          <s72-dropdown class="navbar-nav-user-nav">
+            <a href="#" class="s72-btn s72-dropdown-toggle">{{i18n("nav_signed_in_as")}} <s72-username></s72-username></a>
+            <div class="s72-dropdown-menu s72-dropdown-menu-right">
+              <a class="s72-dropdown-item" href="/devices.html">{{i18n("nav_devices")}}</a>
+              <a class="s72-dropdown-item" href="/subscriptions.html">{{i18n("nav_subscriptions")}}</a>
+              <a class="s72-dropdown-item" href="/account.html">{{i18n("nav_account")}}</a>
+              <s72-sign-out class="s72-dropdown-item">{{i18n("nav_signout")}}</s72-sign-out>
+            </div>
+          </s72-dropdown>
+        </s72-user-known>
+      </div>
+    </div>
+  </nav>
+{{end}}

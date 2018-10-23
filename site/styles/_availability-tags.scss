@@ -1,0 +1,23 @@
+s72-availability-status,
+s72-availability-label {
+  position: absolute;
+  z-index: 2;
+}
+
+.availability-bg {
+  padding: $btn-padding-y-sm $btn-padding-x-sm;
+  background: rgba(0,0,0,0.5);
+  border-radius: $meta-item-border-radius;
+}
+
+.availability-bg,
+.availability-state {
+
+}
+
+.availability-state {
+  font-size: 10px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+}

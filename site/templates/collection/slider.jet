@@ -1,0 +1,23 @@
+{{import "./page_collection_item.jet"}}
+{{import "../common/slider.jet"}}
+
+{{block pageCollectionSlider()}}
+  {{if len(.Items) > 0}}
+  <div class="page-collection page-collection-slider page-collection-slider-{{.ItemsPerRow}} page-collection-slider-{{.ItemLayout}}">
+
+    <div class="page-collection-header">
+    	<h3 class="page-collection-title">{{.DisplayName}}</h3>
+    	{*<a href="{{routeToSlug(.Slug)}}">{{i18n("page_collection_see_all")}}</a>*}
+    </div>
+
+    {{yield slider(itemsPerRow=.ItemsPerRow, itemLayout=.ItemLayout, fluid=true) content}}
+      {{range item := .Items}}
+        <div class="page-collection-item page-collection-slider-item page-collection-slider-item-{{.ItemLayout}} page-collection-item-{{.ItemLayout}} page-collection-slider-item-{{.ItemsPerRow}} page-collection-item-{{.ItemsPerRow}}">
+          {{yield pageCollectionItem(item=item, layout=.ItemLayout)}}
+        </div>
+      {{end}}
+    {{end}}
+
+  </div>
+  {{end}}
+{{end}}

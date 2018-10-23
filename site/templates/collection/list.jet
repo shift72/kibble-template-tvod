@@ -1,0 +1,23 @@
+{{import "./page_collection_item.jet"}}
+
+{{block pageCollectionList()}}
+{{if len(.Items) > 0}}
+<div class="page-collection page-collection-list page-collection-list-{{.ItemsPerRow}} page-collection-list-{{.ItemLayout}}">
+
+  <div class="page-collection-header">
+    <h3 class="page-collection-title">{{.DisplayName}}</h3>
+  </div>
+
+  <div class="page-collection-list-container">
+    <div class="page-collection-list-item-wrapper">
+      {{range item := .Items}}
+        <div class="page-collection-item page-collection-list-item page-collection-list-item-{{.ItemLayout}} page-collection-item-{{.ItemLayout}} page-collection-list-item-{{.ItemsPerRow}} page-collection-item-{{.ItemsPerRow}}">
+          {{yield pageCollectionItem(item=item, layout=.ItemLayout)}}
+        </div>
+      {{end}}
+    </div>
+  </div>
+
+</div>
+{{end}}
+{{end}}

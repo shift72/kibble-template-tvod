@@ -1,0 +1,136 @@
+{{extends "../application.jet"}}
+{{import "../common/slider.jet"}}
+{{import "../items/tagline.jet"}}
+{{import "../items/meta_item.jet"}}
+
+{{block head()}}
+  {{yield seo() film}}
+{{end}}
+
+{* Hide Sub nav on this page *}
+{{block navigation()}}
+  {{yield nav(showSubNav=false)}}
+{{end}}
+
+{{block body()}}
+  <div class="page page-film meta-detail meta-detail-film">
+
+    <div class="meta-detail-bg">
+      <div class="meta-detail-bg-gradient"></div>
+      <s72-image src="{{film.Images.Background}}" class="meta-detail-bg-img"></s72-image>
+    </div>
+
+    <div class="container">
+      <s72-availability-status data-slug="{{film.Slug}}" class="meta-detail-availability-status"></s72-availability-status>
+      <s72-availability-label data-slug="{{film.Slug}}" class="meta-detail-availability-label"></s72-availability-label>
+
+      <div class="meta-detail-watch-buttons">
+        {{if len(film.Trailers) > 0 }}
+          <s72-cant-be-watched data-slug="{{film.Slug}}">
+            <s72-modal-player src="{{film.Trailers[0].URL}}" class="btn-play-square-lg" data-label="{{i18n("play_trailer")}}" autoplay="querystring"></s72-modal-player>
+          </s72-cant-be-watched>
+        {{end}}
+        <s72-play-button data-slug="{{film.Slug}}" class="btn-play-square-lg" data-title="{{film.Title}}"></s72-play-button>
+      </div>
+
+      <div class="meta-detail-main">
+
+        <div class="meta-detail-panel">
+          <div class="poster poster-portrait">
+            <s72-availability-status data-slug="{{film.Slug}}"></s72-availability-status>
+            <s72-availability-label data-slug="{{film.Slug}}"></s72-availability-label>
+            <s72-image src="{{film.Images.Portrait}}" alt="{{film.Title}}" class="poster poster-image poster-image-portrait"></s72-image>
+          </div>
+        </div>
+
+        <div class="meta-detail-content">
+          <h1 class="meta-detail-title">{{ film.Title }} <small>({{film.ReleaseDate.Year()}})</small></h1>
+          <div class="meta-detail-tagline">
+            {{yield metaItemTagline() film}}
+          </div>
+
+          {{if len(film.Trailers) > 0 }}
+            <div class="meta-detail-buttons">
+              <s72-can-be-watched data-slug="{{film.Slug}}">
+                <s72-modal-player src="{{film.Trailers[0].URL}}" data-label="{{i18n("play_trailer")}}"></s72-modal-player>
+              </s72-can-be-watched>
+            </div>
+          {{end}}
+
+          <div class="meta-detail-synopsis">{{film.Overview | raw}}</div>
+
+          {{if len(film.Cast) > 0}}
+            <div class="meta-detail-cast">
+              <h3>{{i18n("meta_detail_cast_title")}}</h3>
+              <div class="cast-members">
+                {{range index, member := film.Cast}}
+                  {{member.Name}}{{if index < len(film.Cast) - 1}}, {{end}}
+                {{end}}
+              </div>
+            </div>
+          {{end}}
+
+          {{if len(film.Crew) > 0}}
+            <div class="meta-detail-crew">
+              <h3>{{i18n("meta_detail_crew_title")}}</h3>
+              <div class="crew-members">
+                {{range index, member := film.Crew}}
+                  <div class="crew-member">
+                    <span class="crew-member-job">{{member.Job}}</span>
+                    <span class="crew-member-name">{{member.Name}}</span>
+                  </div>
+                {{end}}
+              </div>
+            </div>
+          {{end}}
+
+          {{if len(film.Bonuses) > 0 }}
+            <div class="meta-detail-bonus-content">
+              <h3>{{i18n("meta_detail_bonus_title")}}</h4>
+              {{yield slider(itemsPerRow=6, itemLayout="landscape") content}}
+                {{range bonus := film.Bonuses}}
+                  <div class="slider-item slider-item-6">
+                    <div class="bonus-content">
+                      <div class="bonus-content-poster poster poster-landscape">
+                        <s72-availability-status slug="{{bonus.Slug}}"></s72-availability-status>
+                        <s72-image src="{{len(bonus.Images.Landscape) > 0 ? bonus.Images.Landscape : film.Images.Landscape}}" alt="" class="poster-image poster-image-landscape"></s72-image>
+                        <s72-play-button data-slug="{{bonus.Slug}}" class="btn-play-poster" data-label="false" title="{{bonus.Title}}"></s72-play-button>
+                      </div>
+                      <div class="bonus-content-caption">
+                        <div class="bonus-content-title">{{bonus.Title}}</div>
+                        <div class="bonus-content-synopsis">{{bonus.Overview | raw}}</div>
+
+                        {{if bonus.Runtime > 0}}
+                          <div class="bonus-content-runtime">
+                            {{if bonus.Runtime.Hours() > 0}}
+                              {{bonus.Runtime.Hours()}}{{i18n("runtime_hours")}}
+                            {{end}}
+                            {{bonus.Runtime.Minutes()}}{{i18n("runtime_minutes")}}
+                          </div>
+                        {{end}}
+                      </div>
+                    </div>
+                  </div>
+                {{end}}
+              {{end}}
+            </div>
+          {{end}}
+
+          {{if len(film.Recommendations) > 0 }}
+            <div class="meta-detail-recommendations">
+              <h3>{{i18n("meta_detail_recommendations_title")}}</h4>
+              {{yield slider(itemsPerRow=6, itemLayout="portrait") content}}
+                {{range item := film.Recommendations}}
+                  <div class="slider-item slider-item-6">
+                    {{yield metaItem(item=item, layout="portrait")}}
+                  </div>
+                {{end}}
+              {{end}}
+            </div>
+          {{end}}
+
+        </div>
+      </div>
+    </div>
+  </div>
+{{end}}

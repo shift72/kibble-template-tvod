@@ -1,0 +1,51 @@
+{{block seo(title="", index=true)}}
+
+  {{seoTitle := config("seo_title_prefix") + " " + title + " " + config("seo_title_suffix")}}
+
+  {{if isset(.Seo) && len(.Seo.Title) > 0}}
+    {{seoTitle = .Seo.Title}}
+  {{else if isset(.Title) && len(.Title) > 0}}
+    {{seoTitle = config("seo_title_prefix") + " " + .Title + " " + config("seo_title_suffix")}}
+  {{end}}
+
+  <title>{{seoTitle}}</title>
+  <meta property="og:title" content="{{seoTitle}}">
+  <meta property="og:url" content="{{site.SiteConfig.SiteURL}}{{currentUrlPath}}">
+
+  {{if isset(.Seo) && len(.Seo.SiteName) > 0}}
+    <meta property="og:site_name" content="{{.Seo.SiteName}}">
+  {{end}}
+
+  {{if isset(.Seo) && len(.Seo.Image) > 0}}
+    <meta property="og:image" content="{{.Seo.Image}}">
+  {{end}}
+
+  {{if isset(.GetGenericItem)}}
+    {{if .GetGenericItem().ItemType == "film"}}
+      <meta property="og:type" content="video.movie">
+    {{else if .GetGenericItem().ItemType == "tvseason"}}
+      <meta property="og:type" content="video.tv_show">
+    {{end}}
+  {{end}}
+
+  {{if isset(.Seo) && isset(.Seo.VideoURL)}}
+    <meta property="og:video" content="{{.Seo.VideoURL}}">
+    {* Hardcoded values because we dont have the relevant information about trailers *}
+    <meta property="og:video:width" content="640" />
+    <meta property="og:video:height" content="426" />
+    <meta property="og:video:type" content="video/mp4" />
+  {{end}}
+
+  {{if isset(.Seo) && len(.Seo.Description) > 0}}
+    <meta name="description" content="{{.Seo.Description}}">
+    <meta property="og:description" content="{{.Seo.Description}}">
+  {{end}}
+
+  {{if isset(.Seo) && len(.Seo.Keywords) > 0}}
+    <meta name="keywords" content="{{.Seo.Keywords}}">
+  {{end}}
+
+  {{if !index}}
+    <meta name="robots" content="noindex, nofollow">
+  {{end}}
+{{end}}

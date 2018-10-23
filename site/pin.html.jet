@@ -1,0 +1,22 @@
+{{extends "templates/application.jet"}}
+
+{{block head()}}
+  {{yield seo(title=i18n("activatedevice_page_header"))}}
+{{end}}
+
+{{block body()}}
+  <div class="page form-page activatedevice-page">
+
+    <div class="container">
+      <div class="page-header form-page-header">
+        <h1 class="page-title form-page-title">{{ i18n("activatedevice_page_header") }}</h1>
+      </div>
+
+      <div class="page-content form-page-content">
+        <p>{{i18n("activatedevice_page_content")}}</p>
+        <s72-activatedevice-form code-param="code" signin-url="/signin.html"></s72-activatedevice-form>
+      </div>
+    </div>
+
+  </div>
+{{end}}

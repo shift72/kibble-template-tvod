@@ -1,0 +1,54 @@
+{{import "tagline.jet"}}
+
+{{block metaItem(item, layout="landscape")}}
+
+  {{isPage := hasPrefix(item.Slug, "/page/")}}
+  {{isExternalPage := isPage && item.InnerItem.PageType != "external"}}
+  {{isCollection := hasPrefix(item.Slug, "/collection/")}}
+  {{imageUrl := ""}}
+
+  {{if layout == "portrait" && isset(item.Images["Portrait"])}}
+    {{imageUrl = item.Images.Portrait}}
+  {{else if layout == "landscape" && isset(item.Images["Landscape"])}}
+    {{imageUrl = item.Images.Landscape}}
+  {{end}}
+
+  {{if len(imageUrl) == 0 && isPage}}
+    {{imageUrl = layout == "portrait" ? "/images/missing/page-portrait.png" : "/images/missing/page-landscape.png"}}
+  {{else if len(imageUrl) == 0 && isCollection}}
+    {{imageUrl = layout == "portrait" ? "/images/missing/collection-portrait.png" : "/images/missing/collection-landscape.png"}}
+  {{end}}
+
+  <div class="meta-item meta-item-{{layout|lower}}">
+    <a href="{{routeToSlug(item.Slug)}}" target="{{isExternalPage ? "_blank" : ""}}" class="meta-item-link">
+      <div class="poster poster-{{layout}}">
+        <s72-availability-status data-slug="{{item.Slug}}"></s72-availability-status>
+        <s72-availability-label data-slug="{{item.Slug}}"></s72-availability-label>
+
+        <s72-image src="{{imageUrl}}" alt="{{item.GetTranslatedTitle(i18n, "")}}" class="poster-image poster-image-{{layout}}" border="0"></s72-image>
+
+        {{if !isExternalPage}}
+          <div class="meta-item-body hover">
+
+            <s72-play-button data-slug="{{item.Slug}}" data-title="{{item.GetTranslatedTitle(i18n, "")}}" class="meta-item-play-btn"></s72-play-button>
+
+            {{if isset(item.InnerItem["Tagline"])}}
+              <div class="meta-item-synopsis">{{item.InnerItem.Tagline}}</div>
+            {{end}}
+
+            {{if isset(item["Trailers"]) && len(item.Trailers) > 0}}
+              <div class="buttons">
+                <s72-trailer-button data-slug="{{item.Slug}}" data-url="{{item.Trailers}}" data-use-tooltip="{{(layout == "landscape") ? true : false}}" button-class="btn-sm"></s72-trailer-button>
+              </div>
+            {{end}}
+          </div>
+        {{end}}
+      </div>
+
+      <div class="meta-item-caption">
+        <div class="meta-item-title">{{item.GetTranslatedTitle(i18n, (item.ItemType + "_title_html"))|raw}}</div>
+        {{yield metaItemTagline(genres=false) item.InnerItem}}
+      </div>
+    </a>
+  </div>
+{{end}}

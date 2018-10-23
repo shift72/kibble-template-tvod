@@ -1,0 +1,34 @@
+.plans {
+  @extend .card-deck;
+}
+
+.plan {
+  @extend .card;
+  max-width: 250px; // arbituary
+}
+
+.plan-poster {
+  @extend .card-img-top;
+}
+
+.plan-caption { @extend .card-body; }
+
+.plan-name {
+  @extend .h2;
+  @extend .card-title;
+}
+
+.plan-description { @extend .card-text; }
+
+.plan-details {
+  @extend .list-group;
+  @extend .list-group-flush;
+}
+
+.plan-interval { @extend .list-group-item; }
+.plan-trial-period { @extend .list-group-item; }
+
+.plan-buttons {
+  @extend .card-footer;
+  @extend .border-top-0;
+}

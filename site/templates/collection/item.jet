@@ -1,0 +1,29 @@
+{{extends "../application.jet"}}
+{{import "./page_collection_item.jet"}}
+
+{{block body()}}
+  <div class="page collection-page">
+    <div class="container">
+      <div class="page-header">
+        <h1>{{ collection.Title }}</h1>
+      </div>
+
+      {{if len(collection.Description)}}
+      <div class="page-content collection-content">
+        {{collection.Description | raw}}
+      </div>
+      {{end}}
+    </div>
+
+    <div class="page-collection-list-container">
+      <div class="page-collection-list-item-wrapper">
+        {{ range index, item := collection.Items }}
+          <div class="page-collection-item page-collection-list-item page-collection-list-item-{{collection.ItemLayout}} page-collection-item-{{collection.ItemLayout}} page-collection-list-item-{{collection.ItemsPerRow}} page-collection-item-{{collection.ItemsPerRow}}">
+            {{yield pageCollectionItem(item=item, layout=collection.ItemLayout)}}
+          </div>
+        {{ end }}
+      </div>
+    </div>
+
+  </div>
+{{end}}

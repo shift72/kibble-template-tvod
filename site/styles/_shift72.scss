@@ -1,0 +1,192 @@
+
+// s72-slider styles in _slider.scss
+// shopping modal styles in _shopping.scss
+// user devices styles in _devices.scss
+// subscriptions (purchased plans) styles in _subscriptions.scss
+
+.s72-btn {
+  @extend .btn;
+
+  &:disabled,
+  &.disabled {
+    pointer-events: none;
+  }
+
+  .s72-icon {
+    margin-left: .3em;
+  }
+}
+.s72-btn-search { @extend .btn-primary; }
+
+.s72-btn-purchase { @extend .btn-primary; }
+.s72-btn-rent { @extend .btn-primary; }
+.s72-btn-close { @extend .close; }
+.s72-btn-purchase-card { @extend .btn-primary; }
+.s72-btn-purchase-free { @extend .btn-primary; }
+
+.s72-btn-changepassword { @extend .btn-secondary; }
+.s72-btn-updateaccount { @extend .btn-primary; }
+.s72-btn-signup { @extend .btn-primary; }
+.s72-btn-signin { @extend .btn-primary; }
+.s72-btn-forgotpassword { @extend .btn-primary; }
+.s72-btn-resetpassword { @extend .btn-primary; }
+.s72-btn-activatedevice { @extend .btn-primary; }
+
+.s72-btn-modal-action { @extend .btn-primary; }
+.s72-btn-modal-cancel { @extend .btn-outline-secondary; }
+
+.s72-btn-combined-auth { @extend .btn-primary; }
+.s72-btn-combined-auth-change { @extend .btn-link; }
+
+.s72-btn-applydiscount { @extend .btn-secondary; }
+
+.s72-btn-next-page {
+  @extend .btn-secondary;
+  @extend .btn-lg;
+  width: 100%;
+}
+
+.s72-combined-auth {
+  form { margin-bottom: 0; }
+}
+
+.s72-combined-auth-email {
+  @extend .alert;
+  @extend .alert-secondary;
+  padding: .5rem 1rem;
+  span { vertical-align: middle; }
+}
+
+.s72-icon { @extend .fa; }
+
+.s72-icon-angle-left {
+  @extend .fa-angle-left;
+}
+.s72-icon-angle-right {
+
+  @extend .fa-angle-right;
+}
+.s72-icon-loading { @extend .icon-loading; }
+.s72-icon-errored { @extend .icon-errored; }
+
+.s72-icon.s72-block-icon {
+  font-size: 4rem;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.s72-icon-warning { @extend .icon-warning; }
+
+.s72-icon-search {
+  @extend .icon-search;
+
+  // undo margin left from .s72-btn .s72-icon (above)
+  .s72-btn & { margin-left: 0; }
+}
+
+.s72-icon-tick { @extend .fa-check; }
+
+.s72-dropdown            { @extend .dropdown; }
+.s72-dropdown-toggle     { @extend .dropdown-toggle; }
+.s72-dropdown-menu       { @extend .dropdown-menu; }
+.s72-dropdown-menu-right { @extend .dropdown-menu-right; }
+.s72-dropdown-item       { @extend .dropdown-item; }
+
+// s72-sign-out             { @extend li; }
+
+.s72-modal-error .s72-modal-content {
+  @extend .text-danger;
+  @extend .bg-light;
+}
+
+.s72-modal-content {
+  color: $gray-900;
+}
+
+.s72-form-control { @extend .form-control; }
+.s72-form-group { @extend .form-group; }
+.s72-form-check { @extend .form-check; }
+.s72-form-check-label { @extend .form-check-label; }
+.s72-form-check-input { @extend .form-check-input; }
+
+.s72-form-control-readonly,
+.s72-form-control-static {
+  @extend .form-control-plaintext;
+  .form-page & {
+    color: $body-color;
+  }
+}
+
+.s72-form-state-label {
+  // so it looks similar to a button
+  display: inline-block;
+  vertical-align: middle;
+  @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-line-height, $btn-border-radius);
+
+  .s72-icon-tick {
+    margin-right: .3em;
+  }
+}
+
+.s72-form-errors { @extend .invalid-feedback; }
+.s72-has-error .form-control { @extend .is-invalid; }
+// .s72-control-inputs { @extend .control-inputs; }
+// .s72-no-control-label { @extend .no-control-label; }
+// .s72-error-message { @extend .error-message; }
+
+.s72-input-group { @extend .input-group; }
+.s72-input-group-append { @extend .input-group-append; }
+.s72-input-group-prepend { @extend .input-group-prepend; }
+
+s72-can-be-watched,
+s72-can-be-watched-now,
+s72-cant-be-watched {
+  &.s72-show {
+    display: inline-block;
+  }
+}
+
+.s72-player .s72-btn-close {
+  color: #fff;
+  text-shadow: 0 1px 0 #000;
+  padding: 1rem;
+}
+
+.s72-btn-play {
+  @extend .btn-link;
+
+  font-weight: 700;
+  color: $primary;
+  padding-left: 0;
+  border: 0 none;
+
+  .s72-icon-play {
+    margin-right: 5px;
+
+    circle { fill: $primary; }
+
+    circle, path {
+      stroke: $primary;
+      transition: stroke .15s ease-in-out, fill .15s ease-in-out;
+    }
+
+    path {
+      fill: #fff;
+      stroke: #fff;
+    }
+  }
+
+  @include hover-focus {
+    text-decoration: none;
+
+    .s72-icon-play {
+      circle { fill: rgba($primary, 0.5); } //darken($primary, 7.5%)
+    }
+  }
+}
+
+.s72-prompt {
+  @extend p;
+  @extend .text-center;
+}

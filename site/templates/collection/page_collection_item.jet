@@ -1,0 +1,7 @@
+{{import "../items/meta_item.jet"}}
+
+{{block pageCollectionItem(item, layout)}}
+
+  {{yield metaItem(item=item, layout=layout)}}
+
+{{end}}

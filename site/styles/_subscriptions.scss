@@ -1,0 +1,49 @@
+.usersubscriptions-page .page-content {
+  max-width: 800px;
+}
+
+.s72-subscriptions-list { @extend .list-group; }
+.s72-subscriptions-list-item { @extend .list-group-item; }
+
+.s72-subscriptions-list-item-name {
+  @extend .h5;
+  display: inline-block; //so the non nested badge can sit on same line
+}
+
+.s72-subscriptions-list-item-status {
+  @extend .badge;
+  margin-left: $badge-padding-x;
+}
+
+.s72-subscriptions-list-item-status-active,
+.s72-subscriptions-list-item-status-trialing { @extend .badge-primary; }
+
+.s72-subscriptions-list-item-status-past_due,
+.s72-subscriptions-list-item-status-unpaid { @extend .badge-danger; }
+
+.s72-subscriptions-list-item-status-cancelled { @extend .badge-info; }
+
+
+.s72-subscriptions-list-item-expiry {
+  @extend .text-muted;
+  @extend .small;
+}
+
+.s72-subscriptions-list-item-actions {
+  text-align: right;
+
+  @include media-breakpoint-up(sm) {
+    position: absolute;
+    right: $list-group-item-padding-x;
+    top: $list-group-item-padding-y;
+  }
+}
+
+.s72-btn-updatecreditcard {
+  @extend .btn-outline-secondary;
+}
+
+.s72-btn-unsubscribe {
+  @extend .btn-primary;
+  @extend .btn-sm;
+}

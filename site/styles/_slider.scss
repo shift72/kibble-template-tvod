@@ -1,0 +1,134 @@
+s72-slider .s72-slider-control {
+
+  font-family: $font-family-base;
+  height: $slider-control-height;
+  width: $slider-control-width;
+  left: -$slider-control-width / 2;
+  background-color: $slider-control-bg;
+  border: 1px solid $slider-control-border;
+  border-radius: 50%;
+  z-index: 10;
+  margin-top: 0;
+
+  &.right {
+
+    right: -$slider-control-width / 2;
+    left: auto;
+
+  }
+
+  .s72-icon {
+
+    font-size: $slider-control-icon-size;
+    color: $slider-control-color;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    // NOTE(gscragg):
+    // this is not ideal, but the icon doesnt look centered (in the circle border) without it
+    // there might be a nice calculation here but, not all sites have a circle bordered control,
+    // so this should be removed if its not needed.
+    margin-top: -1px;
+    // another wierd fix for prod (staging too) where for some reason the arrow does was appearing below the circle border.
+    // I think (not sure why) the icon was actually getting display: block from somewhere else on local but not prod.
+    display: inline-block;
+
+    // &.s72-icon-angle-left { margin-left: 14px; }
+    // &.s72-icon-angle-right { margin-left: 18px; }
+  }
+
+  &:hover, &:active, &:focus {
+    background: $slider-control-hover-bg;
+  }
+
+}
+
+// make .slider-control be in the middle of the poster, not the middle of the item (which includes captions).
+@for $i from 1 through 10 {
+  $width: round($slider-container-width / $i);
+  $child-width: $width - ($slider-item-gutter-width);
+
+  .slider-#{$i} {
+
+    &.slider-landscape .s72-slider-control{
+      top: ($child-width * $poster-landscape-size-ratio) / 2 - ($slider-control-height / 2);
+    }
+
+    &.slider-portrait .s72-slider-control{
+      top: ($child-width * $poster-portrait-size-ratio) / 2 - ($slider-control-height / 2);
+    }
+  }
+}
+
+s72-slider .s72-slider-container {
+
+
+}
+
+s72-slider.has-prev:before {
+  @extend .slider-fade-in;
+}
+
+s72-slider.has-next:after {
+  @extend .slider-fade-out;
+}
+
+s72-slider.has-prev.s72-slider-scroll:before,
+s72-slider.has-next.s72-slider-scroll:after {
+  width: 50px;
+}
+
+.slider-fade-in {
+
+  display: block;
+  content: '';
+  width: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5;
+  height: 100%;
+  @include gradient-x(rgba($body-bg, .9), transparent, 0%, 100%);
+  pointer-events: none;
+}
+
+.slider-fade-out {
+
+  @extend .slider-fade-in;
+  left: auto;
+  right: 0;
+  @include gradient-x(transparent, rgba($body-bg, .9), 0%, 100%);
+
+}
+
+.slider {
+  // not sure why this is needed for sliders with only a couple of items, that dont require sliding.
+  width: 100%;
+}
+
+.slider-fluid {
+  position: relative;
+
+  // This changes the default value for s72-slider due to us using the fade-in/fade-out to show more items
+  // We instead use .slider-fluid as the relative positioned parent so the fades dont move when scrolling.
+  // removing this value will break those fades.
+  s72-slider {
+    position: static;
+  }
+
+  .s72-slider-fluid {
+
+    .s72-slider-container-container {
+      @extend .container;
+
+      position: static;
+    }
+  }
+}
+
+s72-slider .s72-slider-item-wrapper {
+  margin-left: $slider-item-gutter-width / -2;
+  margin-right: $slider-item-gutter-width / -2;
+}

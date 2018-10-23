@@ -1,0 +1,24 @@
+.poster {
+  position: relative;
+  overflow: hidden;
+  border-radius: $poster-border-radius;
+  z-index: 1;
+  max-width: 100%;
+
+  s72-availability-status { top: $meta-item-availability-tag-margin; right: $meta-item-availability-tag-margin; }
+  s72-availability-label  { bottom: $meta-item-availability-tag-margin; left: $meta-item-availability-tag-margin; }
+}
+
+.poster-image {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+
+  &.poster-image-landscape {
+
+  }
+
+  &.poster-image-portrait {
+
+  }
+}

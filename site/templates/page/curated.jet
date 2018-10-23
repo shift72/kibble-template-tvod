@@ -1,0 +1,25 @@
+{{extends "templates/application.jet"}}
+{{import "templates/collection/page_collection.jet"}}
+
+{{block body()}}
+<div class="page page-{{page.PageType}} curated-page">
+  <div class="container">
+    <div class="page-header">
+      <h1>{{ page.Title }}</h1>
+    </div>
+
+    {{if len(page.Content)}}
+    <div class="page-content">
+      {{page.Content | raw}}
+    </div>
+    {{end}}
+  </div>
+
+  <div class="page-collections">
+    {{range index, pf := page.PageCollections}}
+      {{if index > 0}}{{yield pageCollection() pf}}{{end}}
+    {{end}}
+  </div>
+
+</div>
+{{end}}

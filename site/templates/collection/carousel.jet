@@ -1,0 +1,62 @@
+{{block pageCollectionCarousel()}}
+{{if len(.Items) > 0}}
+{*
+	Image width and height are here to help with resizing, there might be another way doing it,
+	but I didnt want to have to rely on images loading like the web-core carousel.
+
+	None of the html in .carousel-item is finished or even 10% looked at, so feel free to make it better.
+	This was copypasted from web-core.
+*}
+<s72-carousel data-image-width="1600" data-image-height="600">
+	<div class="page-collection page-collection-carousel">
+		<div class="masonry">
+			{{range item := .Items}}
+				<div class="brick">
+					<a href="{{routeToSlug(item.Slug)}}" class="carousel-item-link">
+						{{if isset(item.Images["Carousel"])}}
+							<s72-image src="{{item.Images.Carousel}}" alt="{{item.Title}}" class="carousel-item-image"></s72-image>
+						{{end}}
+						{{if !isset(item["PageType"]) || item.PageType != "external"}}
+							<div class="carousel-item-caption">
+
+								<s72-availability-status data-slug="{{item.Slug}}"></s72-availability-status>
+								<s72-availability-label data-slug="{{item.Slug}}"></s72-availability-label>
+
+								<div class="content">
+									<h3>{{item.Title}} {{if isset(item["season"])}}<span class="small">{{item.season}}</span>{{end}}</h3>
+
+										{*<p class="tagline">{{item.ReleaseDate}}</p>*}
+
+										{*<p class="synopsis what visible-md">{{item.Tagline}}</p>*}
+
+									<div class="buttons">
+										<watch-button data-slug="item.Slug"></watch-button>
+										<pricing-buttons data-slug="item.Slug"></pricing-buttons>
+									</div>
+
+										{*<p class="synopsis visible-md visible-lg">{{item.Tagline}}</p>*}
+
+									<share-buttons item="::item.meta" class="hidden-sm hidden-xs pull-right"></share-buttons>
+									<trailer-button item="::item.meta" button-class="btn-sm" class="hidden-sm hidden-xs"></trailer-button>
+
+								</div>
+							</div>
+						{{end}}
+					</a>
+				</div>
+			{{end}}
+		</div>
+
+		<!-- <div class="carousel-pagination">
+			{{range index, item := .Items}}
+				<div class="carousel-page" data-page-index="{{index}}"><span class="fa fa-circle"></span></div>
+			{{end}}
+		</div> -->
+
+		<!-- Controls -->
+		<a class="left carousel-control"><span class="fa fa-angle-left"></span></a>
+		<a class="right carousel-control"><span class="fa fa-angle-right"></span></a>
+	</div>
+</s72-carousel>
+{{end}}
+{{end}}

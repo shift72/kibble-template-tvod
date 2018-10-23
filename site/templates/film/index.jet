@@ -1,0 +1,11 @@
+{{extends "../application.jet"}}
+{{block body()}}
+  <h2>Film - Index</h2>
+
+  {{range films}}
+    <p>
+      {{ .Title }} - {{ .Slug }} - <a href="{{ routeToSlug(.Slug) }}">{{ .Title }}</a>
+    </p>
+  {{end}}
+
+{{end}}

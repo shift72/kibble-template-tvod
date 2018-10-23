@@ -1,0 +1,172 @@
+.meta-detail {
+  position: relative;
+
+  & > .container {
+    z-index: 2;
+    position: relative;
+  }
+}
+.meta-detail-availability-label,
+.meta-detail-availability-status {
+  @include media-breakpoint-up(lg) { display: none; }
+  top: 0;
+}
+
+.meta-detail-availability-status { right: $grid-gutter-width / 2; }
+.meta-detail-availability-label  { left: $grid-gutter-width / 2; }
+
+.meta-detail-bg {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+
+  max-height: 900px;
+  overflow: hidden;
+}
+
+.meta-detail-bg-gradient {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  top: 0;
+  @include gradient-y(rgba(0,0,0,0.4), $body-bg, 0%, 100%);
+}
+
+.meta-detail-bg s72-image,
+.meta-detail-bg-img {
+  width: 100%;
+  display: block;
+}
+
+.meta-detail-watch-buttons {
+
+  text-align: center;
+  width: 100%;
+  display: block;
+  padding: 30px 0;
+
+  @include media-breakpoint-up(sm) { padding: 60px 0; }
+  @include media-breakpoint-up(md) { padding: 90px 0; }
+  @include media-breakpoint-up(lg) { padding: 120px 0; }
+  @include media-breakpoint-up(xl) { padding: 150px 0; }
+  @include media-breakpoint-up(xxl) { padding: 180px 0; }
+}
+
+
+.meta-detail-main {
+  @extend .row;
+}
+
+.meta-detail-panel,
+.meta-detail-content {
+  padding-left: $grid-gutter-width / 2;
+  padding-right: $grid-gutter-width / 2;
+}
+
+.meta-detail-panel {
+  @include make-col(2, 10);
+  display: none;
+
+  @include media-breakpoint-up(lg) {
+    display: block;
+  }
+}
+
+.meta-detail-content {
+  width: 100%; // required for flex action
+
+  @include media-breakpoint-up(lg) {
+    padding-top: $grid-gutter-width / 2;
+    @include make-col(8, 10);
+  }
+}
+
+.meta-detail-title,
+.meta-detail-buttons,
+.meta-detail-tagline,
+.meta-detail-synopsis,
+.meta-detail-cast,
+.meta-detail-crew,
+// .meta-detail-recommendations, // don't need a margin on the last thing on the page
+.meta-detail-bonus-content {
+  margin-bottom: 20px;
+}
+
+.meta-detail-tagline {
+  .meta-item-tagline {
+    margin-bottom: 0;
+  }
+}
+
+.meta-detail-synopsis {
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.meta-detail-cast,
+.meta-detail-crew {
+
+}
+
+.meta-detail-crew {
+
+}
+
+.crew-members {
+  @extend .row;
+}
+
+.crew-member {
+  padding-left: $grid-gutter-width / 2;
+  padding-right: $grid-gutter-width / 2;
+}
+
+.crew-member-name,
+.crew-member-job {
+  display:block;
+}
+
+.crew-member-job {
+  font-weight: bold;
+  margin-bottom: .5rem;
+}
+
+.meta-detail-recommendations {
+
+}
+
+.meta-detail-bonus-content {
+
+}
+
+.bonus-content { }
+.bonus-content-poster { }
+
+.bonus-content-caption {
+  @extend .meta-item-caption;
+}
+
+.bonus-content-title {
+  @extend .meta-item-title;
+}
+
+.bonus-content-synopsis {
+  @extend .small;
+  p:last-child { margin-bottom: 0; }
+}
+
+.bonus-content-runtime {
+  @extend .small;
+  @extend .text-muted;
+}
+
+// the following are marked as optional, due to class definitions not existing if they are empty
+.meta-detail-episodes   { @extend .meta-detail-bonus-content !optional; }
+.episode                { @extend .bonus-content !optional; }
+.episode-poster         { @extend .bonus-content-poster !optional; }
+.episode-caption        { @extend .bonus-content-caption !optional; }
+.episode-title          { @extend .bonus-content-title !optional; }
+.episode-synopsis       { @extend .bonus-content-synopsis !optional; }
+.episode-runtime        { @extend .bonus-content-runtime !optional; }

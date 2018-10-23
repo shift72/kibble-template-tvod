@@ -1,0 +1,54 @@
+{
+  "name": "kibble-template-avod",
+  "version": "0.0.1",
+  "siteUrl": "https://staging-channel-kibble.shift72.com",
+  "builderVersion": "0.10.6",
+  "defaultLanguage": "en",
+  "languages": {
+    "en": "en_NZ"
+  },
+  "siteRootPath": "site",
+  "liveReload": {
+    "ignoredPaths": [
+      "styles"
+    ]
+  },
+  "routes": [
+    {
+      "name": "filmItem",
+      "urlPath": "/film/:slug/",
+      "templatePath": "templates/film/item.jet",
+      "partialUrlPath": "/partials/film/:filmID.html",
+      "partialTemplatePath": "templates/film/partial.jet",
+      "datasource": "Film",
+      "pageSize": 0
+    },
+    {
+      "name": "tvItem",
+      "urlPath": "/tv/:slug/:seasonNumber",
+      "templatePath": "templates/tv/detail.jet",
+      "partialUrlPath": "/partials/tv/:showID/season/:seasonNumber.html",
+      "partialTemplatePath": "templates/tv/partial.jet",
+      "datasource": "TVSeason",
+      "pageSize": 0
+    },
+    {
+      "name": "pageItem",
+      "urlPath": "/page/:slug/",
+      "templatePath": "templates/page/:type.jet",
+      "partialUrlPath": "/partials/page/:pageID.html",
+      "partialTemplatePath": "templates/page/partial.jet",
+      "datasource": "Page",
+      "pageSize": 0
+    },
+    {
+      "name": "collectionItem",
+      "urlPath": "/collection/:slug/",
+      "templatePath": "templates/collection/item.jet",
+      "partialUrlPath": "/partials/collection/:collectionID.html",
+      "partialTemplatePath": "templates/collection/partial.jet",
+      "datasource": "Collection",
+      "pageSize": 0
+    }
+  ]
+}

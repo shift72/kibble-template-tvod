@@ -1,0 +1,3 @@
+{{import "../items/meta_item.jet"}}
+
+{{yield metaItem(item=tvseason.GetGenericItem(), layout="portrait")}}
