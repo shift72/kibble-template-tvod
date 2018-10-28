@@ -1,0 +1,80 @@
+{{extends "../application.jet"}}
+{{import "../common/slider.jet"}}
+{{import "../items/tagline.jet"}}
+{{import "../items/meta_item.jet"}}
+
+{{block head()}}
+  {{yield seo() bundle}}
+{{end}}
+
+{{block body()}}
+  <div class="page page-bundle meta-detail meta-detail-bundle">
+
+    <div class="meta-detail-bg">
+      <div class="meta-detail-bg-gradient"></div>
+      <s72-image src="{{bundle.Images.Background}}" class="meta-detail-bg-img"></s72-image>
+    </div>
+
+    <div class="container">
+      <s72-availability-status data-slug="{{bundle.Slug}}" class="meta-detail-availability-status"></s72-availability-status>
+      <s72-availability-label data-slug="{{bundle.Slug}}" class="meta-detail-availability-label"></s72-availability-label>
+
+      {{if len(bundle.PromoURL) > 0 }}
+        <div class="meta-detail-watch-buttons">
+          <s72-modal-player src="{{bundle.PromoURL}}" data-label="{{i18n("play_trailer")}}"></s72-modal-player>
+        </div>
+      {{end}}
+
+      <div class="meta-detail-main">
+
+        <div class="meta-detail-panel">
+          <div class="poster poster-portrait">
+            <s72-availability-status data-slug="{{bundle.Slug}}"></s72-availability-status>
+            <s72-availability-label data-slug="{{bundle.Slug}}"></s72-availability-label>
+            <s72-image src="{{bundle.Images.Portrait}}" alt="{{bundle.Title}}" class="poster poster-image poster-image-portrait"></s72-image>
+          </div>
+        </div>
+
+        <div class="meta-detail-content">
+          <h1 class="meta-detail-title">{{bundle.Title}}</h1>
+          <div class="meta-detail-tagline">
+            {{yield metaItemTagline() bundle}}
+          </div>
+
+          <div class="meta-detail-buttons">
+            <s72-pricing-buttons data-slug="{{bundle.Slug}}" data-title="{{bundle.Title}}"></s72-pricing-buttons>
+          </div>
+
+          <div class="meta-detail-synopsis">{{bundle.Description | raw}}</div>
+
+          {{if len(bundle.Items) > 0 }}
+            <div class="meta-detail-bundle-items">
+              <h3>{{i18n("meta_detail_bundle_items_title")}}</h3>
+              {{yield slider(itemsPerRow=6, itemLayout="portrait") content}}
+                {{range item := bundle.Items}}
+                  <div class="slider-item slider-item-6">
+                    {{yield metaItem(item=item, layout="portrait")}}
+                  </div>
+                {{end}}
+              {{end}}
+            </div>
+          {{end}}
+
+          {{if isset(bundle.Recommendations) && len(bundle.Recommendations) > 0 }}
+            <div class="meta-detail-recommendations">
+              <h3>{{i18n("meta_detail_recommendations_title")}}</h4>
+              {{yield slider(itemsPerRow=6, itemLayout="portrait") content}}
+                {{range item := bundle.Recommendations}}
+                  <div class="slider-item slider-item-6">
+                    {{yield metaItem(item=item, layout="portrait")}}
+                  </div>
+                {{end}}
+              {{end}}
+            </div>
+          {{end}}
+
+        </div>
+      </div>
+    </div>
+  </div>
+{{end}}

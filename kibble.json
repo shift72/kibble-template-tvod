@@ -1,7 +1,7 @@
 {
-  "name": "kibble-template-avod",
+  "name": "kibble-template-tvod",
   "version": "0.0.1",
-  "siteUrl": "https://staging-channel-kibble.shift72.com",
+  "siteUrl": "https://staging-store-kibble.shift72.com",
   "builderVersion": "0.10.6",
   "defaultLanguage": "en",
   "languages": {
@@ -48,6 +48,15 @@
       "partialUrlPath": "/partials/collection/:collectionID.html",
       "partialTemplatePath": "templates/collection/partial.jet",
       "datasource": "Collection",
+      "pageSize": 0
+    },
+    {
+      "name": "bundleItem",
+      "urlPath": "/bundle/:slug/",
+      "templatePath": "templates/bundle/detail.jet",
+      "partialUrlPath": "/partials/bundle/:bundleID.html",
+      "partialTemplatePath": "templates/bundle/partial.jet",
+      "datasource": "Bundle",
       "pageSize": 0
     }
   ]

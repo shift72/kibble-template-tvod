@@ -2,7 +2,8 @@
 {{import "./seo.jet" }}
 {{import "./footer.jet" }}
 
-{{CDN := "//droy91bxkyxho.cloudfront.net/1.2.0-beta"}}
+{*{CDN := "//droy91bxkyxho.cloudfront.net/1.2.0-beta"}*}
+{{CDN:="//localhost:3000"}}
 <!DOCTYPE html>
 <html lang="{{lang.Code}}">
   <head>
@@ -33,6 +34,10 @@
         '{{CDN}}/s72.ui.js',
 
         '/scripts/main.js',
+
+        // Only required for transactional sites
+        '{{CDN}}/s72.transactional.js',
+        '//js.stripe.com/v3/'
       ];
 
       // adapted (and modified) from: https://www.html5rocks.com/en/tutorials/speed/script-loading/

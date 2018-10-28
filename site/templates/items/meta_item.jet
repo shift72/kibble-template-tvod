@@ -33,14 +33,20 @@
             <s72-play-button data-slug="{{item.Slug}}" data-title="{{item.GetTranslatedTitle(i18n, "")}}" class="meta-item-play-btn"></s72-play-button>
 
             {{if isset(item.InnerItem["Tagline"])}}
-              <div class="meta-item-synopsis">{{item.InnerItem.Tagline}}</div>
-            {{end}}
-
-            {{if isset(item["Trailers"]) && len(item.Trailers) > 0}}
-              <div class="buttons">
-                <s72-trailer-button data-slug="{{item.Slug}}" data-url="{{item.Trailers}}" data-use-tooltip="{{(layout == "landscape") ? true : false}}" button-class="btn-sm"></s72-trailer-button>
+              <div class="meta-item-synopsis">
+                <span class="tits">{{item.InnerItem.Tagline}}</span>
               </div>
             {{end}}
+
+            {*
+              {{if isset(item.InnerItem["Trailers"]) && len(item.InnerItem.Trailers) > 0}}
+                <s72-cant-be-watched data-slug="{{item.Slug}}">
+                  <s72-modal-player src="{{item.InnerItem.Trailers[0].URL}}" data-label="{{i18n("play_trailer")}}"></s72-modal-player>
+                </s72-cant-be-watched>
+              {{end}}
+            *}
+
+            <s72-pricing-buttons data-slug="{{item.Slug}}" data-title="{{item.GetTranslatedTitle(i18n, item.ItemType)}}" class="meta-item-pricing-btn meta-item-pricing-btn-{{(layout == "landscape") ? "horizontal" : "vertical"}}"></s72-pricing-buttons>
           </div>
         {{end}}
       </div>

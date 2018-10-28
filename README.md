@@ -3,6 +3,7 @@ This template supports the following features:
 * Films
 * TV Seasons
 * Collections
+* Bundles
 * Pages
 * Template only pages (robots.txt and sitemap.txt are examples)
 * Internationalization

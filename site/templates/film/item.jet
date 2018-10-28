@@ -7,11 +7,6 @@
   {{yield seo() film}}
 {{end}}
 
-{* Hide Sub nav on this page *}
-{{block navigation()}}
-  {{yield nav(showSubNav=false)}}
-{{end}}
-
 {{block body()}}
   <div class="page page-film meta-detail meta-detail-film">
 
@@ -49,13 +44,15 @@
             {{yield metaItemTagline() film}}
           </div>
 
-          {{if len(film.Trailers) > 0 }}
-            <div class="meta-detail-buttons">
+          <div class="meta-detail-buttons">
+            <s72-pricing-buttons data-slug="{{film.Slug}}" data-title="{{film.Title}}"></s72-pricing-buttons>
+
+            {{if len(film.Trailers) > 0 }}
               <s72-can-be-watched data-slug="{{film.Slug}}">
                 <s72-modal-player src="{{film.Trailers[0].URL}}" data-label="{{i18n("play_trailer")}}"></s72-modal-player>
               </s72-can-be-watched>
-            </div>
-          {{end}}
+            {{end}}
+          </div>
 
           <div class="meta-detail-synopsis">{{film.Overview | raw}}</div>
 
@@ -86,7 +83,7 @@
 
           {{if len(film.Bonuses) > 0 }}
             <div class="meta-detail-bonus-content">
-              <h3>{{i18n("meta_detail_bonus_title")}}</h4>
+              <h3>{{i18n("meta_detail_bonus_title")}}</h3>
               {{yield slider(itemsPerRow=6, itemLayout="landscape") content}}
                 {{range bonus := film.Bonuses}}
                   <div class="slider-item slider-item-6">

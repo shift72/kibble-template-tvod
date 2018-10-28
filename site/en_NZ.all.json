@@ -25,7 +25,7 @@
   "nav_account": { "other": "My Account" },
   "nav_signout": { "other": "Sign Out" },
 
-  "nav_branding_title": { "other": "Shift72 AVOD" },
+  "nav_branding_title": { "other": "Shift72" },
   "footer_branding_copyright": { "other": "Shift72 - All Rights Reserved." },
 
   "play_trailer": { "other": "Watch Trailer" },
@@ -39,6 +39,13 @@
   "search_control_placeholder": { "other": "Search" },
 
   "play_button_watch": { "other": "Watch Now"},
+
+  "pricing_quality_hd": { "other": "HD" },
+  "pricing_quality_sd": { "other": "SD" },
+  "pricing_quality_hd_only": { "other": "HD Only" },
+  "pricing_quality_sd_only": { "other": "SD Only" },
+  "pricing_ownership_buy": { "other": "Buy" },
+  "pricing_ownership_rent": { "other": "Rent" },
 
   "homepage_header": { "other" : "Featured"},
   "page_collection_see_all": { "other" : "See All"},
@@ -151,9 +158,157 @@
   "validation_promocode_required": { "other": "Please enter a promo code." },
   "validation_pincode_required": { "other": "Please enter a PIN code." },
 
+  "shopping_info_subtitle_hd": { "other": "HD Video on Demand." },
+  "shopping_info_subtitle_sd": { "other": "SD Video on Demand." },
+  "shopping_info_subtitle_wallet": { "other": "Funds in your Wallet may be used for the purchase or rental of any content on ScreenPlu." },
+  "shopping_info_subtitle_help": { "other": "See here for system requirements." },
+  "shopping_info_ownership_buy": { "other": "Purchase" },
+  "shopping_info_ownership_rent": { "other": "Rental" },
+  "shopping_info_ownership_plan": { "other": "Subscription"},
+
+  "shopping_info_sd_only": { "other": "Limited to SD playback only." },
+  "shopping_info_release_date_title": { "other": "Releases {{.Date}}. " },
+  "shopping_info_release_date_explanation_rent": { "other": "You can rent it now, but you won't be able to watch it until then." },
+  "shopping_info_release_date_explanation_buy": { "other": "You can buy it now, but you won't be able to watch it until then." },
+
+  "shopping_info_rental_period_duration": { "other": "{{.Count}} day rental " },
+  "shopping_info_watch_window_duration": { "other": "{{.Count}} hour playback window. " },
+  "shopping_info_watch_window_explanation_film": {
+    "one": "Once rented, your film will be available in your account for a day. ",
+    "other": "Once rented, your film will be available in your account for {{.Count}} days. "
+  },
+  "shopping_info_watch_window_explanation2_film": {
+    "one": "Once you press play, the watch window begins and you have an hour to watch the film as many times as you like.",
+    "other": "Once you press play, the watch window begins and you have {{.Count}} hours to watch the film as many times as you like."
+  },
+  "shopping_info_watch_window_explanation_bundle": {
+    "one": "Once rented, the items in your bundle will be available in your account for a day. ",
+    "other": "Once rented, the items in your bundle will be available in your account for {{.Count}} days. "
+  },
+  "shopping_info_watch_window_explanation2_bundle": {
+    "one": "Once you press play on a specific film, the watch window begins and you have an hour to watch that film as many times as you like.",
+    "other": "Once you press play on a specific film, the watch window begins and you have {{.Count}} hours to watch that film as many times as you like."
+  },
+  "shopping_info_watch_window_explanation_season": {
+    "one": "Once rented, your season will be available in your account for a day. ",
+    "other": "Once rented, your season will be available in your account for {{.Count}} days. "
+  },
+  "shopping_info_watch_window_explanation2_season": {
+    "one": "Once you press play on an episode, the watch window begins and you have an hour to watch that episode as many times as you like.",
+    "other": "Once you press play on an episode, the watch window begins and you have {{.Count}} hours to watch that episode as many times as you like."
+  },
+  "shopping_info_credit_bonus_title": { "other": "{{.BonusPercentage}}% Bonus" },
+  "shopping_info_trial_period_offer": {
+    "one": "Try your free 24hr trial now!",
+    "other": "Try your free {{.Count}} day trial!"
+  },
+  "shopping_info_plan_offer": {
+    "one": "Automatically renews every {{.Interval}}",
+    "other": "Automatically renews every {{.Count}} {{.Interval}}s"
+  },
+
+  "shopping_price_you_pay": { "other": "You pay" },
+  "shopping_price_nothing": { "other": "Nothing" },
+  "shopping_price_free": { "other": "Free" },
+  "shopping_price_title_plan": { "other": "Price" },
+  "shopping_price_plan_note": {
+    "zero": "Charged every {{.Interval}}.",
+    "one": "Charged every {{.Interval}} after your 24 hour free trial ends.",
+    "other": "Charged every {{.Interval}} after your {{.Count}} day free trial ends."
+  },
+
+  "shopping_price_plan_note_interval": {
+    "one": "{{.Interval}}",
+    "other": "{{.Count}} {{.Interval}}s"
+  },
+
+  "shopping_enter_card_prompt": { "other": "Enter your credit card details below to complete your {{.Verb}}." },
+  "shopping_enter_card_prompt_plan": { "other": "Enter your credit card details below in order start your subscription." },
+
+  "shopping_terms": { "other": "By completing this transaction, I agree to the <a href=\"/page/terms-and-conditions/\" target=\"_blank\" tabindex=\"-1\">terms and conditions</a>."},
+  "shopping_discount_applied": { "other": "{{.DiscountAmount}} discount applied." },
+  "shopping_discount_apply": { "other": "Apply" },
+  "shopping_discount_code": { "other": "Enter a promo code." },
+  "shopping_discount_have_code": { "other": "I have a promo code." },
+
+  "shopping_auth_directions": { "other": "An account is needed first. Please enter your email address." },
+
+  "shopping_error_in_library": { "other": "{{.Title}} is already in your library." },
+
+  "shopping_error_missing_card": { "other": "Please enter your Credit Card details." },
+  "shopping_error_title": { "other": "An error occured" },
+  "shopping_error_incorrect_cvc": { "other": "Please enter a valid CVV." },
+  "shopping_error_invalid_cvc": { "other": "Please enter a valid CVV." },
+  "shopping_error_incorrect_number": { "other": "Please enter a valid Credit Card Nunber." },
+  "shopping_error_invalid_number": { "other": "Please enter a valid Credit Card Nunber." },
+  "shopping_error_card_declined": { "other": "The Credit Card has been declined." },
+  "shopping_error_invalid_expiry_month": { "other": "Please enter a valid Expiry." },
+  "shopping_error_invalid_expiry_year": { "other": "Please enter a valid Expiry." },
+  "shopping_error_expired_card": { "other": "The Credit Card has expired." },
+  "shopping_error_creditcard_country_mismatch": { "other": "Your {{.Ownership}} has not been completed. You need to be in the country your credit card was issued. Please use another card for making the payment." },
+  "shopping_error_proxy_detected": { "other": "Your {{.Ownership}} has not been completed. We have detected that you are using an unblocker or proxy service. Please turn off any of these services and try again." },
+
+  "shopping_error_discount_blank": { "other": "Please enter a promo code." },
+  "shopping_error_discount_invalid": { "other": "Please enter a valid promo code." },
+  "shopping_error_discount_disabled": { "other": "Please enter a valid promo code." },
+  "shopping_error_discount_already_applied": { "other": "A promo code has already been used for this session." },
+  "shopping_error_discount_used_previously": { "other": "That promo code has already been used." },
+  "shopping_error_discount_max_limit": { "other": "That promo code can no longer be used." },
+  "shopping_error_discount_expired": { "other": "That promo code has expired." },
+  "shopping_error_discount_invalid_ownership_buy": { "other": "That promo code can not be used when purchasing." },
+  "shopping_error_discount_invalid_ownership_rent": { "other": "That promo code can not be used when renting." },
+  "shopping_error_discount_invalid_item": { "other": "That promo code can not be used with this item." },
+  "shopping_error_discount_invalid_pricing_region": { "other": "That promo code can not be used in your country." },
+  "shopping_error_discounts_not_allowed": { "other": "That promo code can not be used." },
+  "shopping_error_discount_disallowed_on_bundles": { "other": "That promo code can not be used on bundles." },
+
+  "shopping_action_buy": { "other": "Buy" },
+  "shopping_action_rent": { "other": "Rent" },
+  "shopping_action_credit": { "other": "Top up" },
+  "shopping_action_plan": { "other": "Complete" },
+
+  "shopping_complete_rental": { "other": "Thank you for renting {{.Title}}." },
+  "shopping_complete_rental_period": {
+    "one": "You are now able to watch it as often as you like over the next day.",
+    "other": "You are now able to watch it as often as you like over the next {{.Count}} days."
+  },
+  "shopping_complete_purchase": { "other": "Thank you for purchasing {{.Title}}." },
+  "shopping_complete_credit_purchase": { "other": "Thank you for purchasing {{.Title}}, {{.CreditTotal}} has been added to your account." },
+  "shopping_complete_purchase_coming_soon": { "other": "You will be able to watch it from {{.Date}}." },
+  "shopping_complete_receipt": { "other": "A receipt has been emailed to you." },
+  "shopping_complete_library_link": { "other": "Start watching any of the {{.BundleItems}} in your library now." },
+
+  "shopping_complete_rental_watch_window_start": {
+    "one": "You are now able to start watching it within the next day.",
+    "other": "You are now able to start watching it within the next {{.Count}} days."
+  },
+  "shopping_complete_rental_watch_window_end": {
+    "one": "When playback is started you will then have an hour to watch the item as many times as you like.",
+    "other": "When playback is started you will then have {{.Count}} hours to watch the item as many times as you like."
+  },
+  "shopping_complete_rental_coming_soon": {
+    "one": "You will be able to watch it from {{.Date}} and your rental will remain active for a day.",
+    "other": "You will be able to watch it from {{.Date}} and your rental will remain active for {{.Count}} days."
+  },
+  "shopping_complete_rental_coming_soon_watch_window_start": {
+    "one": "You will be able to watch it from {{.Date}} and your rental will remain active for a day.",
+    "other": "You will be able to watch it from {{.Date}} and your rental will remain active for {{.Count}} days."
+  },
+  "shopping_complete_subscription": {
+    "other": "Your subscription purchase was successful. You are now subscribed to {{.Title}}."
+  },
+  "shopping_complete_subscription_browse": {
+    "other": "Feel free to <a href=\"/\">browse around</a> the site, or <a href=\"/search.html\">search</a> for something specific."
+  },
+
   "meta_detail_cast_title": { "other": "Cast" },
   "meta_detail_crew_title": { "other": "Crew" },
   "meta_detail_episodes_title": { "other": "Episodes" },
   "meta_detail_bonus_title": { "other": "Bonus Content" },
-  "meta_detail_recommendations_title": { "other": "You may also like" }
+  "meta_detail_recommendations_title": { "other": "You may also like" },
+  "meta_detail_bundle_items_title": { "other": "Content included in this bundle" },
+
+  "bundle_items_all_films": { "other": "{{.Count}} films" },
+  "bundle_items_all_seasons": { "other": "{{.Count}} seasons" },
+  "bundle_items_mixed": { "other": "{{.Count}} films and seasons" }
 }

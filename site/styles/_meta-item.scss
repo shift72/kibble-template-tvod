@@ -63,16 +63,11 @@
 .meta-item-synopsis {
   font-size: $small-font-size;
   overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
 
-  @include media-breakpoint-down(md) {
-    display: none !important;
-  }
 
-  @include media-breakpoint-up(md) {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-  }
 }
 
 .meta-item-buttons {
@@ -99,6 +94,23 @@
   font-size: $meta-item-caption-font-size;
 
   .meta-item-tagline { font-size: $small-font-size; }
+}
+
+.meta-item-pricing-btn {
+  display: block;
+
+  &.meta-item-pricing-btn-vertical .s72-pricing-buttons {
+    .s72-btn {
+      display: block;
+      width: 100%;
+      margin-left: 0;
+
+      &:nth-child(2) {
+        margin-top: .5rem;
+      }
+    }
+  }
+
 }
 
 .featured-meta-item {

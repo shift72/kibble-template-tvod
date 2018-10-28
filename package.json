@@ -1,9 +1,9 @@
 {
   "name": "kibble-template-svod",
   "version": "0.0.1",
-  "description": "Base template for SVOD kibble sites",
+  "description": "Base template for TVOD kibble sites",
   "scripts": {
-    "start": "npm-run-all --parallel css:watch kibble:watch",
+    "start": "npm run css && npm-run-all --parallel css:watch kibble:watch",
     "css": "node-sass ./site/styles/main.scss ./site/static/styles/main.css",
     "css:watch": "npm run css -- --watch",
     "css:build": "postcss ./site/static/styles/main.css --use autoprefixer --use cssnano -r",

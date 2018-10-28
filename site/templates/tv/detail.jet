@@ -53,6 +53,8 @@
 
           {{if len(tvseason.Trailers) > 0 }}
             <div class="meta-detail-buttons">
+              <s72-pricing-buttons data-slug="{{tvseason.Slug}}" data-title="{{tvseason.Title}}"></s72-pricing-buttons>
+
               <s72-can-be-watched data-slug="{{tvseason.Slug}}">
                 <s72-modal-player src="{{tvseason.Trailers[0].URL}}" data-label="{{i18n("play_trailer")}}"></s72-modal-player>
               </s72-can-be-watched>
@@ -93,6 +95,38 @@
                 {{range episode := tvseason.Episodes}}
                   <div class="slider-item slider-item-6">
                     {{yield episodeCollectionItem(item=episode)}}
+                  </div>
+                {{end}}
+              {{end}}
+            </div>
+          {{end}}
+
+          {{if len(tvseason.Bonuses) > 0 }}
+            <div class="meta-detail-bonus-content">
+              <h3>{{i18n("meta_detail_bonus_title")}}</h3>
+              {{yield slider(itemsPerRow=6, itemLayout="landscape") content}}
+                {{range bonus := tvseason.Bonuses}}
+                  <div class="slider-item slider-item-6">
+                    <div class="bonus-content">
+                      <div class="bonus-content-poster poster poster-landscape">
+                        <s72-availability-status slug="{{bonus.Slug}}"></s72-availability-status>
+                        <s72-image src="{{len(bonus.Images.Landscape) > 0 ? bonus.Images.Landscape : film.Images.Landscape}}" alt="" class="poster-image poster-image-landscape"></s72-image>
+                        <s72-play-button data-slug="{{bonus.Slug}}" class="btn-play-poster" data-label="false" title="{{bonus.Title}}"></s72-play-button>
+                      </div>
+                      <div class="bonus-content-caption">
+                        <div class="bonus-content-title">{{bonus.Title}}</div>
+                        <div class="bonus-content-synopsis">{{bonus.Overview | raw}}</div>
+
+                        {{if bonus.Runtime > 0}}
+                          <div class="bonus-content-runtime">
+                            {{if bonus.Runtime.Hours() > 0}}
+                              {{bonus.Runtime.Hours()}}{{i18n("runtime_hours")}}
+                            {{end}}
+                            {{bonus.Runtime.Minutes()}}{{i18n("runtime_minutes")}}
+                          </div>
+                        {{end}}
+                      </div>
+                    </div>
                   </div>
                 {{end}}
               {{end}}
