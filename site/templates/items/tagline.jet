@@ -13,7 +13,7 @@
         <li class="meta-item-tagline-item">{{.ShowInfo.Genres}}</li>
       {{end}}
 
-      {{if isset(.Runtime) || isset(.Episodes)}}
+      {{if isset(.Runtime) || (isset(.ShowInfo) && isset(.ShowInfo.ReleaseDate))}}
         <li class="meta-item-tagline-divider">•</li>
       {{end}}
     {{end}}
@@ -33,8 +33,8 @@
       <li class="meta-item-tagline-item">{{i18n("bundle_items_all_films", len(.Items))}}</li>
     {{end}}
 
-    {{if isset(.Episodes)}}
-      <li class="meta-item-tagline-item">{{i18n("episode_count", len(.Episodes))}}</li>
+    {{if isset(.ShowInfo) && isset(.ShowInfo.ReleaseDate)}}
+      <li class="meta-item-tagline-item">{{.ShowInfo.ReleaseDate.Year()}}</li>
     {{end}}
 
   </ul>

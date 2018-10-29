@@ -67,6 +67,7 @@ $meta-item-body-padding: 15px;
 $meta-item-body-color: #fff;
 $meta-item-body-bg: rgba(0,0,0,0.8) !default;
 $meta-item-body-font-size: 1rem !default;
+$meta-item-synopsis-font-size: 13px !default; // ~80% of $font-size-base
 
 $meta-item-caption-color: $body-color !default;
 $meta-item-caption-font-size: 1rem !default;
@@ -108,7 +109,7 @@ $slider-control-bg: $primary !default;
 $slider-control-border: $slider-control-bg !default;
 $slider-control-hover-bg: darken($primary, 7.5%) !default;
 
-$slider-container-width: 1140px !default; // base value that item widths are calculated off
+$slider-container-width: 1110px !default; // base value that item widths are calculated off
 $slider-item-gutter-width: 10px !default; //bs4 grid-gutter-width is wider than we like
 
 // Page Collections

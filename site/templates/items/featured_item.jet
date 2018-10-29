@@ -24,8 +24,12 @@
 
         <div class="meta-item-buttons">
           <s72-play-button data-slug="{{item.Slug}}"></s72-play-button>
+          <s72-pricing-buttons data-slug="{{item.Slug}}" data-title="{{item.GetTranslatedTitle(i18n, item.ItemType)}}"></s72-pricing-buttons>
+
           {{if isset(item.InnerItem["Trailers"]) && len(item.InnerItem.Trailers) > 0}}
-            <s72-modal-player src="{{item.InnerItem.Trailers[0].URL}}" class="btn-sm" data-label="{{i18n("play_trailer")}}"></s72-modal-player>
+            <s72-cant-be-watched data-slug="{{item.Slug}}">
+              <s72-modal-player src="{{item.InnerItem.Trailers[0].URL}}" class="btn-sm" data-label="{{i18n("play_trailer")}}"></s72-modal-player>
+            </s72-cant-be-watched>
           {{end}}
         </div>
       </div>

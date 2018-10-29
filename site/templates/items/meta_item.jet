@@ -30,12 +30,10 @@
         {{if !isExternalPage}}
           <div class="meta-item-body hover">
 
-            <s72-play-button data-slug="{{item.Slug}}" data-title="{{item.GetTranslatedTitle(i18n, "")}}" class="meta-item-play-btn"></s72-play-button>
+            <s72-play-button data-slug="{{item.Slug}}" data-title="{{item.GetTranslatedTitle(i18n, "")}}" class="meta-item-play-btn meta-item-play-btn-{{layout}}"></s72-play-button>
 
             {{if isset(item.InnerItem["Tagline"])}}
-              <div class="meta-item-synopsis">
-                <span class="tits">{{item.InnerItem.Tagline}}</span>
-              </div>
+              <div class="meta-item-synopsis">{{item.InnerItem.Tagline}}</div>
             {{end}}
 
             {*
@@ -53,7 +51,9 @@
 
       <div class="meta-item-caption">
         <div class="meta-item-title">{{item.GetTranslatedTitle(i18n, (item.ItemType + "_title_html"))|raw}}</div>
-        {{yield metaItemTagline(genres=false) item.InnerItem}}
+        {{if item.ItemType != "tvseason"}}
+          {{yield metaItemTagline(genres=false) item.InnerItem}}
+        {{end}}
       </div>
     </a>
   </div>

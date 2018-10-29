@@ -17,7 +17,7 @@
 
   <div class="page-collections">
     {{range index, pf := page.PageCollections}}
-      {{if index > 0}}{{yield pageCollection() pf}}{{end}}
+      {{yield pageCollection() pf}}
     {{end}}
   </div>
 

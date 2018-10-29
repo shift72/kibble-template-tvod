@@ -25,10 +25,8 @@
     transition: opacity $meta-item-hover-time ease;
     background-color: $meta-item-body-bg;
 
-    // half assed attempt at making each thing inside the hover is aligned nicely.
-    > * {
-      flex: 1 1 0;
-      display: flex;
+    s72-play-button.s72-show {
+      flex: 1;
     }
   }
 }
@@ -61,23 +59,29 @@
 }
 
 .meta-item-synopsis {
-  font-size: $small-font-size;
+  $meta-item-synopsis-lines: 4;
+  font-size: $meta-item-synopsis-font-size;
   overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
+  max-height: ($meta-item-synopsis-font-size * $line-height-base * $meta-item-synopsis-lines);
+  text-overflow: -o-ellipsis-lastline;
 
-
-}
-
-.meta-item-buttons {
-  margin-top: 5px;
+  // this is shit, and uses the old flexbox implementation, but its the easiest way to get ellipsis on multiline elements
+  display: -webkit-box;
+  -webkit-line-clamp: $meta-item-synopsis-lines;
+  -webkit-box-orient: vertical;
 }
 
 .meta-item-play-btn {
   padding-right: 0;
-  display: block;
   margin: 0 auto;
+  display: block;
+}
+
+.meta-item-play-btn-landscape {
+  text-align: center;
+}
+
+.meta-item-play-btn-portrait {
 
   .s72-icon-play {
     margin: 0;
@@ -96,16 +100,34 @@
   .meta-item-tagline { font-size: $small-font-size; }
 }
 
-.meta-item-pricing-btn {
+.meta-item-pricing-btn.s72-show {
   display: block;
 
-  &.meta-item-pricing-btn-vertical .s72-pricing-buttons {
+  .s72-pricing-buttons {
+    margin-top: .5rem;
+  }
+
+  .s72-pricing-button-container {
+    display: flex;
+
     .s72-btn {
-      display: block;
+      flex: 1;
+    }
+  }
+
+
+  &.meta-item-pricing-btn-vertical .s72-pricing-button-container {
+    display: block;
+    flex: none;
+
+    &, .s72-btn {
       width: 100%;
+    }
+
+    .s72-btn {
       margin-left: 0;
 
-      &:nth-child(2) {
+      &:nth-child(2){
         margin-top: .5rem;
       }
     }
@@ -132,10 +154,12 @@
   }
 
   .meta-item-text {
-    padding-top: 5px;
+    margin-top: 5px;
   }
 
   .meta-item-buttons {
+    margin-top: 5px;
+
     @include media-breakpoint-down(md) {
       display: none;
     }
