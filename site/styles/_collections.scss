@@ -45,7 +45,7 @@
 
 // sliders
 @for $i from 1 through 10 {
-  $width: round($slider-container-width / $i);
+  $width: $slider-container-width / $i;
   $child-width: $width - ($slider-item-gutter-width);
 
   .slider-item-#{$i} {
@@ -67,7 +67,7 @@
 
 // page-collections
 @for $i from 1 through 10 {
-  $width: round($page-collection-container-width / $i);
+  $width: $page-collection-container-width / $i;
   $child-width: $width - ($page-collection-item-gutter-width);
 
   .page-collection-item-#{$i} {
