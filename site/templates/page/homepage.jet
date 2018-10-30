@@ -1,6 +1,8 @@
-{{extends "templates/application.jet"}}
-{{import "templates/collection/page_collection.jet"}}
-{{import "templates/items/featured_item.jet"}}
+{{extends "../application.jet"}}
+{{import "../collection/page_collection.jet"}}
+{{import "../collection/carousel.jet"}}
+
+{*{import "templates/items/featured_item.jet"}*}
 
 {{block head()}}
   {{yield seo() page}}
@@ -18,7 +20,7 @@
 
   <div class="page page-{{page.PageType|lower}} homepage">
 
-    {{if count > 0 && len(page.PageCollections[0].Items) >= 3}}
+    {*{if count > 0 && len(page.PageCollections[0].Items) >= 3}}
       <div class="container">
         <h2 class="masonry-title">{{i18n("homepage_header")}}</h2>
         <div class="masonry d-flex">
@@ -27,7 +29,11 @@
           <div class="brick">{{yield featuredItem(item=page.PageCollections[0].Items[2], image="Carousel") }}</div>
         </div>
       </div>
-    {{end}}
+    {{end}*}
+
+    <div class="container">
+      {{yield pageCollectionCarousel() page.PageCollections[0]}}
+    </div>
 
     {{range index, pf := page.PageCollections}}
       {{if index > 1}}{{yield pageCollection() pf}}{{end}}

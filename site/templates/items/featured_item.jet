@@ -12,7 +12,7 @@
 
     {{if !isset(item["PageType"]) || item.PageType != "external"}}
       <div class="meta-item-body featured-meta-item-body">
-        <div class="meta-item-title">{{item.Title}}</div>
+        <div class="meta-item-title">{{item.GetTranslatedTitle(i18n, (item.ItemType + "_title_html"))|raw}}</div>
 
         <div class="meta-item-text">
           {{yield metaItemTagline() item.InnerItem}}

@@ -1,9 +1,10 @@
-s72-slider .s72-slider-control {
+.s72-slider-control,
+.s72-carousel-control {
 
   font-family: $font-family-base;
   height: $slider-control-height;
   width: $slider-control-width;
-  left: -$slider-control-width / 2;
+  left: 0;
   background-color: $slider-control-bg;
   border: 1px solid $slider-control-border;
   border-radius: 50%;
@@ -11,10 +12,8 @@ s72-slider .s72-slider-control {
   margin-top: 0;
 
   &.right {
-
-    right: -$slider-control-width / 2;
+    right: 0;
     left: auto;
-
   }
 
   .s72-icon {
@@ -39,7 +38,7 @@ s72-slider .s72-slider-control {
     // &.s72-icon-angle-right { margin-left: 18px; }
   }
 
-  &:hover, &:active, &:focus {
+  @include hover-focus {
     background: $slider-control-hover-bg;
   }
 

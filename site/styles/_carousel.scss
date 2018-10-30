@@ -1,0 +1,7 @@
+.s72-carousel-control {
+	@extend .s72-slider-control;
+	top: 40%;
+	left: 5px;
+
+	&.right { right: 5px; }
+}
