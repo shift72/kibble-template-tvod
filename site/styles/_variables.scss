@@ -101,10 +101,10 @@ $poster-border-radius: $meta-item-border-radius !default;
 // Sliders
 // ------------------------------------
 
-$slider-control-width: 50px !default;
-$slider-control-height: 50px !default;
+$slider-control-width: 30px !default;
+$slider-control-height: 30px !default;
 $slider-control-color: #fff !default;
-$slider-control-icon-size: 32px !default;
+$slider-control-icon-size: 24px !default;
 $slider-control-bg: $primary !default;
 $slider-control-border: $slider-control-bg !default;
 $slider-control-hover-bg: darken($primary, 7.5%) !default;

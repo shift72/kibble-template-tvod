@@ -1,7 +1,10 @@
 .s72-carousel-control {
 	@extend .s72-slider-control;
-	top: 40%;
-	left: 5px;
+	top: 47%;
+	left: $grid-gutter-width / -2;
 
-	&.right { right: 5px; }
+	&.right {
+    left: auto;
+    right: $grid-gutter-width / -2;
+  }
 }

@@ -14,6 +14,10 @@
   &.right {
     right: 0;
     left: auto;
+
+    .s72-icon {
+      margin-left: 1px;
+    }
   }
 
   .s72-icon {
@@ -30,6 +34,7 @@
     // there might be a nice calculation here but, not all sites have a circle bordered control,
     // so this should be removed if its not needed.
     margin-top: -1px;
+    margin-left: -1px;
     // another wierd fix for prod (staging too) where for some reason the arrow does was appearing below the circle border.
     // I think (not sure why) the icon was actually getting display: block from somewhere else on local but not prod.
     display: inline-block;
