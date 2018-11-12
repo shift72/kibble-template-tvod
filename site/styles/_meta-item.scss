@@ -155,6 +155,10 @@
 
   .meta-item-text {
     margin-top: 5px;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
   }
 
   .meta-item-buttons {
@@ -172,8 +176,4 @@
   display: block;
   @include gradient-y($start-color: transparent, $end-color: rgba(#000, 0.7), $start-percent: 0%, $end-percent: 50%);
   padding: $featured-meta-item-body-padding;
-
-  @include media-breakpoint-up(md) {
-    padding: $featured-meta-item-body-padding * 2;
-  }
 }

@@ -10,19 +10,19 @@
 *}
 <s72-carousel data-image-width="1600" data-image-height="600">
 	<div class="page-collection page-collection-carousel">
-		<div class="carousel-slides">
+		<div class="s72-carousel-slides">
 			{{range item := .Items}}
-				<div class="carousel-item">
+				<div class="s72-carousel-item">
 					{{yield featuredItem(item=item, image="Carousel")}}
 				</div>
 			{{end}}
 		</div>
 
-		<!-- <div class="carousel-pagination">
+		<div class="s72-carousel-pagination">
 			{{range index, item := .Items}}
-				<div class="carousel-page" data-page-index="{{index}}"><span class="fa fa-circle"></span></div>
+				<div class="s72-carousel-page" data-page-index="{{index}}"><span class="carousel-page-rect"></span></div>
 			{{end}}
-		</div> -->
+		</div>
 
 		<!-- Controls -->
 		<a class="left s72-carousel-control"><span class="s72-icon s72-icon-angle-left"></span></a>

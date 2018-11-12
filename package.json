@@ -1,6 +1,6 @@
 {
-  "name": "kibble-template-svod",
-  "version": "0.0.1",
+  "name": "kibble-template-tvod",
+  "version": "0.0.3",
   "description": "Base template for TVOD kibble sites",
   "scripts": {
     "start": "npm run css && npm-run-all --parallel css:watch kibble:watch",
@@ -29,6 +29,6 @@
     "node-sass": "^4.9.3",
     "npm-run-all": "^4.0.2",
     "postcss-cli": "^4.1.0",
-    "s72-kibble": "^0.10.6"
+    "s72-kibble": "^0.10.8"
   }
 }

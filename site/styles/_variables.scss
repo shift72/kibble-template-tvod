@@ -79,7 +79,7 @@ $meta-item-tagline-classification-border-radius: $meta-item-border-radius;
 
 $meta-item-availability-tag-margin: 5px;
 
-$featured-meta-item-body-padding: 10px;
+$featured-meta-item-body-padding: 20px;
 
 
 // Posters
@@ -120,6 +120,11 @@ $page-collection-item-gutter-width: $slider-item-gutter-width !default;
 
 $page-collection-title-font-size: 1.5rem !default;
 $page-collection-title-padding-y: 20px !default;
+
+// Carousel
+// ------------------------------------
+$carousel-pagination-page-bg-color: rgba(#fff, .7) !default;
+$carousel-pagination-page-bg-color-hover: #fff !default;
 
 // Icons
 // ------------------------------------

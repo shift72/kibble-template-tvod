@@ -1,10 +1,44 @@
 .s72-carousel-control {
 	@extend .s72-slider-control;
+
 	top: 47%;
 	left: $grid-gutter-width / -2;
 
 	&.right {
     left: auto;
     right: $grid-gutter-width / -2;
-  }
+	}
+
+	@include media-breakpoint-down(sm){
+		display: none;
+	}
+}
+
+.s72-carousel-pagination {
+	display: flex;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	justify-content: center;
+}
+
+.s72-carousel-page {
+	z-index: 1;
+	padding: 7px; // 7 + 7 + 6 = 20
+	cursor: pointer;
+
+	.carousel-page-rect {
+		display: block;
+		width: 20px;
+		height: 6px;
+		border-radius: 1px;
+		background-color: $carousel-pagination-page-bg-color;
+	}
+
+	&.current, &:hover, &:focus, &:active {
+		.carousel-page-rect {
+			background-color: $carousel-pagination-page-bg-color-hover;
+		}
+	}
 }
