@@ -8,11 +8,6 @@
   {{yield seo() tvseason}}
 {{end}}
 
-{* Hide Sub nav on this page *}
-{{block navigation()}}
-  {{yield nav(showSubNav=false)}}
-{{end}}
-
 {{block body()}}
   <div class="page page-tvseason meta-detail meta-detail-tvseason">
 

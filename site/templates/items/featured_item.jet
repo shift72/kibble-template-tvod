@@ -4,7 +4,7 @@
 <div class="meta-item featured-meta-item meta-item-{{item.ItemType|lower}}">
   <a href="{{routeToSlug(item.Slug)}}">
     {{if isset(item.Images[image])}}
-      <s72-image src="{{item.Images[image]}}" alt="{{item.Title}}" class="poster-image poster-image-featured"></s72-image>
+      <s72-image src="{{item.Images[image]}}" alt="{{item.GetTranslatedTitle(i18n, "")}}" class="poster-image poster-image-featured"></s72-image>
     {{end}}
 
     <s72-availability-status data-slug="{{item.Slug}}"></s72-availability-status>

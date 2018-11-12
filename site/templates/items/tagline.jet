@@ -23,10 +23,8 @@
       {{if .Runtime > 60}}
         <li class="meta-item-tagline-item">{{.Runtime.Hours()}}{{i18n("runtime_hours")}} {{.Runtime.Minutes()}}{{i18n("runtime_minutes")}}</li>
       {{else}}
-        <li class="meta-item-tagline-item">{{.Runtime}}min</li>
+        <li class="meta-item-tagline-item">{{.Runtime.Minutes()}}{{i18n("runtime_minutes")}}</li>
       {{end}}
-
-      {*<li class="meta-item-tagline-item">{{.Runtime}}min</li>*}
     {{end}}
 
     {{if isset(.Items)}}
