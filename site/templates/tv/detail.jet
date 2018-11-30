@@ -105,7 +105,7 @@
                     <div class="bonus-content">
                       <div class="bonus-content-poster poster poster-landscape">
                         <s72-availability-status slug="{{bonus.Slug}}"></s72-availability-status>
-                        <s72-image src="{{len(bonus.Images.Landscape) > 0 ? bonus.Images.Landscape : film.Images.Landscape}}" alt="" class="poster-image poster-image-landscape"></s72-image>
+                        <s72-image src="{{len(bonus.Images.Landscape) > 0 ? bonus.Images.Landscape : tvseason.Images.Landscape}}" alt="" class="poster-image poster-image-landscape"></s72-image>
                         <s72-play-button data-slug="{{bonus.Slug}}" class="btn-play-poster" data-label="false" title="{{bonus.Title}}"></s72-play-button>
                       </div>
                       <div class="bonus-content-caption">
