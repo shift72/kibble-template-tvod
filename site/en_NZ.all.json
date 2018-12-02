@@ -23,6 +23,7 @@
   "nav_subscriptions": { "other": "My Subscriptions" },
   "nav_devices": { "other": "My Devices" },
   "nav_account": { "other": "My Account" },
+  "nav_activate": { "other": "Activate a Device" },
   "nav_signout": { "other": "Sign Out" },
 
   "nav_branding_title": { "other": "Shift72" },

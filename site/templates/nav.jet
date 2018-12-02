@@ -45,6 +45,7 @@
               <a class="s72-dropdown-item" href="/library.html">{{i18n("nav_library")}}</a>
               <a class="s72-dropdown-item" href="/devices.html">{{i18n("nav_devices")}}</a>
               <a class="s72-dropdown-item" href="/account.html">{{i18n("nav_account")}}</a>
+              <a class="s72-dropdown-item" href="/pin.html">{{i18n("nav_activate")}}</a>
               <s72-sign-out class="s72-dropdown-item">{{i18n("nav_signout")}}</s72-sign-out>
             </div>
           </s72-dropdown>

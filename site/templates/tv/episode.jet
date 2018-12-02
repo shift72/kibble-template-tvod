@@ -7,7 +7,7 @@
 
 <div class="episode-caption">
   <div class="episode-title" title="{{item.Title}}">{{item.Title}}</div>
-  <div class="episode-overview">{{item.Overview}}</div>
+  <div class="episode-overview">{{item.Overview | raw}}</div>
 
   {{if item.Runtime > 0 }}
     <div class="episode-runtime">
