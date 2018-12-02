@@ -50,6 +50,10 @@
   "homepage_header": { "other" : "Featured"},
   "page_collection_see_all": { "other" : "See All"},
 
+  "date_day": { "other": "Day" },
+  "date_month": { "other": "Month" },
+  "date_year": { "other": "Year" },
+
   "signup_page_header": { "other": "Create an Account" },
   "signup_form_name": { "other": "Name" },
   "signup_form_email": { "other": "Email address" },
@@ -91,6 +95,8 @@
   "account_form_name": { "other": "Name" },
   "account_form_email": { "other": "Email address" },
   "account_form_password": { "other": "Password" },
+  "account_form_dob": { "other": "Date of Birth" },
+  "account_form_gender": { "other": "Gender" },
   "account_form_change_password": { "other": "Change" },
   "account_form_submit": { "other": "Update" },
   "account_form_submitted": { "other": "Updated" },

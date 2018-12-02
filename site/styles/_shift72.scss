@@ -139,6 +139,11 @@
 .s72-input-group-append { @extend .input-group-append; }
 .s72-input-group-prepend { @extend .input-group-prepend; }
 
+.s72-datepicker { @extend .row; }
+.s72-datepicker-day { @extend .col-3; }
+.s72-datepicker-month { @extend .col-5; }
+.s72-datepicker-year { @extend .col-4; }
+
 s72-can-be-watched,
 s72-can-be-watched-now,
 s72-cant-be-watched {
