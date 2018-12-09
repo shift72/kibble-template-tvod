@@ -2,11 +2,11 @@
 	@extend .s72-slider-control;
 
 	top: 47%;
-	left: $grid-gutter-width / -2;
+	left: ($grid-gutter-width / -2) - 5px; // slider controls have 5px margin on them
 
 	&.right {
     left: auto;
-    right: $grid-gutter-width / -2;
+    right: ($grid-gutter-width / -2) - 5px;
 	}
 
 	@include media-breakpoint-down(sm){

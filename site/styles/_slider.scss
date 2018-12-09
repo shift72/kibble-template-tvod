@@ -3,21 +3,13 @@
   font-family: $font-family-base;
   height: $slider-control-height;
   width: $slider-control-width;
-  left: 0;
   background-color: $slider-control-bg;
   border: 1px solid $slider-control-border;
   border-radius: 50%;
   z-index: 10;
-  margin-top: 0;
+  margin: 5px; //make it a bit easier to hit
 
-  &.right {
-    right: 0;
-    left: auto;
-
-    .s72-icon {
-      margin-left: 1px;
-    }
-  }
+  &.right .s72-icon { margin-left: 1px; }
 
   .s72-icon {
 
@@ -46,6 +38,15 @@
     background: $slider-control-hover-bg;
   }
 
+}
+
+.s72-slider-fluid .s72-slider-control {
+  left: 0;
+
+  &.right {
+    right: 0;
+    left: auto;
+  }
 }
 
 // make .slider-control be in the middle of the poster, not the middle of the item (which includes captions).
@@ -94,7 +95,7 @@ s72-slider.has-next.s72-slider-scroll:after {
   z-index: 5;
   height: 100%;
   @include gradient-x(rgba($body-bg, .9), transparent, 0%, 100%);
-  pointer-events: none;
+  pointer-events: auto; // if its none, it allows clicks through to the item beneath it
 }
 
 .slider-fade-out {
@@ -113,6 +114,7 @@ s72-slider.has-next.s72-slider-scroll:after {
 
 .slider-fluid {
   position: relative;
+  overflow: hidden; // hide scrollbars
 
   // This changes the default value for s72-slider due to us using the fade-in/fade-out to show more items
   // We instead use .slider-fluid as the relative positioned parent so the fades dont move when scrolling.
