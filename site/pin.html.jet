@@ -13,7 +13,7 @@
       </div>
 
       <div class="page-content form-page-content">
-        <p>{{i18n("activatedevice_page_content")}}</p>
+        <p class="text-center">{{i18n("activatedevice_page_content")}}</p>
         <s72-activatedevice-form code-param="code" signin-url="/signin.html"></s72-activatedevice-form>
       </div>
     </div>
