@@ -25,11 +25,13 @@
   @extend .clearfix;
   margin-left: $page-collection-item-gutter-width / -2;
   margin-right: $page-collection-item-gutter-width / -2;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .page-collection-item,
 .slider-item {
-  float: left;
   padding: 0;
 }
 

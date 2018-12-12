@@ -134,6 +134,5 @@ s72-slider.has-next.s72-slider-scroll:after {
 }
 
 s72-slider .s72-slider-item-wrapper {
-  margin-left: $slider-item-gutter-width / -2;
-  margin-right: $slider-item-gutter-width / -2;
+  @extend .page-collection-list-item-wrapper;
 }
