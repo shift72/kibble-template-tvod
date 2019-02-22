@@ -168,6 +168,8 @@
   "validation_password_minlength": { "other": "Please enter at least {{.Count}} characters." },
   "validation_promocode_required": { "other": "Please enter a promo code." },
   "validation_pincode_required": { "other": "Please enter a PIN code." },
+  "validation_dob_required": { "other": "Please enter your date of birth." },
+  "validation_gender_required": { "other": "Please enter your gender." },
 
   "shopping_info_subtitle_hd": { "other": "HD Video on Demand." },
   "shopping_info_subtitle_sd": { "other": "SD Video on Demand." },
