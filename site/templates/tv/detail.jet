@@ -85,7 +85,7 @@
 
           {{if len(tvseason.Episodes) > 0}}
             <div class="meta-detail-episodes">
-              <h3>{{i18n("meta_detail_episodes_title")}}</h3>
+              <h3 id="episodes">{{i18n("meta_detail_episodes_title")}}</h3>
               {{yield slider(itemsPerRow=6, itemLayout="landscape") content}}
                 {{range episode := tvseason.Episodes}}
                   <div class="slider-item slider-item-6">

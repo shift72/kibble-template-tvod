@@ -9,6 +9,12 @@
   "tvseason": {
     "other": "{{.ShowInfo.Title}} Seasón {{.Season.SeasonNumber}}"
   },
+  "tvepisode": {
+    "other": "S{{.Season.SeasonNumber}}E{{.Episode.EpisodeNumber}}. {{.Episode.Title}}"
+  },
+  "tvepisode_title_html": {
+    "other": "S{{.Season.SeasonNumber}}E{{.Episode.EpisodeNumber}}. {{.Episode.Title}}"
+  },
   "tvseason_title_html": {
     "other": "{{.ShowInfo.Title}} <small>Seasón {{.Season.SeasonNumber}}</small>"
   },

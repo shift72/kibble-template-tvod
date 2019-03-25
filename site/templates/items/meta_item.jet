@@ -19,8 +19,13 @@
     {{imageUrl = layout == "portrait" ? "/images/missing/collection-portrait.png" : "/images/missing/collection-landscape.png"}}
   {{end}}
 
+  {{slugRoute := routeToSlug(item.Slug)}}
+  {{if item.ItemType == "tvepisode"}}
+    {{slugRoute = routeToSlug(item.InnerItem.Season.Slug) + "#episodes"}}
+  {{end}}
+
   <div class="meta-item meta-item-{{layout|lower}}">
-    <a href="{{routeToSlug(item.Slug)}}" target="{{isExternalPage ? "_blank" : ""}}" class="meta-item-link">
+    <a href="{{slugRoute}}" target="{{isExternalPage ? "_blank" : ""}}" class="meta-item-link">
       <div class="poster poster-{{layout}}">
         <s72-availability-status data-slug="{{item.Slug}}"></s72-availability-status>
         <s72-availability-label data-slug="{{item.Slug}}"></s72-availability-label>
@@ -51,7 +56,7 @@
 
       <div class="meta-item-caption">
         <div class="meta-item-title">{{item.GetTranslatedTitle(i18n, (item.ItemType + "_title_html"))|raw}}</div>
-        {{if item.ItemType != "tvseason"}}
+        {{if item.ItemType != "tvseason" }}
           {{yield metaItemTagline(genres=false) item.InnerItem}}
         {{end}}
       </div>

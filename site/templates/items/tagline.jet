@@ -5,6 +5,13 @@
       <span class="meta-item-classification meta-item-classification-mature">M</span>
     </li>*}
 
+    {{showRuntime:=true}}
+
+    {{if isset(.Season)}}
+      {{showRuntime=false}}
+      <li class="meta-item-tagline-item">{{i18n("tvseason_title_html", map("Season", .Season, "ShowInfo", .Season.ShowInfo))|raw}}</li>
+    {{end}}
+
     {{if genres == true}}
       {{if isset(.Genres)}}
         <li class="meta-item-tagline-item">{{.Genres}}</li>
@@ -18,7 +25,7 @@
       {{end}}
     {{end}}
 
-    {{if isset(.Runtime)}}
+    {{if showRuntime && isset(.Runtime)}}
 
       {{if .Runtime > 60}}
         <li class="meta-item-tagline-item">{{.Runtime.Hours()}}{{i18n("runtime_hours")}} {{.Runtime.Minutes()}}{{i18n("runtime_minutes")}}</li>

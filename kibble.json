@@ -25,11 +25,18 @@
     },
     {
       "name": "tvItem",
-      "urlPath": "/tv/:slug/:seasonNumber",
+      "urlPath": "/tv/:slug/:seasonNumber/",
       "templatePath": "templates/tv/detail.jet",
       "partialUrlPath": "/partials/tv/:showID/season/:seasonNumber.html",
       "partialTemplatePath": "templates/tv/partial.jet",
       "datasource": "TVSeason",
+      "pageSize": 0
+    },
+    {
+      "name": "episode",
+      "partialUrlPath": "/partials/tv/:showID/season/:seasonNumber/episode/:episodeNumber.html",
+      "partialTemplatePath": "templates/tv/episode-partial.jet",
+      "datasource": "TVEpisode",
       "pageSize": 0
     },
     {

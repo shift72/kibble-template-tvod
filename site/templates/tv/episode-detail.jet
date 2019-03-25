@@ -1,0 +1,7 @@
+{{extends "../application.jet"}}
+
+{{block body()}}
+  <div class="page page-tvseason meta-detail meta-detail-tvepisode">
+    {{tvepisode.GetTitle(i18n)}}
+  </div>
+{{end}}
