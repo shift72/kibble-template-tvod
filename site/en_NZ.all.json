@@ -92,6 +92,7 @@
   "forgotpassword_form_email": { "other": "Email address" },
   "forgotpassword_form_submit": { "other": "Reset" },
   "forgotpassword_form_error_email_doesnt_exist": { "other": "An account matching that email address does not exist." },
+  "forgotpassword_form_error_account_suspended": { "other": "This account is suspended." },
   "forgotpassword_complete": { "other": "Thank you. A password reset email should appear in your inbox shortly." },
 
   "resetpassword_page_header": { "other": "Change your Password" },
