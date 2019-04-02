@@ -13,7 +13,7 @@
     </div>
 
     <div class="page-content">
-      <s72-searchresults search-param="q" partials-base-path="/partials" show-search-form="true" />
+      <s72-searchresults cloudsearch="true" search-param="q" partials-base-path="/partials" show-search-form="true" />
     </div>
   </div>
 
