@@ -63,7 +63,7 @@
               <h3>{{i18n("meta_detail_cast_title")}}</h3>
               <div class="cast-members">
                 {{range index, member := tvseason.Cast}}
-                  {{member.Name}}{{if index < len(tvseason.Cast) - 1}}, {{end}}
+                  <a href="/search.html?q={{member.Name}}">{{member.Name}}</a>{{if index < len(tvseason.Cast) - 1}}, {{end}}
                 {{end}}
               </div>
             </div>
@@ -76,7 +76,7 @@
                 {{range index, member := tvseason.Crew}}
                   <div class="crew-member">
                     <span class="crew-member-job">{{member.Job}}</span>
-                    <span class="crew-member-name">{{member.Name}}</span>
+                    <a class="crew-member-name" href="/search.html?q={{member.Name}}">{{member.Name}}</a>
                   </div>
                 {{end}}
               </div>
