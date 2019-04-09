@@ -1,0 +1,13 @@
+{
+	{{range site.Pages}}"{{.Slug}}": "{{routeToSlug(.Slug)}}",
+	{{end}}
+	{{range site.Films}}"{{.Slug}}": "{{routeToSlug(.Slug)}}",
+	{{end}}
+	{{range site.TVSeasons}}"{{.Slug}}": "{{routeToSlug(.Slug)}}",
+	{{end}}
+	{{range site.Collections}}"{{.Slug}}": "{{routeToSlug(.Slug)}}",
+	{{end}}
+	{{range site.Bundles}}"{{.Slug}}": "{{routeToSlug(.Slug)}}",
+	{{end}}
+	"/": "/"
+}
