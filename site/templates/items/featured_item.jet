@@ -29,16 +29,12 @@
           {{if isset(item.InnerItem["Trailers"]) && len(item.InnerItem.Trailers) > 0}}
             <s72-cant-be-watched data-slug="{{item.Slug}}">
             
-              {{if config("trailer_redirect") != "false"}}
-                <a href="{{routeToSlug(item.Slug)}}?autoplay" class="btn-sm">
-                  <button class="s72-btn s72-btn-play">
-                    <span class="s72-btn-play-icon"><s72-play-icon></s72-play-icon></span>
-                    <span class="verb s72-btn-play-label">{{i18n("play_trailer")}}</span>
-                  </button>
-                </a>
-              {{else}}
-                <s72-modal-player src="{{item.InnerItem.Trailers[0].URL}}" class="btn-sm" data-label="{{i18n("play_trailer")}}"></s72-modal-player>
-              {{end}}
+            <a href="{{routeToSlug(item.Slug)}}?autoplay" class="btn-sm">
+              <button class="s72-btn s72-btn-play">
+                <span class="s72-btn-play-icon"><s72-play-icon></s72-play-icon></span>
+                <span class="verb s72-btn-play-label">{{i18n("play_trailer")}}</span>
+              </button>
+            </a>
               
             </s72-cant-be-watched>
           {{end}}
