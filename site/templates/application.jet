@@ -2,8 +2,8 @@
 {{import "./seo.jet" }}
 {{import "./footer.jet" }}
 
-{*{CDN := "//droy91bxkyxho.cloudfront.net/1.2.0-beta"}*}
-{{CDN:="//localhost:3000"}}
+{{CDN := "//droy91bxkyxho.cloudfront.net/1.2.0-beta"}}
+{*{CDN:="//localhost:3000"}*}
 <!DOCTYPE html>
 <html lang="{{lang.Code}}">
   <head>
