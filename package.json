@@ -29,6 +29,6 @@
     "node-sass": "^4.9.3",
     "npm-run-all": "^4.0.2",
     "postcss-cli": "^4.1.0",
-    "s72-kibble": "^0.10.12"
+    "s72-kibble": "^0.10.11"
   }
 }
