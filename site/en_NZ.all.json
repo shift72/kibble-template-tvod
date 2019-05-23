@@ -46,6 +46,7 @@
   "search_control_placeholder": { "other": "Search" },
 
   "play_button_watch": { "other": "Watch Now"},
+  "play_button_resume": { "other": "Resume"},
 
   "pricing_quality_hd": { "other": "HD" },
   "pricing_quality_sd": { "other": "SD" },

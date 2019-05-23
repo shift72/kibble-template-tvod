@@ -27,6 +27,8 @@
   <div class="meta-item meta-item-{{layout|lower}}">
     <a href="{{slugRoute}}" target="{{isExternalPage ? "_blank" : ""}}" class="meta-item-link">
       <div class="poster poster-{{layout}}">
+        <s72-playback-progress slug="{{item.Slug}}"></s72-playback-progress>
+
         <s72-availability-status data-slug="{{item.Slug}}"></s72-availability-status>
         <s72-availability-label data-slug="{{item.Slug}}"></s72-availability-label>
 
@@ -40,14 +42,6 @@
             {{if isset(item.InnerItem["Tagline"])}}
               <div class="meta-item-synopsis">{{item.InnerItem.Tagline}}</div>
             {{end}}
-
-            {*
-              {{if isset(item.InnerItem["Trailers"]) && len(item.InnerItem.Trailers) > 0}}
-                <s72-cant-be-watched data-slug="{{item.Slug}}">
-                  <s72-modal-player src="{{item.InnerItem.Trailers[0].URL}}" data-label="{{i18n("play_trailer")}}"></s72-modal-player>
-                </s72-cant-be-watched>
-              {{end}}
-            *}
 
             <s72-pricing-buttons data-slug="{{item.Slug}}" data-title="{{item.GetTranslatedTitle(i18n, item.ItemType)}}" class="meta-item-pricing-btn meta-item-pricing-btn-{{(layout == "landscape") ? "horizontal" : "vertical"}}"></s72-pricing-buttons>
           </div>

@@ -32,9 +32,9 @@
         </a>
 
         <s72-user-anon>
-          <a class="btn btn-signin" href="/signin.html">{{i18n("nav_signin")}}</a>
+          <a class="btn btn-signin" href="/signin.html?from={{currentUrlPath|url}}">{{i18n("nav_signin")}}</a>
           {{if config("disable_user_signups") != "true"}}
-            <a class="btn btn-signup" href="/signup.html">{{i18n("nav_signup")}}</a>
+            <a class="btn btn-signup" href="/signup.html?from={{currentUrlPath|url}}">{{i18n("nav_signup")}}</a>
           {{end}}
         </s72-user-anon>
 

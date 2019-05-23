@@ -36,6 +36,7 @@
             <s72-availability-status data-slug="{{tvseason.Slug}}"></s72-availability-status>
             <s72-availability-label data-slug="{{tvseason.Slug}}"></s72-availability-label>
             <s72-image src="{{tvseason.Images.Portrait}}" alt="{{tvseason.Title}}" class="poster poster-image poster-image-portrait"></s72-image>
+            <s72-playback-progress slug="{{tvseason.Slug}}"></s72-playback-progress>
           </div>
         </div>
 
@@ -107,6 +108,7 @@
                         <s72-availability-status slug="{{bonus.Slug}}"></s72-availability-status>
                         <s72-image src="{{len(bonus.Images.Landscape) > 0 ? bonus.Images.Landscape : tvseason.Images.Landscape}}" alt="" class="poster-image poster-image-landscape"></s72-image>
                         <s72-play-button data-slug="{{bonus.Slug}}" class="btn-play-poster" data-label="false" title="{{bonus.Title}}"></s72-play-button>
+                        <s72-playback-progress slug="{{bonus.Slug}}"></s72-playback-progress>
                       </div>
                       <div class="bonus-content-caption">
                         <div class="bonus-content-title">{{bonus.Title}}</div>

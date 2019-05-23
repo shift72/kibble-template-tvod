@@ -3,6 +3,7 @@
   <s72-availability-status data-slug="{{item.Slug}}"></s72-availability-status>
   <s72-play-button data-slug="{{item.Slug}}" data-title="{{item.Title}}" data-label="false" class="btn-play-poster"></s72-play-button>
   <s72-image src="{{item.Images.Landscape}}" alt="{{item.Title}}" class="poster-image poster-image-landscape" border="0"></s72-image>
+  <s72-playback-progress slug="{{item.Slug}}"></s72-playback-progress>
 </div>
 
 <div class="episode-caption">
