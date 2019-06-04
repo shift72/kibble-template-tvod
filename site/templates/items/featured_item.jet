@@ -28,14 +28,14 @@
 
           {{if isset(item.InnerItem["Trailers"]) && len(item.InnerItem.Trailers) > 0}}
             <s72-cant-be-watched data-slug="{{item.Slug}}">
-            
-            <a href="{{routeToSlug(item.Slug)}}?autoplay" class="btn-sm">
+
+            <div class="btn-sm btn-trailer" data-url="{{routeToSlug(item.Slug)}}?autoplay">
               <button class="s72-btn s72-btn-play">
                 <span class="s72-btn-play-icon"><s72-play-icon></s72-play-icon></span>
                 <span class="verb s72-btn-play-label">{{i18n("play_trailer")}}</span>
               </button>
-            </a>
-              
+            </div>
+
             </s72-cant-be-watched>
           {{end}}
         </div>
