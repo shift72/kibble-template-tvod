@@ -24,11 +24,11 @@
   "dependencies": {
     "autoprefixer": "^7.1.2",
     "bootstrap": "^4.0.0",
-    "cssnano": "^3.10.0",
+    "cssnano": "^4.1.10",
     "font-awesome": "^4.7.0",
-    "node-sass": "^4.9.3",
+    "node-sass": "^4.12",
     "npm-run-all": "^4.0.2",
-    "postcss-cli": "^4.1.0",
-    "s72-kibble": "^0.10.11"
+    "postcss-cli": "^6.1.0",
+    "s72-kibble": "^0.10.13"
   }
 }
