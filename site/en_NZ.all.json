@@ -268,6 +268,7 @@
   "shopping_error_expired_card": { "other": "The Credit Card has expired." },
   "shopping_error_creditcard_country_mismatch": { "other": "Your {{.Ownership}} has not been completed. You need to be in the country your credit card was issued. Please use another card for making the payment." },
   "shopping_error_proxy_detected": { "other": "Your {{.Ownership}} has not been completed. We have detected that you are using an unblocker or proxy service. Please turn off any of these services and try again." },
+  "shopping_error_payment_intent_authentication_failure": { "other": "The Credit Card has been declined." },
 
   "shopping_error_discount_blank": { "other": "Please enter a promo code." },
   "shopping_error_discount_invalid": { "other": "Please enter a valid promo code." },

@@ -40,8 +40,11 @@
         '//js.stripe.com/v3/'
       ];
 
-      // adapted (and modified) from: https://www.html5rocks.com/en/tutorials/speed/script-loading/
-      !function(w,e,t,r,z){w[z]=w[z]||function(){(w[z].q=w[z].q||[]).push(arguments)};function n(){for(;d[0]&&"loaded"==d[0][f];)c=d.shift(),c[o]=!i.parentNode.insertBefore(c,i)}for(var s,a,c,d=[],i=e.scripts[0],o="onreadystatechange",f="readyState";s=r.shift();)a=e.createElement(t),"async"in i?(a.async=!1,e.head.appendChild(a)):i[f]?(d.push(a),a[o]=n):e.write("<"+t+' src="'+s+'" defer></'+t+">"),a.src=s}(window, document,"script", scripts, 's72');
+      {*
+        // Adapted (and modified) from: https://www.html5rocks.com/en/tutorials/speed/script-loading/
+        // This version adds a global `s72` function for queueueueueing up calls to the s72 libraries before they load, as well as an ordered js script loading util (`s72.js()`)
+      *}
+      !function(w,e,t,r,z){w[z]=w[z]||function(){(w[z].q=w[z].q||[]).push(arguments);};w[z].js=function(s){var i=e.scripts[0],o='onreadystatechange',f='readyState',d=[];a=e.createElement(t),"async"in i?(a.async=!1,e.head.appendChild(a)):i[f]?(d.push(a),a[o]=n):e.write("<"+t+' src="'+s+'" defer></'+t+">"),a.src=s};function n(){for(;d[0]&&"loaded"==d[0][f];)c=d.shift(),c[o]=!i.parentNode.insertBefore(c,i)}for(var s;s=r.shift();)w[z].js(s)}(window, document,"script", scripts, 's72');
 
       s72({
         config: {{ site.Config | json | raw }},
