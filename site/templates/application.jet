@@ -2,7 +2,7 @@
 {{import "./seo.jet" }}
 {{import "./footer.jet" }}
 
-{{CDN := "//droy91bxkyxho.cloudfront.net/1.2.5-beta1"}}
+{{CDN := "//cdn.shift72.com/1.2.6"}}
 {*{CDN:="//localhost:3000"}*}
 <!DOCTYPE html>
 <html lang="{{lang.Code}}">
