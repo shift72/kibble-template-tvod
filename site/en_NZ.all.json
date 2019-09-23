@@ -103,6 +103,7 @@
   "resetpassword_form_submit": { "other": "Change" },
   "resetpassword_complete": { "other": "Thank you. Your password has been changed, and you have been signed in." },
   "resetpassword_form_error_invalid_reset_password_token": { "other": "The reset password request is invalid. Please try again later." },
+  "resetpassword_form_error_reset_password_token_expired": { "other": "The reset password token has expired. Please request a new one." },
 
   "account_page_header": { "other": "My Account" },
   "account_form_name": { "other": "Name" },
