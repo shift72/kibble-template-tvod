@@ -17,6 +17,10 @@
     </div>
   </div>
 
-  <script>s72('run', function(){  document.querySelector('.s72-form-control-search').focus(); });</script>
+  <script>
+    document.addEventListener('s72loaded', function(){
+      document.querySelector('.s72-form-control-search').focus();
+    });
+  </script>
 </div>
 {{end}}
