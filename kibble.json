@@ -1,8 +1,8 @@
 {
   "name": "kibble-template-tvod",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "siteUrl": "https://staging-store-kibble.shift72.com",
-  "builderVersion": "0.10.13",
+  "builderVersion": "0.10.16",
   "defaultLanguage": "en",
   "languages": {
     "en": "en_NZ"
@@ -13,6 +13,7 @@
       "styles"
     ]
   },
+  "proxy": ["/subtitles/"],
   "routes": [
     {
       "name": "filmItem",
@@ -20,6 +21,13 @@
       "templatePath": "templates/film/item.jet",
       "partialUrlPath": "/partials/film/:filmID.html",
       "partialTemplatePath": "templates/film/partial.jet",
+      "datasource": "Film",
+      "pageSize": 0
+    },
+    {
+      "name": "filmPlayItem",
+      "urlPath": "/film/:slug/play/",
+      "templatePath": "templates/film/play.jet",
       "datasource": "Film",
       "pageSize": 0
     },

@@ -1,0 +1,58 @@
+{{extends "../application.jet"}}
+{{import "../common/slider.jet"}}
+{{import "../items/tagline.jet"}}
+{{import "../items/meta_item.jet"}}
+
+{{block head()}}
+  <link rel="stylesheet" href="https://cdn.shift72.com/player/1.0.0/index.css">
+  <script src="https://cdn.shift72.com/player/1.0.0/index.js" defer></script>
+
+  {*<link rel="stylesheet" href="https://localhost:1234/src.a2b27638.css">
+  <script src="https://localhost:1234/src.a2b27638.js" defer></script>*}
+  {{yield seo() film}}
+{{end}}
+
+{{block body()}}
+  <div class="page page-film meta-detail meta-detail-film">
+
+    <div class="meta-detail-bg">
+      <div class="meta-detail-bg-gradient"></div>
+      <s72-image src="{{film.Images.Background}}" class="meta-detail-bg-img"></s72-image>
+    </div>
+
+    <div class="container">
+
+      <div class="player s72-player"></div>
+
+      <script>
+        document.addEventListener('s72loaded', function(e){
+          var app = e.detail.app;
+
+          if (!app.userService.isAuthenticated()){
+            return;
+          }
+
+          var pa = new s72.player.App(e.detail.app);
+          pa.createPlayer('{{film.Slug}}', '.player').then(p => {
+            p.play().then(() => {
+              {{range i, t := film.SubtitleTracks}}
+                p.player.addTextTrack('{{t.Path}}', '{{t.Language}}', '{{t.Type}}');
+              {{end}}
+            });
+          });
+        });
+      </script>
+
+      <div class="meta-detail-main">
+
+        <div class="meta-detail-content">
+          <h1 class="meta-detail-title">{{ film.Title }} <small>({{film.ReleaseDate.Year()}})</small></h1>
+          <div class="meta-detail-tagline">
+            {{yield metaItemTagline() film}}
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+{{end}}
