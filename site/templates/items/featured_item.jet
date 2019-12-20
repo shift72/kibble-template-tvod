@@ -23,7 +23,7 @@
         {{end}}
 
         <div class="meta-item-buttons">
-          <s72-play-button data-slug="{{item.Slug}}"></s72-play-button>
+          <s72-play-button data-slug="{{item.Slug}}" data-url="{{routeToSlug(item.Slug)}}play/"></s72-play-button>
           <s72-pricing-buttons data-slug="{{item.Slug}}" data-title="{{item.GetTranslatedTitle(i18n, item.ItemType)}}"></s72-pricing-buttons>
 
           {{if isset(item.InnerItem["Trailers"]) && len(item.InnerItem.Trailers) > 0}}

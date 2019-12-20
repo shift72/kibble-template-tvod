@@ -1,0 +1,83 @@
+{{extends "templates/application.jet"}}
+
+{{block head()}}
+  {{yield seo(title=i18n("account_page_header"), index=false)}}
+
+  <link rel="stylesheet" href="https://cdn.shift72.com/player/1.0.0/index.css">
+  <script src="https://cdn.shift72.com/player/1.0.0/index.js" defer></script>
+{{end}}
+
+{{block body()}}
+  <div class="page">
+
+    <div class="container">
+
+      <div class="alert alert-info">Make sure you are signed in as admin.</div>
+
+      <div class="player s72-player"></div>
+
+      <script>
+        document.addEventListener('s72loaded', function(e){
+          var app = e.detail.app;
+
+          if (!app.userService.isAuthenticated()){
+            return;
+          }
+
+          var manifests = [{
+            uri: 'https://shift72c.akamaized.net/59e8aa56-d0c6-43b1-ae33-c4d6b358242c/3207/big_buck_bunny.mpd',
+            poster: 'https://s3-ap-southeast-2.amazonaws.com/s72-client-2-assets/staging/posters-and-backdrops/585x330/film/104/index.jpg',
+            cfg: {
+              authorisation: app.userService.authToken,
+              plugins: {
+                'endofplay': { time: 7000, action: 'next_episode', label: 'Play Next Episode', item: '/tv/1/season/1/episode/2', title: 'S1E2 - The next one' },
+                'seekButton': {
+                  events: [
+                    { time: 0.1, duration: 7.9, seek: 8, label: 'Skip Intro' },
+                    { time: 7427, duration: 10, seek: .01, label: 'Replay' },
+                  ]
+                },
+                'moments': {
+                  points: [
+                    { time: .01, label: 'A little long' },
+                    { time: 1000, label: '!' },
+                    { time: 2000, label: '!' },
+                    { time: 4000, label: 'Beep' },
+                    { time: 5000, label: 'Bang' },
+                    { time: 6000, label: 'Bang' },
+                    { time: 7576, label: 'A long one to end on' }
+                  ],
+                  showPoints: false
+                }
+              }
+            }
+          }, {
+            uri: 'https://d1e4e8w781tfrd.cloudfront.net/out/v1/6e59b351ca34438c860e4b53cabb1968/index.m3u8',
+            poster: 'https://s3-ap-southeast-2.amazonaws.com/s72-client-2-assets/staging/posters-and-backdrops/585x330/film/36/index.jpg',
+            cfg: { }
+          }];
+
+          var p1 = new s72.player.Player('.s72-player', manifests[0].cfg);
+
+          p1.addEventListener('endofplayaction', () => {
+            // find next manifest
+            var i = 0;
+            manifests.forEach(function(m, index){
+              if (m.uri === p1.src){
+                i = index + 1;
+              }
+            });
+            i = (i >= manifests.length) ? 0 : i;
+
+            p1.configure(manifests[i].cfg);
+            p1.load(manifests[i].uri, manifests[i].poster);
+          });
+
+          // first manifest
+          p1.load(manifests[0].uri, manifests[0].poster);
+        });
+      </script>
+    </div>
+
+  </div>
+{{end}}

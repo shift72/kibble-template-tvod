@@ -37,7 +37,7 @@
         {{if !isExternalPage}}
           <div class="meta-item-body hover">
 
-            <s72-play-button data-slug="{{item.Slug}}" data-title="{{item.GetTranslatedTitle(i18n, "")}}" class="meta-item-play-btn meta-item-play-btn-{{layout}}"></s72-play-button>
+            <s72-play-button data-slug="{{item.Slug}}" data-title="{{item.GetTranslatedTitle(i18n, "")}}" class="meta-item-play-btn meta-item-play-btn-{{layout}}" data-url="{{routeToSlug(item.Slug)}}play/"></s72-play-button>
 
             {{if isset(item.InnerItem["Tagline"])}}
               <div class="meta-item-synopsis">{{item.InnerItem.Tagline}}</div>

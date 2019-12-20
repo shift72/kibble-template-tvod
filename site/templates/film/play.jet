@@ -34,9 +34,10 @@
 
           var pa = new s72.player.App(e.detail.app);
           pa.createPlayer('{{film.Slug}}', '.player').then(p => {
-            p.play().then(() => {
+            p.load().then(() => {
+              // stop gap until we get subtitles in the above createPlayer process
               {{range i, t := film.SubtitleTracks}}
-                p.player.addTextTrack('{{t.Path}}', '{{t.Language}}', '{{t.Type}}');
+                p.player.addTextTrack('{{t.Path}}', '{{t.Language}}', '{{t.Name}}', '{{t.Type}}s');
               {{end}}
             });
           });
