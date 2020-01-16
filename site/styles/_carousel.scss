@@ -42,3 +42,26 @@
 		}
 	}
 }
+
+.s72-carousel-item {
+
+	.meta-item-tagline-and-classification {
+	  @extend .d-flex;
+	  align-items: center;
+	  padding-top: 8px;
+	  padding-bottom: 8px;
+	  .s72-classification {
+	    margin-right: 5px;
+	  }
+	  .meta-item-tagline {
+	    font-size: 14px;
+	    font-weight: 600;
+	    margin-bottom: 0;
+	    align-self: center;
+	    line-height: 100%;
+	    @include media-breakpoint-up(xxxl) {
+	      font-size: 18px;
+	    }
+	  }
+	}
+}

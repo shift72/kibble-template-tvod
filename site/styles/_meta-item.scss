@@ -7,6 +7,14 @@
     display: block;
     height: 100%;
   }
+
+  .s72-classification {
+    margin-right: 5px;
+
+    .s72-classification-label {
+      border-color: $meta-item-body-color;
+    }
+  }
 }
 
 .meta-item-body {

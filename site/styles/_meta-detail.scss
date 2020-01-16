@@ -80,15 +80,37 @@
     padding-top: $grid-gutter-width / 2;
     @include make-col(8, 10);
   }
+
+  .meta-detail-tagline-and-classification {
+    @extend .d-flex;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 14px;
+    .s72-classification {
+      margin-right: 5px;
+    }
+    .meta-item-tagline {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 0;
+      align-self: center;
+      line-height: 100%;
+      @include media-breakpoint-up(xxxl) {
+        font-size: 18px;
+      }
+    }
+  }
 }
 
 .meta-detail-title,
 .meta-detail-buttons,
-.meta-detail-tagline,
 .meta-detail-synopsis,
 .meta-detail-cast,
 .meta-detail-crew,
 // .meta-detail-recommendations, // don't need a margin on the last thing on the page
+
+// .meta-detail-tagline, // in favour of .meta-detail-tagline-and-classification
+.meta-detail-tagline-and-classification
 .meta-detail-bonus-content {
   margin-bottom: 20px;
 }

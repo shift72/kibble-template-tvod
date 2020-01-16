@@ -1,0 +1,29 @@
+s72-classification-label {
+  display: inline-block;
+}
+.s72-classification {
+  display: inline-block;
+  margin-top: 0;
+  padding: 0;
+  @extend .d-flex;
+  .s72-classification-intro,
+  .s72-classification-divider {
+    display: none;
+  }
+  .s72-classification-description {
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 5px;
+    display: none;
+  }
+  .s72-classification-label {
+    font-weight: 800;
+    font-size: 12px;
+    padding: 1px 5px;
+    border: 3px solid black;
+    border-radius: 0;
+    @include media-breakpoint-up(xxxl) {
+      font-size: 14px;
+    }
+  }
+}
