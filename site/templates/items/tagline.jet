@@ -1,9 +1,11 @@
-{{block metaItemTagline(genres=true)}}
+{{block metaItemTagline(genres=true, classification=true)}}
   <ul class="meta-item-tagline">
 
-    {*<li class="meta-item-tagline-item">
-      <span class="meta-item-classification meta-item-classification-mature">M</span>
-    </li>*}
+    {{if classifications==true}}
+    <li class="meta-item-tagline-item meta-item-tagline-item-classification">
+      <s72-classification-label data-slug="{{.Slug}}" data-layout="tooltip"></s72-classification-label>
+    </li>
+    {{end}}
 
     {{showRuntime:=true}}
 
