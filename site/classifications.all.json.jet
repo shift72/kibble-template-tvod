@@ -1,0 +1,4 @@
+{{ count := 0 }}{
+  {{ range site.Films }}{{ if .Classifications }}{{ if count > 0 }},
+  {{end}}"{{ .Slug }}" : {{ .Classifications | json | raw }}{{ count = count + 1 }}{{ end }}{{ end }}
+}
