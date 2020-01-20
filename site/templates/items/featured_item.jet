@@ -14,15 +14,11 @@
       <div class="meta-item-body featured-meta-item-body">
         <div class="meta-item-title">{{item.GetTranslatedTitle(i18n, (item.ItemType + "_title_html"))|raw}}</div>
 
-        <div class="meta-item-tagline-and-classification">
-          <s72-classification-label data-slug="{{item.Slug}}" data-layout="tooltip"></s72-classification-label>
-
-          {{if isset(item.InnerItem["Tagline"])}}
+        {{if isset(item.InnerItem["Tagline"])}}
           <div class="meta-item-text">
-            {{yield metaItemTagline() item.InnerItem}}
+            {{yield metaItemTagline(classifications=true) item.InnerItem}}
           </div>
-          {{end}}
-        </div>
+        {{end}}
 
         <div class="meta-item-buttons">
           <s72-play-button data-slug="{{item.Slug}}"></s72-play-button>

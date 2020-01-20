@@ -41,11 +41,8 @@
 
         <div class="meta-detail-content">
           <h1 class="meta-detail-title">{{ film.Title }} <small>({{film.ReleaseDate.Year()}})</small></h1>
-          <div class="meta-detail-tagline-and-classification">
-            <s72-classification-label data-slug="{{film.Slug}}" data-layout="tooltip"></s72-classification-label>
-            <div class="meta-detail-tagline">
-              {{yield metaItemTagline() film}}
-            </div>
+          <div class="meta-detail-tagline">
+            {{yield metaItemTagline(classifications=true) film}}
           </div>
 
           <div class="meta-detail-buttons">
