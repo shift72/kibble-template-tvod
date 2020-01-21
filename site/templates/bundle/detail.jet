@@ -38,7 +38,7 @@
         <div class="meta-detail-content">
           <h1 class="meta-detail-title">{{bundle.Title}}</h1>
           <div class="meta-detail-tagline">
-            {{yield metaItemTagline(classifications=false) bundle}}
+            {{yield metaItemTagline(classification=false) bundle}}
           </div>
 
           <div class="meta-detail-buttons">

@@ -1,7 +1,7 @@
 {{block metaItemTagline(genres=true, classification=true)}}
   <ul class="meta-item-tagline">
 
-    {{if classifications==true}}
+    {{if classification==true}}
     <li class="meta-item-tagline-item meta-item-tagline-item-classification">
       <s72-classification-label data-slug="{{.Slug}}" data-layout="tooltip"></s72-classification-label>
     </li>

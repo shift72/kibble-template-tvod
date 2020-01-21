@@ -42,7 +42,7 @@
         <div class="meta-detail-content">
           <h1 class="meta-detail-title">{{ film.Title }} <small>({{film.ReleaseDate.Year()}})</small></h1>
           <div class="meta-detail-tagline">
-            {{yield metaItemTagline(classifications=true) film}}
+            {{yield metaItemTagline() film}}
           </div>
 
           <div class="meta-detail-buttons">

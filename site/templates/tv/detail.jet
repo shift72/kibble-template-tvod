@@ -44,7 +44,7 @@
 
           <h1 class="meta-detail-title">{{tvseason.GetTitle(i18n)}}</h1>
           <div class="meta-detail-tagline">
-            {{yield metaItemTagline(classifications=false) tvseason}}
+            {{yield metaItemTagline() tvseason}}
           </div>
 
           {{if len(tvseason.Trailers) > 0 }}

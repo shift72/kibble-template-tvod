@@ -16,7 +16,7 @@
 
         {{if isset(item.InnerItem["Tagline"])}}
           <div class="meta-item-text">
-            {{yield metaItemTagline(classifications=true) item.InnerItem}}
+            {{yield metaItemTagline() item.InnerItem}}
           </div>
         {{end}}
 

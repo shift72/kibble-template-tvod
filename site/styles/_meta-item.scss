@@ -28,14 +28,18 @@
     s72-play-button.s72-show {
       flex: 1;
     }
+  }
 
-    s72-classification-label {
-      margin-bottom: .5rem;
-    }
+  s72-classification-label {
+    margin-bottom: .5rem;
+  }
 
-    .s72-classification-description {
-      font-size: $meta-item-synopsis-font-size;
-    }
+  .s72-classification-label {
+    border-color: $meta-item-body-color;
+  }
+
+  .s72-classification-description {
+    font-size: $meta-item-synopsis-font-size;
   }
 }
 
