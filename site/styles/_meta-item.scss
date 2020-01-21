@@ -29,6 +29,18 @@
       flex: 1;
     }
   }
+
+  s72-classification-label {
+    margin-bottom: .5rem;
+  }
+
+  .s72-classification-label {
+    border-color: $meta-item-body-color;
+  }
+
+  .s72-classification-description {
+    font-size: $meta-item-synopsis-font-size;
+  }
 }
 
 .meta-item-link {

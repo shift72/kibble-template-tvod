@@ -39,6 +39,8 @@
 
             <s72-play-button data-slug="{{item.Slug}}" data-title="{{item.GetTranslatedTitle(i18n, "")}}" class="meta-item-play-btn meta-item-play-btn-{{layout}}" data-url="{{routeToSlug(item.Slug)}}play/"></s72-play-button>
 
+            <s72-classification-label data-slug="{{item.Slug}}"></s72-classification-label>
+
             {{if isset(item.InnerItem["Tagline"])}}
               <div class="meta-item-synopsis">{{item.InnerItem.Tagline}}</div>
             {{end}}
@@ -51,7 +53,7 @@
       <div class="meta-item-caption">
         <div class="meta-item-title">{{item.GetTranslatedTitle(i18n, (item.ItemType + "_title_html"))|raw}}</div>
         {{if item.ItemType != "tvseason" }}
-          {{yield metaItemTagline(genres=false) item.InnerItem}}
+          {{yield metaItemTagline(genres=false,classification=false) item.InnerItem}}
         {{end}}
       </div>
     </a>

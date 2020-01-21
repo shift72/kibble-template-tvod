@@ -331,6 +331,10 @@
   "meta_detail_recommendations_title": { "other": "You may also like" },
   "meta_detail_bundle_items_title": { "other": "Content included in this bundle" },
 
+  "classification_intro": { "other": "" },
+  "classification_divider": { "other": "" },
+  "classification_outro": { "other": "" },
+
   "bundle_items_all_films": { "other": "{{.Count}} films" },
   "bundle_items_all_seasons": { "other": "{{.Count}} seasons" },
   "bundle_items_mixed": { "other": "{{.Count}} films and seasons" }

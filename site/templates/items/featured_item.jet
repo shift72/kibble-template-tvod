@@ -14,12 +14,10 @@
       <div class="meta-item-body featured-meta-item-body">
         <div class="meta-item-title">{{item.GetTranslatedTitle(i18n, (item.ItemType + "_title_html"))|raw}}</div>
 
-        <div class="meta-item-text">
-          {{yield metaItemTagline() item.InnerItem}}
-        </div>
-
         {{if isset(item.InnerItem["Tagline"])}}
-          <div class="meta-item-text meta-item-synopsis">{{item.InnerItem.Tagline}}</div>
+          <div class="meta-item-text">
+            {{yield metaItemTagline() item.InnerItem}}
+          </div>
         {{end}}
 
         <div class="meta-item-buttons">
