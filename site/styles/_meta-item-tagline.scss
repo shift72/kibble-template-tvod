@@ -26,8 +26,8 @@ $meta-item-tagline-item-margin-right: map-get($spacers, 1); // Currently 0.25rem
 }
 
 .s72-classification-label-m {
-  border-color: $danger;
-  color: $danger;
+  border-color: $danger !important;
+  color: $danger !important;
 }
 
 .s72-classification-description {

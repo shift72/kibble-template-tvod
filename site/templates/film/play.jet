@@ -29,7 +29,7 @@
           var app = e.detail.app;
 
           if (!app.userService.isAuthenticated()){
-            return;
+            s72.utils.redirect('/signin.html', { from: window.location.href })
           }
 
           var pa = new s72.player.App(e.detail.app);
