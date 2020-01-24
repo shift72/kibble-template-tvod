@@ -9,8 +9,10 @@
 
   <script>
     // help with old ng routes
-    var routes = { '#!/signin': '/signin.html' };
-    !function(o, l){for(k in o){if(k==l.hash){l.href=o[k];}}}(routes, window.location);
+    var routes = { '/signin': '/signin.html' };
+    {{range p := site.Pages}}routes['{{p.Slug}}']='{{routeToSlug(p.Slug)}}';{{end}}
+    {{range f := site.Films}}routes['{{f.Slug}}']='{{routeToSlug(f.Slug)}}';{{end}}
+    !function(o,l,s){var h=l.hash.split(s,3),u;if(h[0]=='#!'&&(u=o[s+h.slice(1).join(s)])){l.href=u;}}(routes,window.location,'/');
   </script>
 {{end}}
 
