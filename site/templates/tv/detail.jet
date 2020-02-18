@@ -23,7 +23,7 @@
       <div class="meta-detail-watch-buttons">
         {{if len(tvseason.Trailers) > 0 }}
           <s72-cant-be-watched data-slug="{{tvseason.Slug}}">
-            <s72-modal-player src="{{tvseason.Trailers[0].URL}}" class="btn-play-square" data-label="{{i18n("play_trailer")}}" autoplay="querystring"></s72-modal-player>
+            <s72-modal-player src="{{tvseason.Trailers[0].URL}}" data-slug="{{tvseason.Slug}}" class="btn-play-square" data-label="{{i18n("play_trailer")}}" autoplay="querystring"></s72-modal-player>
           </s72-cant-be-watched>
         {{end}}
         <s72-play-button data-slug="{{tvseason.Slug}}" class="btn-play-square" data-title="{{tvseason.Title}}"></s72-play-button>
@@ -52,7 +52,7 @@
               <s72-pricing-buttons data-slug="{{tvseason.Slug}}" data-title="{{tvseason.Title}}"></s72-pricing-buttons>
 
               <s72-can-be-watched data-slug="{{tvseason.Slug}}">
-                <s72-modal-player src="{{tvseason.Trailers[0].URL}}" data-label="{{i18n("play_trailer")}}"></s72-modal-player>
+                <s72-modal-player src="{{tvseason.Trailers[0].URL}}" data-slug="{{tvseason.Slug}}" data-label="{{i18n("play_trailer")}}"></s72-modal-player>
               </s72-can-be-watched>
             </div>
           {{end}}

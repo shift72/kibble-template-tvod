@@ -21,7 +21,7 @@
 
       {{if len(bundle.PromoURL) > 0 }}
         <div class="meta-detail-watch-buttons">
-          <s72-modal-player src="{{bundle.PromoURL}}" data-label="{{i18n("play_trailer")}}"></s72-modal-player>
+          <s72-modal-player src="{{bundle.PromoURL}}" data-slug="{{bundle.Slug}}" data-label="{{i18n("play_trailer")}}"></s72-modal-player>
         </div>
       {{end}}
 
