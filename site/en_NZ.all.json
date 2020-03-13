@@ -63,7 +63,7 @@
   "date_month": { "other": "Month" },
   "date_year": { "other": "Year" },
 
-  "accept_invite_page_header": { "other": "Welcome to " },
+  "acceptinvite_page_header": { "other": "Welcome to " },
   "acceptinvite_form_invalid_reset_password_token": { "other": "It looks like you have already claimed this invite, you should <a href=\"signin.html\">sign in</a> instead. If you have forgotten your password, you can also <a href=\"forgotpassword.html\">reset your password</a>." },
   "acceptinvite_complete": { "other": "Thank you. Your account has been created." },
   "acceptinvite_form_submit": { "other": "Accept Invitation" },
