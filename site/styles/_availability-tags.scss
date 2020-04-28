@@ -20,4 +20,5 @@ s72-availability-label {
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
+  display: block; // inline screws with line-height?
 }
