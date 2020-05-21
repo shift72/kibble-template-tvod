@@ -298,6 +298,7 @@
   "shopping_error_discount_invalid_pricing_region": { "other": "That promo code can not be used in your country." },
   "shopping_error_discounts_not_allowed": { "other": "That promo code can not be used." },
   "shopping_error_discount_disallowed_on_bundles": { "other": "That promo code can not be used on bundles." },
+  "shopping_error_discount_not_applied": { "other": "Please apply your promo code first." },
 
   "shopping_action_buy": { "other": "Buy" },
   "shopping_action_rent": { "other": "Rent" },
