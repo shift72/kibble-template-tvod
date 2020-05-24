@@ -45,6 +45,7 @@
     </script>
   </head>
   <body>
+    <s72-cookie-consent></s72-cookie-consent>
 
     {{block navigation()}}
       {{yield nav() }}

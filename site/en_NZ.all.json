@@ -352,5 +352,8 @@
 
   "bundle_items_all_films": { "other": "{{.Count}} films" },
   "bundle_items_all_seasons": { "other": "{{.Count}} seasons" },
-  "bundle_items_mixed": { "other": "{{.Count}} films and seasons" }
+  "bundle_items_mixed": { "other": "{{.Count}} films and seasons" },
+
+  "cookie_banner_message": { "other": "This site uses cookies to enhance your experience. By using this site, you accept our <a href=\"/page/cookie-policy/\">cookie usage</a>." },
+  "cookie_banner_accept": { "other": "I Accept" }
 }
