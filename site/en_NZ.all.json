@@ -300,6 +300,8 @@
   "shopping_error_discount_disallowed_on_bundles": { "other": "That promo code can not be used on bundles." },
   "shopping_error_discount_not_applied": { "other": "Please apply your promo code first." },
 
+  "shopping_error_item_limit_exceeded": { "other": "Unfortunately, {{.Title}} has sold out." },
+
   "shopping_action_buy": { "other": "Buy" },
   "shopping_action_rent": { "other": "Rent" },
   "shopping_action_credit": { "other": "Top up" },

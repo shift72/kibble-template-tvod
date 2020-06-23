@@ -4,7 +4,7 @@
 {{import "./footer.jet" }}
 
 {{CDN := "//cdn.shift72.com/latest"}}
-{*{CDN:="//localhost:3000"}*}
+{{CDN:="//localhost:3000"}}
 <!DOCTYPE html>
 <html lang="{{lang.Code}}">
   <head>
