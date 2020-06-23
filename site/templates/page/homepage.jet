@@ -22,23 +22,12 @@
 
   <div class="page page-{{page.PageType|lower}} homepage">
 
-    {*{if count > 0 && len(page.PageCollections[0].Items) >= 3}}
-      <div class="container">
-        <h2 class="masonry-title">{{i18n("homepage_header")}}</h2>
-        <div class="masonry d-flex">
-          <div class="brick">{{yield featuredItem(item=page.PageCollections[0].Items[0], image="Carousel") }}</div>
-          <div class="brick">{{yield featuredItem(item=page.PageCollections[0].Items[1], image="Carousel") }}</div>
-          <div class="brick">{{yield featuredItem(item=page.PageCollections[0].Items[2], image="Carousel") }}</div>
-        </div>
-      </div>
-    {{end}*}
-
     <div class="container">
       {{yield pageCollectionCarousel() page.PageCollections[0]}}
     </div>
 
     {{range index, pf := page.PageCollections}}
-      {{if index > 0}}{{yield pageCollection() pf}}{{end}}
+      {{if index > 1}}{{yield pageCollection() pf}}{{end}}
     {{end}}
 
   </div>

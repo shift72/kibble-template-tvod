@@ -1,4 +1,5 @@
 {
+  "site_owner": { "other": "S72 TVOD" },
   "settings_title": { "other": "Settings" },
   "en": { "other": "English" },
   "fr": { "other": "French" },
@@ -62,6 +63,12 @@
   "date_month": { "other": "Month" },
   "date_year": { "other": "Year" },
 
+  "acceptinvite_page_header": { "other": "Welcome to " },
+  "acceptinvite_form_invalid_reset_password_token": { "other": "It looks like you have already claimed this invite, you should <a href=\"signin.html\">sign in</a> instead. If you have forgotten your password, you can also <a href=\"forgotpassword.html\">reset your password</a>." },
+  "acceptinvite_complete": { "other": "Thank you. Your account has been created." },
+  "acceptinvite_form_submit": { "other": "Accept Invitation" },
+  "acceptinvite_agreement": { "other": "By clicking \"Accept Invitation\" you agree that you have read and understood our <a href=\"/page/terms-and-conditions\" target=\"_blank\">terms &amp; conditions</a> and <a href=\"/page/privacy\" target=\"_blank\">privacy policy</a>." },
+
   "signup_page_header": { "other": "Create an Account" },
   "signup_form_name": { "other": "Name" },
   "signup_form_email": { "other": "Email address" },
@@ -71,6 +78,7 @@
   "signup_form_gender": { "other": "Gender" },
   "signup_form_optin": { "other": "I would like to receive regular updates and promos." },
   "signup_form_submit": { "other": "Submit" },
+  "signup_form_error_forbidden": { "other": "An error occurred." },
 
   "signin_page_header": { "other": "Sign In" },
   "signin_form_email": { "other": "Email address" },
@@ -88,12 +96,14 @@
   "combined_auth_signup": { "other": "Create account" },
   "combined_auth_signin_password": { "other": "Please enter your password to sign in to your account." },
   "combined_auth_signin_error_incorrect_credentials": { "other": "That password is incorrect." },
+  "combined_auth_error_forbidden": { "other": "An error occurred." },
 
   "forgotpassword_page_header": { "other": "Reset your Password" },
   "forgotpassword_form_email": { "other": "Email address" },
   "forgotpassword_form_submit": { "other": "Reset" },
   "forgotpassword_form_error_email_doesnt_exist": { "other": "An account matching that email address does not exist." },
   "forgotpassword_form_error_account_suspended": { "other": "This account is suspended." },
+  "forgotpassword_form_error_forbidden": { "other": "An error occurred." },
   "forgotpassword_complete": { "other": "Thank you. A password reset email should appear in your inbox shortly." },
 
   "resetpassword_page_header": { "other": "Change your Password" },
@@ -193,6 +203,10 @@
   "shopping_info_release_date_explanation_rent": { "other": "You can rent it now, but you won't be able to watch it until then." },
   "shopping_info_release_date_explanation_buy": { "other": "You can buy it now, but you won't be able to watch it until then." },
 
+  "shopping_info_available_until_date_title": { "other": "Available until {{.Date}}. " },
+  "shopping_info_available_until_date_explanation_rent": { "other": "You will not be able to view the content after this." },
+  "shopping_info_available_until_date_explanation_buy": { "other": "You will not be able to view the content after this." },
+
   "shopping_info_rental_period_duration": { "other": "{{.Count}} day rental " },
   "shopping_info_watch_window_duration": { "other": "{{.Count}} hour playback window. " },
   "shopping_info_watch_window_explanation_film": {
@@ -284,6 +298,9 @@
   "shopping_error_discount_invalid_pricing_region": { "other": "That promo code can not be used in your country." },
   "shopping_error_discounts_not_allowed": { "other": "That promo code can not be used." },
   "shopping_error_discount_disallowed_on_bundles": { "other": "That promo code can not be used on bundles." },
+  "shopping_error_discount_not_applied": { "other": "Please apply your promo code first." },
+
+  "shopping_error_item_limit_exceeded": { "other": "Unfortunately, {{.Title}} has sold out." },
 
   "shopping_action_buy": { "other": "Buy" },
   "shopping_action_rent": { "other": "Rent" },
@@ -337,5 +354,8 @@
 
   "bundle_items_all_films": { "other": "{{.Count}} films" },
   "bundle_items_all_seasons": { "other": "{{.Count}} seasons" },
-  "bundle_items_mixed": { "other": "{{.Count}} films and seasons" }
+  "bundle_items_mixed": { "other": "{{.Count}} films and seasons" },
+
+  "cookie_banner_message": { "other": "This site uses cookies to enhance your experience. By using this site, you accept our <a href=\"/page/cookie-policy/\">cookie usage</a>." },
+  "cookie_banner_accept": { "other": "I Accept" }
 }

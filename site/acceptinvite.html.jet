@@ -1,0 +1,21 @@
+{{extends "templates/application.jet"}}
+
+{{block head()}}
+  {{yield seo(title=i18n("acceptinvite_page_header"), index=false)}}
+{{end}}
+
+{{block body()}}
+  <div class="page form-page">
+
+    <div class="container">
+      <div class="page-header form-page-header">
+        <h1>{{ i18n("acceptinvite_page_header") }}{{ i18n("site_owner") }}</h1>
+      </div>
+
+      <div class="page-content form-page-content">
+        <s72-acceptinvite-form acceptinvite-url="/acceptinvite.html" />
+      </div>
+    </div>    
+
+  </div>
+{{end}}

@@ -1,12 +1,15 @@
 {{import "./nav.jet"}}
 {{import "./seo.jet" }}
+{{import "./google.jet" }}
 {{import "./footer.jet" }}
 
-{{CDN := "//cdn.shift72.com/1.3.3"}}
-{*{CDN:="//localhost:3000"}*}
+{{CDN := "//cdn.shift72.com/latest"}}
+{{CDN:="//localhost:3000"}}
 <!DOCTYPE html>
 <html lang="{{lang.Code}}">
   <head>
+    {{yield googleTagManagerScript()}}
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -45,6 +48,8 @@
     </script>
   </head>
   <body>
+    <s72-cookie-consent></s72-cookie-consent>
+    {{yield googleTagManagerNoScript()}}
 
     {{block navigation()}}
       {{yield nav() }}
@@ -54,5 +59,6 @@
 
     {{yield footer()}}
 
+    {{yield googleAnalytics()}}
   </body>
 </html>

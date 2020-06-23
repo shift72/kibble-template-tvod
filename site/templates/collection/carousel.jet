@@ -8,7 +8,7 @@
 	None of the html in .carousel-item is finished or even 10% looked at, so feel free to make it better.
 	This was copypasted from web-core.
 *}
-<s72-carousel data-image-width="1600" data-image-height="600">
+<s72-carousel data-image-width="1600" data-image-height="600" pause-on-hover="false">
 	<div class="page-collection page-collection-carousel">
 		<div class="s72-carousel-slides">
 			{{range item := .Items}}

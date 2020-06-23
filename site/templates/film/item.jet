@@ -22,7 +22,7 @@
       <div class="meta-detail-watch-buttons">
         {{if len(film.Trailers) > 0 }}
           <s72-cant-be-watched data-slug="{{film.Slug}}">
-            <s72-modal-player src="{{film.Trailers[0].URL}}" class="btn-play-square-lg" data-label="{{i18n("play_trailer")}}" autoplay="querystring"></s72-modal-player>
+            <s72-modal-player src="{{film.Trailers[0].URL}}" data-slug="{{film.Slug}}" class="btn-play-square-lg" data-label="{{i18n("play_trailer")}}" autoplay="querystring"></s72-modal-player>
           </s72-cant-be-watched>
         {{end}}
         <s72-play-button data-slug="{{film.Slug}}" class="btn-play-square-lg" data-title="{{film.Title}}" data-url="{{routeToSlug(film.Slug)}}play/"></s72-play-button>
@@ -50,7 +50,7 @@
 
             {{if len(film.Trailers) > 0 }}
               <s72-can-be-watched data-slug="{{film.Slug}}">
-                <s72-modal-player src="{{film.Trailers[0].URL}}" data-label="{{i18n("play_trailer")}}"></s72-modal-player>
+                <s72-modal-player src="{{film.Trailers[0].URL}}" data-slug="{{film.Slug}}" data-label="{{i18n("play_trailer")}}"></s72-modal-player>
               </s72-can-be-watched>
             {{end}}
           </div>
