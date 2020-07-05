@@ -57,6 +57,17 @@
 
           <div class="meta-detail-synopsis">{{film.Overview | raw}}</div>
 
+          {{if len(film.Studio) > 0 }}
+            <div class="meta-detail-companies">
+              <h3>{{i18n("meta_detail_companies_title")}}</h3>
+              <div class="company">
+                {{range index, studio := film.Studio}}
+                  <a href="/search.html?q={{studio}}">{{studio}}</a>{{if index < len(film.Studio) - 1}}, {{end}}
+                {{end}}
+              </div>
+            </div>
+          {{end}}
+
           {{if len(film.Cast) > 0}}
             <div class="meta-detail-cast">
               <h3>{{i18n("meta_detail_cast_title")}}</h3>

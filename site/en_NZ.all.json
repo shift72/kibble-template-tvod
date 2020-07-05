@@ -23,6 +23,9 @@
     "one": "1 Episode",
     "other": "{{.Count}} Episodes"
   },
+
+  "users_gender_none": { "other": "Mind your own business" },
+
   "nav_signin": { "other": "Sign In" },
   "nav_signup": { "other": "Create an Account" },
   "nav_signed_in_as": { "other": "Signed in as" },
@@ -79,6 +82,7 @@
   "signup_form_optin": { "other": "I would like to receive regular updates and promos." },
   "signup_form_submit": { "other": "Submit" },
   "signup_form_error_forbidden": { "other": "An error occurred." },
+  "signup_terms": { "other": "I agree to all the <a href=\"/page/terms-and-conditions\" target=\"_blank\">Terms and Conditions</a>." },
 
   "signin_page_header": { "other": "Sign In" },
   "signin_form_email": { "other": "Email address" },
@@ -97,6 +101,7 @@
   "combined_auth_signin_password": { "other": "Please enter your password to sign in to your account." },
   "combined_auth_signin_error_incorrect_credentials": { "other": "That password is incorrect." },
   "combined_auth_error_forbidden": { "other": "An error occurred." },
+  "combined_auth_terms": { "other": "I agree to all the <a href=\"/page/terms-and-conditions\" target=\"_blank\">blah blah blah</a>." },
 
   "forgotpassword_page_header": { "other": "Reset your Password" },
   "forgotpassword_form_email": { "other": "Email address" },
@@ -189,6 +194,7 @@
   "validation_pincode_required": { "other": "Please enter a PIN code." },
   "validation_dob_required": { "other": "Please enter your date of birth." },
   "validation_gender_required": { "other": "Please enter your gender." },
+  "validation_terms_required": { "other": "Please read and agree to our terms and conditions." },
 
   "shopping_info_subtitle_hd": { "other": "HD Video on Demand." },
   "shopping_info_subtitle_sd": { "other": "SD Video on Demand." },
