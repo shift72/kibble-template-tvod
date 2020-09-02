@@ -93,6 +93,8 @@
   "signin_page_forgotpassword": { "other": "Forgotten your password?" },
   "signup_form_error_email_already_in_use": { "other": "That email address is already in use." },
   "signin_form_error_incorrect_credentials": { "other": "The username or password is incorrect." },
+  "signin_form_error_ip_throttled": { "other": "You have failed to sign in too many times. Please try again later." },
+  "signin_form_error_account_suspended": { "other": "Your account has been temporarily suspended. Please contact an admin if you believe this is in error." },
 
   "combined_auth_continue": { "other": "Continue" },
   "combined_auth_change": { "other": "change" },
