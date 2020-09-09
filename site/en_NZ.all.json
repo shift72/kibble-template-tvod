@@ -88,7 +88,6 @@
   "signin_form_email": { "other": "Email address" },
   "signin_form_password": { "other": "Password" },
   "signin_form_remember": { "other": "Remember me" },
-  "signin_form_remember": { "other": "Remember me" },
   "signin_form_submit": { "other": "Submit" },
   "signin_page_forgotpassword": { "other": "Forgotten your password?" },
   "signup_form_error_email_already_in_use": { "other": "That email address is already in use." },
