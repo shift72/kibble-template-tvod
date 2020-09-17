@@ -47,15 +47,15 @@
             {{yield metaItemTagline() tvseason}}
           </div>
 
-          {{if len(tvseason.Trailers) > 0 }}
             <div class="meta-detail-buttons">
               <s72-pricing-buttons data-slug="{{tvseason.Slug}}" data-title="{{tvseason.Title}}"></s72-pricing-buttons>
 
-              <s72-can-be-watched data-slug="{{tvseason.Slug}}">
-                <s72-modal-player src="{{tvseason.Trailers[0].URL}}" data-slug="{{tvseason.Slug}}" data-label="{{i18n("play_trailer")}}"></s72-modal-player>
-              </s72-can-be-watched>
+              {{if len(tvseason.Trailers) > 0 }}
+                <s72-can-be-watched data-slug="{{tvseason.Slug}}">
+                  <s72-modal-player src="{{tvseason.Trailers[0].URL}}" data-slug="{{tvseason.Slug}}" data-label="{{i18n("play_trailer")}}"></s72-modal-player>
+                </s72-can-be-watched>
+              {{end}}
             </div>
-          {{end}}
 
           <div class="meta-detail-synopsis">{{tvseason.Overview | raw}}</div>
 
