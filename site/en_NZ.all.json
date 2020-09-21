@@ -93,6 +93,7 @@
   "signup_form_error_email_already_in_use": { "other": "That email address is already in use." },
   "signin_form_error_incorrect_credentials": { "other": "The username or password is incorrect." },
   "signin_form_error_ip_throttled": { "other": "You have failed to sign in too many times. Please try again later." },
+  "signup_form_error_email_password_match": { "other": "Your password should not match your email address." },
   "signin_form_error_account_suspended": { "other": "Your account has been temporarily suspended. Please contact an admin if you believe this is in error." },
 
   "combined_auth_continue": { "other": "Continue" },
@@ -120,6 +121,7 @@
   "resetpassword_complete": { "other": "Thank you. Your password has been changed, and you have been signed in." },
   "resetpassword_form_error_invalid_reset_password_token": { "other": "The reset password request is invalid. Please try again later." },
   "resetpassword_form_error_reset_password_token_expired": { "other": "The reset password token has expired. Please request a new one." },
+  "resetpassword_form_error_email_password_match": { "other": "Your new password should not match your email address." },
 
   "account_page_header": { "other": "My Account" },
   "account_form_name": { "other": "Name" },
@@ -132,6 +134,7 @@
   "account_form_submitted": { "other": "Updated" },
   "account_form_password_changed": { "other": "Updated" },
   "account_form_error_incorrect_password": { "other": "That password is incorrect." },
+  "account_form_error_email_password_match": { "other": "Your email address should not match your password." },
 
   "passwordconfirmation_modal_header": { "other": "Confirm your password" },
   "passwordconfirmation_modal_label": { "other": "Please enter your password in order to update your changes" },
@@ -143,6 +146,7 @@
   "changepassword_modal_password2": { "other": "Confirm your new password" },
   "changepassword_modal_submit": { "other": "Update" },
   "changepassword_modal_error_incorrect_password": { "other": "That password is incorrect." },
+  "changepassword_modal_error_email_password_match": { "other": "Your password should not match your email address" },
 
   "userlibrary_page_header": { "other": "My Library" },
   "userlibrary_empty_header":  { "other": "Your library is empty." },
