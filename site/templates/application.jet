@@ -3,8 +3,8 @@
 {{import "./google.jet" }}
 {{import "./footer.jet" }}
 
-{{CDN := "//cdn.shift72.com/latest"}}
-{{CDN:="//localhost:3000"}}
+{{CDN := "//cdn.shift72.com/1.3.38"}}
+{*{CDN:="//localhost:3000"}*}
 <!DOCTYPE html>
 <html lang="{{lang.Code}}">
   <head>
