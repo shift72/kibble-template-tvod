@@ -3,7 +3,7 @@
   "name": "Screen Plus",
   "icons": [
     {
-      "src": "/images/common/icons-192.png",
+      "src": "/images/common/shift72-logo-192px.png",
       "type": "image/png",
       "sizes": "192x192"
     }
