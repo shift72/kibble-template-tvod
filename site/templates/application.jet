@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/images/common/shift72-logo-192px.png">
     <link rel="preload" href="/{{lang.DefinitionFilePath}}" as="fetch" crossorigin>
     <link rel="preload" href="/classifications.all.json" as="fetch" crossorigin type="application/json">
     <!-- Kibble:{{ version }} -->
