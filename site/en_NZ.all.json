@@ -127,7 +127,7 @@
   "account_form_password": { "other": "Password" },
   "account_form_dob": { "other": "Date of Birth" },
   "account_form_gender": { "other": "Gender" },
-  "account_form_change_password": { "other": "Change" },
+  "account_form_change_password": { "other": "Change Password" },
   "account_form_submit": { "other": "Update" },
   "account_form_submitted": { "other": "Updated" },
   "account_form_password_changed": { "other": "Updated" },
@@ -309,7 +309,7 @@
 
   "shopping_error_item_limit_exceeded": { "other": "Unfortunately, {{.Title}} has sold out." },
 
-  "shopping_action_buy": { "other": "Buy" },
+  "shopping_action_buy": { "other": "Purchase" },
   "shopping_action_rent": { "other": "Rent" },
   "shopping_action_credit": { "other": "Top up" },
   "shopping_action_plan": { "other": "Complete" },
@@ -364,5 +364,20 @@
   "bundle_items_mixed": { "other": "{{.Count}} films and seasons" },
 
   "cookie_banner_message": { "other": "This site uses cookies to enhance your experience. By using this site, you accept our <a href=\"/page/cookie-policy/\">cookie usage</a>." },
-  "cookie_banner_accept": { "other": "I Accept" }
+  "cookie_banner_accept": { "other": "I Accept" },
+
+
+
+  "account_form_pin_code": { "other": "PIN" },
+  "account_form_pin_code_not_set": { "other": "You don't have a PIN set, which is required for purchasing, renting and watching some titles."},
+  "account_form_set_pin": { "other": "Set PIN" },
+  "account_form_pin_changed": { "other": "Updated" },
+  "account_form_change_pin": { "other": "Change PIN" },
+
+  "changepincode_modal_header": { "other": "Change your PIN" },
+  "changepincode_modal_currentpassword": { "other": "Your current password" },
+  "changepincode_modal_pincode1": { "other": "Your new PIN" },
+  "changepincode_modal_pincode2": { "other": "Confirm your new PIN" },
+  "changepincode_modal_submit": { "other": "Set PIN" },
+  "changepincode_modal_error_wrong_password": { "other": "That password is incorrect." }
 }

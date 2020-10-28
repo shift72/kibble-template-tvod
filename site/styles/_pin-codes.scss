@@ -1,0 +1,49 @@
+// User account form
+
+s72-useraccount-form {
+
+	.s72-account-pin-not-set-label {
+		padding-bottom: 0.5rem;
+	}
+
+	.s72-account-pin-form-group {
+		.s72-btn-changepin {
+			@extend .btn-secondary;
+		}
+	}
+}
+
+// Update pin form
+
+.s72-account-pin-form-group .s72-control-inputs {
+	display: flex;
+
+	.s72-form-control-static { flex: 1; }
+}
+
+.s72-pincode {
+	@extend .d-flex;
+
+	.s72-pincode-digit {
+		@extend .s72-form-control;
+		@extend .text-center;
+		@extend .px-0;
+
+		min-width:0px;
+		border-radius: 0;
+
+		// Overwrite some error states
+		border-color: $input-border-color !important;
+		background-image: none !important;
+
+		&:first-of-type {
+			border-top-left-radius: $input-border-radius;
+			border-bottom-left-radius: $input-border-radius;
+		}
+
+		&:last-of-type {
+			border-top-right-radius: $input-border-radius;
+			border-bottom-right-radius: $input-border-radius;
+		}
+	}
+}

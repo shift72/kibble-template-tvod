@@ -39,3 +39,13 @@ s72-activatedevice-form {
   width: 100%;
   margin: 0 auto;
 }
+
+.s72-account-password-form-group, .s72-account-pin-form-group {
+  margin-top: 30px;
+  label {
+    font-weight: 700;
+  }
+  input {
+    @extend .s72-form-control;
+  }
+}
