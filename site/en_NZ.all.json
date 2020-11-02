@@ -170,6 +170,8 @@
   "userdevices_device_actions_cancel": { "other": "Cancel" },
   "userdevices_device_actions_confirm": { "other": "Yes, remove device" },
   "userdevices_device_deleted": { "other": "(Removed)" },
+  "userdevices_delete_limits": { "other": "You can remove {{.Limit}} device(s) from this list every {{.Period}} day(s)."},
+  "userdevices_delete_limit_reached": { "other": "You have reached this limit and can't remove any devices right now." },
 
   "searchresults_page_header": { "other": "Search Results" },
   "searchresults_load_more": { "other": "Load {{.Count}} more" },
