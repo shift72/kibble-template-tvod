@@ -15,35 +15,47 @@ s72-useraccount-form {
 
 // Update pin form
 
-.s72-account-pin-form-group .s72-control-inputs {
-	display: flex;
-
-	.s72-form-control-static { flex: 1; }
+.s72-pincode {
+	@extend .s72-form-control;
 }
 
-.s72-pincode {
-	@extend .d-flex;
+form.s72-user-pin-form {
+	button.s72-btn-reset-pin {
+		@extend .btn-secondary;
+	}
 
-	.s72-pincode-digit {
-		@extend .s72-form-control;
-		@extend .text-center;
-		@extend .px-0;
-
-		min-width:0px;
-		border-radius: 0;
-
-		// Overwrite some error states
-		border-color: $input-border-color !important;
-		background-image: none !important;
-
-		&:first-of-type {
-			border-top-left-radius: $input-border-radius;
-			border-bottom-left-radius: $input-border-radius;
-		}
-
-		&:last-of-type {
-			border-top-right-radius: $input-border-radius;
-			border-bottom-right-radius: $input-border-radius;
-		}
+	button.s72-btn-submit-pin {
+		margin-right: $modal-footer-button-margin;
 	}
 }
+
+.s72-user-pin-error-limit {
+	button.s72-btn-reset-pin {
+		@extend .btn-primary;
+		margin-right: $modal-footer-button-margin;
+	}
+
+	.s72-btn-get-help {
+		@extend .d-inline;
+	}
+}
+
+form.s72-user-reset-pin-form {
+	.s72-user-reset-pin-form-header {
+		@extend .font-weight-bold;
+	}
+}
+
+// .s72-account-pin-form-group .s72-control-inputs {
+// 	display: flex;
+
+// 	.s72-form-control-static { flex: 1; }
+// }
+
+// .s72-pincode {
+// 	// @extend .d-flex;
+
+// 	@extend .s72-form-control;
+// 	// @extend .text-center;
+// 	// @extend .px-0;
+// }

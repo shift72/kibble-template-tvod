@@ -105,6 +105,12 @@
   color: $gray-900;
 }
 
+.s72-modal-footer {
+  button.s72-btn-cancel {
+    margin-right: $modal-footer-button-margin;
+  }
+}
+
 .s72-form-control { @extend .form-control; }
 .s72-form-group { @extend .form-group; }
 .s72-form-check { @extend .form-check; }
