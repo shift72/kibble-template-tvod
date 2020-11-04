@@ -9,7 +9,7 @@
 
   <script>
     // help with old ng routes
-    var routes = { '#!/signin': '/signin.html' };
+    var routes = { '#!/signin': '/signin.html', '#!/reset-pin': '/account.html#reset-pin' };
     !function(o, l){for(k in o){if(k==l.hash){l.href=o[k];}}}(routes, window.location);
   </script>
 {{end}}

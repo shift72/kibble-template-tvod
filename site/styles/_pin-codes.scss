@@ -19,6 +19,10 @@ s72-useraccount-form {
 	@extend .s72-form-control;
 }
 
+button.s72-btn-age-restriction {
+	@extend .btn-primary;
+}
+
 form.s72-user-pin-form {
 	button.s72-btn-reset-pin {
 		@extend .btn-secondary;
@@ -45,17 +49,3 @@ form.s72-user-reset-pin-form {
 		@extend .font-weight-bold;
 	}
 }
-
-// .s72-account-pin-form-group .s72-control-inputs {
-// 	display: flex;
-
-// 	.s72-form-control-static { flex: 1; }
-// }
-
-// .s72-pincode {
-// 	// @extend .d-flex;
-
-// 	@extend .s72-form-control;
-// 	// @extend .text-center;
-// 	// @extend .px-0;
-// }
