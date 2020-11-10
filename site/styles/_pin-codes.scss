@@ -19,17 +19,23 @@ s72-useraccount-form {
 	@extend .s72-form-control;
 }
 
-button.s72-btn-age-restriction {
-	@extend .btn-primary;
+button.s72-btn-shopping-error-close {
+	@extend .btn-light;
 }
 
 form.s72-user-pin-form {
-	button.s72-btn-reset-pin {
-		@extend .btn-secondary;
-	}
+	.s72-buttons {
+		@extend .d-flex;
+		@extend .justify-content-between;
 
-	button.s72-btn-submit-pin {
-		margin-right: $modal-footer-button-margin;
+		button.s72-btn-reset-pin {
+			@extend .btn-link;
+			@extend .order-1;
+		}
+
+		button.s72-btn-submit-pin {
+			@extend .order-2;
+		}
 	}
 }
 

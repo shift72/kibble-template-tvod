@@ -197,6 +197,7 @@
   "validation_pincode_required": { "other": "Please enter a PIN code." },
   "validation_pincode1_required": { "other": "Please enter a PIN code." },
   "validation_pincode2_required": { "other": "Please enter a matching PIN code." },
+  "validation_pincode2_match": { "other": "Please enter a matching PIN code." },
   "validation_dob_required": { "other": "Please enter your date of birth." },
   "validation_gender_required": { "other": "Please enter your gender." },
   "validation_terms_required": { "other": "Please read and agree to our terms and conditions." },
@@ -358,6 +359,7 @@
   "meta_detail_bonus_title": { "other": "Bonus Content" },
   "meta_detail_recommendations_title": { "other": "You may also like" },
   "meta_detail_bundle_items_title": { "other": "Content included in this bundle" },
+  "meta_detail_companies_title": { "other": "Production companies" },
 
   "classification_intro": { "other": "" },
   "classification_divider": { "other": "" },
@@ -385,16 +387,18 @@
   "changepincode_modal_submit": { "other": "Set PIN" },
   "changepincode_modal_error_wrong_password": { "other": "That password is incorrect." },
 
-  "user_submit_pin_heading": { "other": "Enter your pin to {{.Action}} this restricted content"},
+  "user_submit_pin_heading": { "other": "Enter your PIN to {{.Action}} this restricted content"},
   "user_submit_pin_button": { "other": "Enter" },
+
+  "user_set_pin_intro": { "other": "You need a PIN to {{.Action}} restricted content"},
   "user_set_pin_header": { "other": "Set your PIN" },
   "user_set_pin_button": { "other": "Set PIN" },
   "user_reset_pin_button": { "other": "Reset PIN" },
   "user_error_wrong_pin_retry": { "other": "Oops, you have entered an incorrect PIN" },
   "user_error_wrong_pin_reset": { "other": "Click here to reset your PIN" },
-  "user_error_too_many_pin_errors": { "other": "If you're having trouble, you can always reset your PIN or contact us for help" },
-  "user_error_too_many_pin_errors_help_page_link": { "other": "<a href=\"/page/help\" role=\"button\" target=\"_blank\">Get help</a>" },
+  "user_error_too_many_pin_errors": { "other": "<p>Looks like you're having trouble.</p><p>Reset your PIN or contact us for <a href=\"/page/help/\" target=\"_blank\">help</a>" },
+  "user_error_too_many_pin_errors_help_page_link": { "other": "" },
   "shopping_error_age_restricted": { "other": "This content is age restricted." },
-  "shopping_error_age_restricted_button": { "other": "OK" }
+  "shopping_error_close_button": { "other": "OK" }
 
 }
