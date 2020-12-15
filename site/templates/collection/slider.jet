@@ -6,8 +6,12 @@
   <div class="page-collection page-collection-slider page-collection-slider-{{.ItemsPerRow}} page-collection-slider-{{.ItemLayout}}">
 
     <div class="page-collection-header">
-    	<h3 class="page-collection-title">{{.DisplayName}}</h3>
-    	{*<a href="{{routeToSlug(.Slug)}}">{{i18n("page_collection_see_all")}}</a>*}
+      <h3 class="page-collection-title">{{.DisplayName}}</h3>
+      {*<a href="{{routeToSlug(.Slug)}}">{{i18n("page_collection_see_all")}}</a>*}
+    </div>
+
+    <div class="container meta-detail-description">
+        <p>{{ .Description | raw}}</p>
     </div>
 
     {{yield slider(itemsPerRow=.ItemsPerRow, itemLayout=.ItemLayout, fluid=true) content}}
