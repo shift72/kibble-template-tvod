@@ -198,9 +198,11 @@
   "validation_pincode1_required": { "other": "Please enter a PIN code." },
   "validation_pincode2_required": { "other": "Please enter a matching PIN code." },
   "validation_pincode2_match": { "other": "Please enter a matching PIN code." },
+  "validation_pincode1_pattern":{ "other":  "PIN pattern does not match requirements."},
   "validation_dob_required": { "other": "Please enter your date of birth." },
   "validation_dob_min": { "other": "Please select a valid date of birth" },
   "validation_dob_max": { "other": "Date of birth cannot be set as future date." },
+  "validation_dob_date": { "other": "Please enter a valid date." },
   "validation_gender_required": { "other": "Please enter your gender." },
   "validation_terms_required": { "other": "Please read and agree to our terms and conditions." },
 
