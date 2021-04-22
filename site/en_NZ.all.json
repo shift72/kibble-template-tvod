@@ -291,6 +291,7 @@
   "shopping_error_title": { "other": "An error occured" },
   "shopping_error_incorrect_cvc": { "other": "Please enter a valid CVV." },
   "shopping_error_invalid_cvc": { "other": "Please enter a valid CVV." },
+  "shopping_error_incomplete_number": {"other": "Please enter a valid Credit Card Number."},
   "shopping_error_incorrect_number": { "other": "Please enter a valid Credit Card Number." },
   "shopping_error_invalid_number": { "other": "Please enter a valid Credit Card Number." },
   "shopping_error_card_declined": { "other": "The Credit Card has been declined." },
