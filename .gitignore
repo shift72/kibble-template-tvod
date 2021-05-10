@@ -3,3 +3,4 @@ node_modules
 npm-debug.log
 site/static/styles/main.css
 .DS_Store
+.env

@@ -1,0 +1,10 @@
+
+{{extends "templates/application.jet"}}
+
+{{block head()}}
+  {{yield seo(title=i18n("signup_page_header"), index=false)}}
+{{end}}
+
+{{block body()}}
+<account></account>
+{{end}}

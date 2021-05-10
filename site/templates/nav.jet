@@ -38,6 +38,8 @@
           {{end}}
         </s72-user-anon>
 
+        <s72-auth0></s72-auth0>
+
         <s72-user-known>
           <s72-dropdown class="navbar-nav-user-nav">
             <a href="#" class="s72-btn s72-dropdown-toggle">{{i18n("nav_signed_in_as")}} <s72-username></s72-username></a>

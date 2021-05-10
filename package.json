@@ -3,10 +3,13 @@
   "version": "0.0.3",
   "description": "Base template for TVOD kibble sites",
   "scripts": {
-    "start": "npm run css && npm-run-all --parallel css:watch kibble:watch",
+    "start": "npm run css && npm-run-all --parallel css:watch js:watch kibble:watch",
     "css": "node-sass ./site/styles/main.scss ./site/static/styles/main.css",
     "css:watch": "npm run css -- --watch",
     "css:build": "postcss ./site/static/styles/main.css --use autoprefixer --use cssnano -r",
+    "js": "rollup -c",
+    "js:watch": "rollup -c -w",
+    "js:build": "rollup -c",
     "kibble": "kibble render",
     "kibble:watch": "kibble render --watch",
     "kibble:build": "kibble publish",
@@ -32,6 +35,16 @@
     "node-sass": "^4.14.0",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^6.1.3",
+    "rollup": "^2.23.0",
+    "rollup-plugin-terser": "^6.1.0",
+    "@rollup/plugin-buble": "^0.21.3",
+    "auth0-js": "^9.16.0",
     "s72-kibble": "^0.15.5"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "dotenv": "^8.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-inject-process-env": "^1.3.1"
   }
 }
