@@ -1,7 +1,7 @@
 {
   "name": "kibble-template-tvod",
   "version": "0.0.85",
-  "siteUrl": "https://staging-store-kibble.shift72.com",
+  "siteUrl": "https://core-store.shift72.local",
   "builderVersion": "0.15.5",
   "defaultLanguage": "en",
   "languages": {

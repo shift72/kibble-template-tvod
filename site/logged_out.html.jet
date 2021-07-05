@@ -16,5 +16,5 @@
 {{end}}
 
 {{block body()}}
-  <s72-oauth-callback></s72-oauth-callback>
+  <s72-oauth-logged-out></s72-oauth-logged-out>
 {{end}}

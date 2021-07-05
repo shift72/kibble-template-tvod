@@ -35,6 +35,8 @@
   "nav_account": { "other": "My Account" },
   "nav_activate": { "other": "Activate a Device" },
   "nav_signout": { "other": "Sign Out" },
+  "nav_signin_sso_aws": { "other": "Sign in with Amazon" },
+  "nav_signin_sso_auth0": { "other": "Sign in with Auth0" },
 
   "nav_branding_title": { "other": "Shift72" },
   "footer_branding_copyright": { "other": "Shift72 - All Rights Reserved." },

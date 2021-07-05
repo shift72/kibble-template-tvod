@@ -11,7 +11,7 @@
     "js:watch": "rollup -c -w",
     "js:build": "rollup -c",
     "kibble": "kibble render",
-    "kibble:watch": "kibble render --watch",
+    "kibble:watch": "kibble render --watch --port 8081",
     "kibble:build": "kibble publish",
     "build": "npm-run-all css css:build kibble:build"
   },
