@@ -1,7 +1,5 @@
 import {render} from 's72';
 
-import Auth0 from "./auth0.component";
-import OAuthButtons from './oauth-buttons.component';
 import OAuthCallback from './oauth-callback.component';
 import OAuthLoggedOut from './oauth-logged-out.component';
 

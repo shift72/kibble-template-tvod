@@ -38,7 +38,7 @@
               <a class="btn btn-signup" href="/signup.html?from={{currentUrlPath|url}}">{{i18n("nav_signup")}}</a>
             {{end}}
           {{else}}
-            <s72-oauth-buttons></s72-oauth-buttons>
+            <s72-oauth-component></s72-oauth-component>
           {{end}}
         </s72-user-anon>
 
