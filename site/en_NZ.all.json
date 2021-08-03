@@ -404,6 +404,10 @@
   "user_error_too_many_pin_errors": { "other": "<p>Looks like you're having trouble.</p><p>Reset your PIN or contact us for <a href=\"/page/help/\" target=\"_blank\">help</a>" },
   "user_error_too_many_pin_errors_help_page_link": { "other": "" },
   "shopping_error_age_restricted": { "other": "This content is age restricted." },
-  "shopping_error_close_button": { "other": "OK" }
+  "shopping_error_close_button": { "other": "OK" },
 
+  "signin_page_sso": { "other": "Sign in with external providers to continue" },
+  "nav_signin_sso_aws": { "other": "Sign in with Amazon" },
+  "nav_signin_sso_auth0": { "other": "Sign in with Auth0" },
+  "nav_signin_sso_sundance": { "other": "Sign in with Sundance" }
 }

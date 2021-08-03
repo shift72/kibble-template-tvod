@@ -1,0 +1,9 @@
+s72-oauth-signin-form {
+  .s72-oauth-buttons {
+    .btn {
+      @extend .btn-primary;
+      @extend .mb-1; // margin-bottom: 1em;
+      @extend .d-block;
+    }
+  }
+}

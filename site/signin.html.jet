@@ -10,11 +10,22 @@
     <div class="container">
       <div class="page-header form-page-header">
         <h1 class="page-title form-page-title">{{ i18n("signin_page_header") }}</h1>
-        <p><a href="/forgotpassword.html">{{ i18n("signin_page_forgotpassword")}}</a></p>
+
+        {{if config("enable_sso") == "true"}}
+          <p>{{ i18n("signin_page_sso")}}</p>
+        {{else}}
+          <p><a href="/forgotpassword.html">{{ i18n("signin_page_forgotpassword")}}</a></p>
+        {{end}}
+
+
       </div>
 
       <div class="page-content form-page-content">
+      {{if config("enable_sso") == "true"}}
+        <s72-oauth-signin-form />
+      {{else}}
         <s72-signin-form />
+      {{end}}
       </div>
     </div>
 
