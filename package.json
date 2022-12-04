@@ -25,7 +25,7 @@
   },
   "author": "Shift 72",
   "dependencies": {
-    "autoprefixer": "^7.1.2",
+    "autoprefixer": "^10.4.13",
     "bootstrap": "^4.3.1",
     "cssnano": "^5.1.14",
     "font-awesome": "^4.7.0",
